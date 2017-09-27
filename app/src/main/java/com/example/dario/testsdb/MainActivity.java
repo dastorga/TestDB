@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Button btnCrear = (Button) findViewById(R.id.btnCrear);
         final Button btnEliminar = (Button) findViewById(R.id.btnEliminar);
+        final Button btnEditar = (Button) findViewById(R.id.btnEditar);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -38,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btnEditar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+                Toast.makeText(getApplicationContext(), "Opcion Editar", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
 
 
 
