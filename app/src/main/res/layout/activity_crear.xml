@@ -16,4 +16,32 @@
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="68dp"
         tools:ignore="HardcodedText,MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:text="Guardar"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <Button
+        android:id="@+id/btnVolverAtras"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:text="Volver Atras"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="563dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:text="Borrar"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="367dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 </android.support.constraint.ConstraintLayout>
