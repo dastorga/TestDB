@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Button btnCrear = (Button) findViewById(R.id.btnCrear);
+        final Button btnEliminar = (Button) findViewById(R.id.btnEliminar);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnEliminar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+
+
+            }
+        });
 
 
 
