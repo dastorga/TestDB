@@ -8,18 +8,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnCrear;
+    Button btnCrear,btnEliminar,btnEditar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button btnCrear = (Button) findViewById(R.id.btnCrear);
-        final Button btnEliminar = (Button) findViewById(R.id.btnEliminar);
-        final Button btnEditar = (Button) findViewById(R.id.btnEditar);
+        btnCrear = (Button) findViewById(R.id.btnCrear);
+        btnEliminar = (Button) findViewById(R.id.btnEliminar);
+        btnEditar = (Button) findViewById(R.id.btnEditar);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+
 
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
 
 
 
