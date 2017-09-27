@@ -176,6 +176,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return node;
     }
 
+
     public List<Node> recoverNodes() {
         SQLiteDatabase db = getReadableDatabase();
         List<Node> lista_nodes = new ArrayList<Node>();
