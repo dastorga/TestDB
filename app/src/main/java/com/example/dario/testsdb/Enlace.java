@@ -22,6 +22,7 @@ public class Enlace {
 
     public int getIdEnlace() {
         return id;
+
     }
     public void setIdEnlace(int id) {
         this.id = id;
