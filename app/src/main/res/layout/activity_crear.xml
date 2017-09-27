@@ -6,42 +6,62 @@
     android:layout_height="match_parent"
     tools:context="com.example.dario.testsdb.CrearActivity">
 
-    <EditText
-        android:id="@+id/etNombreGrafo"
-        android:layout_width="402dp"
-        android:layout_height="58dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Ingresar nombre de grafo..."
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="68dp"
-        tools:ignore="HardcodedText,MissingConstraints" />
+    <RelativeLayout
+        android:layout_width="583dp"
+        android:layout_height="804dp"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="9dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/etNombreGrafo"
+            android:layout_width="549dp"
+            android:layout_height="59dp"
+            android:ems="10"
+            android:hint="Ingresar nombre de grafo..."
+            android:inputType="textPersonName"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
 
-    <Button
-        android:id="@+id/btnGuardar"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:text="Guardar"
-        tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="160dp" />
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="39dp"
+            android:text="Guardar"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="160dp"
+            android:layout_below="@+id/etNombreGrafo"
+            android:layout_alignStart="@+id/btnBorrar" />
 
-    <Button
-        android:id="@+id/btnVolverAtras"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:text="Volver Atras"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="597dp"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        <Button
+            android:id="@+id/btnVolverAtras"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignEnd="@+id/btnBorrar"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="44dp"
+            android:text="Volver Atras"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="596dp" />
 
-    <Button
-        android:id="@+id/btnBorrar"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:text="Borrar"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="350dp"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:text="Borrar"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="349dp"
+            android:layout_below="@+id/btnGuardar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp" />
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
