@@ -55,6 +55,5 @@ public class Enlace {
         this.id_graph = id_graph;
     }
 
-
 }
 
