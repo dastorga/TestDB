@@ -377,7 +377,6 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
         db.update("ENLACE", valores, "id_enlace=" + id_enlace, null);
         db.close();
-
     }
 
     
