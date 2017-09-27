@@ -484,7 +484,6 @@ public class ExampleInstrumentedTest {
         assertEquals(2, MDB.recoverEnlace(3).getOrigenEnlace());
         assertEquals(2, MDB.recoverEnlace(3).getDestinoEnlace());
         assertEquals("Edite enlace", MDB.recoverEnlace(3).getAtributoEnlace());
-
     }
 
 
