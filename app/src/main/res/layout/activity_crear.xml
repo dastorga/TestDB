@@ -29,7 +29,7 @@
 
         <Button
             android:id="@+id/btnGuardar"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="150dp"
             android:layout_marginTop="39dp"
             android:text="Guardar"
@@ -41,7 +41,7 @@
 
         <Button
             android:id="@+id/btnVolverAtras"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="150dp"
             android:layout_alignEnd="@+id/btnBorrar"
             android:layout_alignParentBottom="true"
@@ -53,7 +53,7 @@
 
         <Button
             android:id="@+id/btnBorrar"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="150dp"
             android:text="Borrar"
             tools:ignore="HardcodedText,MissingConstraints"
