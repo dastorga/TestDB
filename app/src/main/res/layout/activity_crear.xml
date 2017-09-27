@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.example.dario.testsdb.CrearActivity">
 
+    <EditText
+        android:id="@+id/etNombreGrafo"
+        android:layout_width="402dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresar nombre de grafo..."
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="68dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 </android.support.constraint.ConstraintLayout>
