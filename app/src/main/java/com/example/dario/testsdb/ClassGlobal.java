@@ -16,7 +16,6 @@ public class ClassGlobal extends Application {
 
     public int getIdGlobal() {
         return idGlobal;
-
     }
     public void setIdGlobal(int idGlobal) {
         this.idGlobal = idGlobal;
