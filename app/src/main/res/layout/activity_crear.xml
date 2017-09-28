@@ -9,59 +9,47 @@
     <RelativeLayout
         android:layout_width="583dp"
         android:layout_height="804dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="9dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="11dp">
 
         <EditText
             android:id="@+id/etNombreGrafo"
             android:layout_width="549dp"
             android:layout_height="59dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:ems="10"
             android:hint="Ingresar nombre de grafo..."
             android:inputType="textPersonName"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="36dp"
-            tools:layout_editor_absoluteY="55dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            tools:layout_editor_absoluteY="55dp" />
 
 
         <Button
             android:id="@+id/btnGuardarNombreGrafo"
             android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="39dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/etNombreGrafo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="51dp"
             android:text="Guardar"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="200dp"
-            tools:layout_editor_absoluteY="160dp"
-            android:layout_below="@+id/etNombreGrafo"
-            android:layout_alignStart="@+id/btnBorrarNombreGrafo" />
+            tools:layout_editor_absoluteY="160dp" />
 
         <Button
             android:id="@+id/btnVolverAtrasGrafo"
             android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:layout_alignEnd="@+id/btnBorrarNombreGrafo"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="44dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/btnGuardarNombreGrafo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="158dp"
             android:text="Volver Atras"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="200dp"
             tools:layout_editor_absoluteY="596dp" />
-
-        <Button
-            android:id="@+id/btnBorrarNombreGrafo"
-            android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:text="Borrar"
-            tools:ignore="HardcodedText,MissingConstraints"
-            tools:layout_editor_absoluteX="200dp"
-            tools:layout_editor_absoluteY="349dp"
-            android:layout_below="@+id/btnGuardarNombreGrafo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="37dp" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

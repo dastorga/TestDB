@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class CrearActivity extends AppCompatActivity {
 
     EditText etNombreGrafo;
-    Button btnGuardarNombreGrafo,btnBorrarNombreGrafo,btnVolverAtrasGrafo;
+    Button btnGuardarNombreGrafo,btnVolverAtrasGrafo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +20,9 @@ public class CrearActivity extends AppCompatActivity {
 
         etNombreGrafo = (EditText) findViewById(R.id.etNombreGrafo);
         btnGuardarNombreGrafo = (Button) findViewById(R.id.btnGuardarNombreGrafo);
-        btnBorrarNombreGrafo = (Button) findViewById(R.id.btnBorrarNombreGrafo);
         btnVolverAtrasGrafo = (Button) findViewById(R.id.btnVolverAtrasGrafo);
 
-         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         btnGuardarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -33,17 +32,11 @@ public class CrearActivity extends AppCompatActivity {
                 int id = MDB.insertGraph(nombreGrafo);
 
                 Toast.makeText(getApplicationContext(), "ID: "+ id + " ", Toast.LENGTH_SHORT).show();
+
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
             }
         });
 
-        btnBorrarNombreGrafo.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                etNombreGrafo.setText("");
-                Toast.makeText(getApplicationContext(), " ", Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
         btnVolverAtrasGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
