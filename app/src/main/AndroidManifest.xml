@@ -18,10 +18,12 @@
         </activity>
         <activity
             android:name=".CrearActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="Crear"/>
         <activity
             android:name=".CrearNodeEnlaceActivity"
-            android:parentActivityName=".CrearActivity" />
+            android:parentActivityName=".CrearActivity"
+            android:label="Crear Nodo o Arco"/>
     </application>
 
 </manifest>
