@@ -23,6 +23,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:text="CREAR NODO"
+            android:textSize="30sp"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="42dp"
             tools:layout_editor_absoluteY="77dp" />
@@ -35,6 +36,7 @@
             android:layout_alignStart="@+id/btnCrearNode"
             android:layout_marginTop="70dp"
             android:text="CREAR ARCO"
+            android:textSize="30sp"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="-24dp"
             tools:layout_editor_absoluteY="378dp" />
@@ -47,6 +49,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="45dp"
             android:text="Volver Atras"
+            android:textSize="30sp"
             tools:ignore="HardcodedText" />
 
     </RelativeLayout>
