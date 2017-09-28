@@ -41,7 +41,6 @@ public class CrearActivity extends AppCompatActivity {
 
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
 
-
             }
         });
 
