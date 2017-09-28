@@ -23,6 +23,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="33dp"
             android:background="@android:color/holo_green_dark"
+            android:elevation="0dp"
             android:text="Crear"
             android:textSize="30sp"
             tools:ignore="HardcodedText" />

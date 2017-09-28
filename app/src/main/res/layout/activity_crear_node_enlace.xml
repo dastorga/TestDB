@@ -17,7 +17,7 @@
 
         <Button
             android:id="@+id/btnCrearNode"
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_below="@+id/btnCrearEnlace"
             android:layout_centerHorizontal="true"
@@ -30,20 +30,20 @@
 
         <Button
             android:id="@+id/btnCrearEnlace"
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="200dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/btnCrearNode"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="69dp"
             android:text="CREAR ARCO"
             android:textSize="30sp"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="-24dp"
-            tools:layout_editor_absoluteY="378dp" />
+            tools:layout_editor_absoluteY="378dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/btnCrearNode" />
 
         <Button
             android:id="@+id/btnVolverAtrasCrearNodeEnlaceActivity"
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_alignEnd="@+id/btnCrearNode"
             android:layout_alignParentBottom="true"
