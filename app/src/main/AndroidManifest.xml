@@ -19,7 +19,9 @@
         <activity
             android:name=".CrearActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".CrearNodeEnlaceActivity"></activity>
+        <activity
+            android:name=".CrearNodeEnlaceActivity"
+            android:parentActivityName=".CrearActivity" />
     </application>
 
 </manifest>

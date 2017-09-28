@@ -6,4 +6,21 @@
     android:layout_height="match_parent"
     tools:context="com.example.dario.testsdb.CrearNodeEnlaceActivity">
 
+    <Button
+        android:id="@+id/btnCrearNode"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:text="CREAR NODO"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="167dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnCrearEnlace"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:text="CREAR ARCO"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="393dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 </android.support.constraint.ConstraintLayout>
