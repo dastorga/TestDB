@@ -28,7 +28,7 @@
 
 
         <Button
-            android:id="@+id/btnGuardar"
+            android:id="@+id/btnGuardarNombreGrafo"
             android:layout_width="300dp"
             android:layout_height="150dp"
             android:layout_marginTop="39dp"
@@ -37,13 +37,13 @@
             tools:layout_editor_absoluteX="200dp"
             tools:layout_editor_absoluteY="160dp"
             android:layout_below="@+id/etNombreGrafo"
-            android:layout_alignStart="@+id/btnBorrar" />
+            android:layout_alignStart="@+id/btnBorrarNombreGrafo" />
 
         <Button
-            android:id="@+id/btnVolverAtras"
+            android:id="@+id/btnVolverAtrasGrafo"
             android:layout_width="300dp"
             android:layout_height="150dp"
-            android:layout_alignEnd="@+id/btnBorrar"
+            android:layout_alignEnd="@+id/btnBorrarNombreGrafo"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="44dp"
             android:text="Volver Atras"
@@ -52,14 +52,14 @@
             tools:layout_editor_absoluteY="596dp" />
 
         <Button
-            android:id="@+id/btnBorrar"
+            android:id="@+id/btnBorrarNombreGrafo"
             android:layout_width="300dp"
             android:layout_height="150dp"
             android:text="Borrar"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="200dp"
             tools:layout_editor_absoluteY="349dp"
-            android:layout_below="@+id/btnGuardar"
+            android:layout_below="@+id/btnGuardarNombreGrafo"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="37dp" />
 

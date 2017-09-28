@@ -17,9 +17,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CrearActivity">
-
-        </activity>
+        <activity
+            android:name=".CrearActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
