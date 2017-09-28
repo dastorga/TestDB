@@ -34,13 +34,13 @@ public class CrearActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "ID: "+ id + " ", Toast.LENGTH_SHORT).show();
 
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
+
+
             }
         });
 
-
         btnVolverAtrasGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "ATRAS", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });

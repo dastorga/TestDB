@@ -34,13 +34,11 @@ public class MainActivity extends AppCompatActivity {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-
             }
         });
 
         btnEditar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
 
             }
         });

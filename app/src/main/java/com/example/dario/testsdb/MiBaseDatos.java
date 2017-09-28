@@ -18,7 +18,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     private static final int VERSION_BASEDATOS = 1;
 
     // Nombre de nuestro archivo de base de datos
-    private static final String NOMBRE_BASEDATOS = "mibasedatos6.db";
+    private static final String NOMBRE_BASEDATOS = "mibasedatos7.db";
 
     // Sentencia SQL para la creación de tabla palabra
     private static final String TABLA_WORD = "CREATE TABLE WORD" + "(_id INT PRIMARY KEY, word VARCHAR)";
