@@ -29,11 +29,11 @@ public class CrearActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String nombreGrafo = etNombreGrafo.getText().toString();
+
                 MDB.insertGraph(1,nombreGrafo);
 
                 Toast.makeText(getApplicationContext(), "GUARDADO", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
-
             }
         });
 

@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btnEditar = (Button) findViewById(R.id.btnEditar);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+
         MDB.dropTable("Graph");
         MDB.dropTable("NODE");
         MDB.dropTable("ENLACE");

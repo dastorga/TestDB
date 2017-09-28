@@ -10,5 +10,7 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_node_enlace);
 
+        //Aqui debo ver que existan
+
     }
 }
