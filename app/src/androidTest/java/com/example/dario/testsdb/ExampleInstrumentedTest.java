@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
+import android.util.Log;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -493,8 +494,14 @@ public class ExampleInstrumentedTest {
         MDB.dropTable("ENLACE");
 
         int id = MDB.insertGraph("Primer Grafo"); //Creo un solo grafo
+        // RECORDAR QUE ES AUTOINCREMENTADO
 
-        assertEquals(id, MDB.recoverGraph(id).getIdGraph());
+        Log.d(String.valueOf(id), "insgraph: id");
+        MDB.deleteGraph(id);
+
+//        assertEquals(7, MDB.recoverGraph(id).getIdGraph());
+//        assertEquals(id, MDB.recoverGraph(1).getIdGraph());
+//        assertEquals(1, id);
 
     }
 

@@ -18,7 +18,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     private static final int VERSION_BASEDATOS = 1;
 
     // Nombre de nuestro archivo de base de datos
-    private static final String NOMBRE_BASEDATOS = "mibasedatos5.db";
+    private static final String NOMBRE_BASEDATOS = "mibasedatos6.db";
 
     // Sentencia SQL para la creación de tabla palabra
     private static final String TABLA_WORD = "CREATE TABLE WORD" + "(_id INT PRIMARY KEY, word VARCHAR)";
@@ -71,6 +71,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
             long newRowId;
 
+            // REcordar que al ser autoincrementado va aumentando de uno en uno
             newRowId = db.insert("GRAPH", null, valores);
 
             db.close();
