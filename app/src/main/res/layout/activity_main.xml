@@ -12,42 +12,56 @@
         android:layout_width="572dp"
         android:layout_height="794dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="14dp"
         tools:layout_editor_absoluteY="16dp">
 
         <Button
             android:id="@+id/btnCrear"
             android:layout_width="300dp"
             android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="33dp"
             android:background="@android:color/holo_green_dark"
             android:text="Crear"
-            tools:ignore="HardcodedText"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnEliminar"
             android:layout_width="300dp"
             android:layout_height="150dp"
+            android:layout_above="@+id/btnReproducir"
+            android:layout_alignStart="@+id/btnReproducir"
+            android:layout_marginBottom="31dp"
             android:background="@android:color/holo_orange_dark"
             android:text="Eliminar"
-            tools:ignore="HardcodedText"
-            android:layout_marginEnd="24dp"
-            android:layout_below="@+id/btnEditar"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="50dp" />
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnEditar"
             android:layout_width="300dp"
             android:layout_height="150dp"
+            android:layout_alignStart="@+id/btnCrear"
+            android:layout_below="@+id/btnCrear"
+            android:layout_marginTop="41dp"
             android:background="@android:color/holo_blue_light"
             android:text="Editar"
-            tools:ignore="HardcodedText"
-            android:layout_marginTop="56dp"
-            android:layout_below="@+id/btnCrear"
-            android:layout_alignParentStart="true" />
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnReproducir"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/btnEditar"
+            android:layout_marginBottom="54dp"
+            android:background="@android:color/holo_purple"
+            android:text="Reproducir"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
