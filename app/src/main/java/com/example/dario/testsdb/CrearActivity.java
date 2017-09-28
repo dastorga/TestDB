@@ -30,17 +30,17 @@ public class CrearActivity extends AppCompatActivity {
 
                 String nombreGrafo = etNombreGrafo.getText().toString();
 
-                MDB.insertGraph(1,nombreGrafo);
+                int id = MDB.insertGraph(nombreGrafo);
 
-                Toast.makeText(getApplicationContext(), "GUARDADO", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
+                Toast.makeText(getApplicationContext(), "ID: "+ id + " ", Toast.LENGTH_SHORT).show();
+                //startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
             }
         });
 
         btnBorrarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 etNombreGrafo.setText("");
-                Toast.makeText(getApplicationContext(), MDB.recoverGraph(1).getNameGraph(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), " ", Toast.LENGTH_SHORT).show();
 
             }
         });

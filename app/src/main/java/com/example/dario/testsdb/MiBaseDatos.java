@@ -18,12 +18,12 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     private static final int VERSION_BASEDATOS = 1;
 
     // Nombre de nuestro archivo de base de datos
-    private static final String NOMBRE_BASEDATOS = "mibasedatos4.db";
+    private static final String NOMBRE_BASEDATOS = "mibasedatos5.db";
 
     // Sentencia SQL para la creación de tabla palabra
     private static final String TABLA_WORD = "CREATE TABLE WORD" + "(_id INT PRIMARY KEY, word VARCHAR)";
 
-    private static final String TABLA_GRAPH = "CREATE TABLE GRAPH" + "(id_graph INT PRIMARY KEY, name VARCHAR)";
+    private static final String TABLA_GRAPH = "CREATE TABLE GRAPH" + "(id_graph INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR)";
 
     private static final String TABLA_NODE = "CREATE TABLE NODE" + "(id_node INT PRIMARY KEY, codigo INT, atributo VARCHAR, id_graph INT, FOREIGN KEY(id_graph) REFERENCES GRAPH(id_graph) ON DELETE CASCADE)";
 
@@ -62,17 +62,22 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     //////////////////////////////// INSERTAR /////////////////////////////////////////////////
 
-    public void insertGraph(int id_graph, String name) {
+    public int insertGraph(String name) {
         SQLiteDatabase db = getWritableDatabase();
         if(db != null){
             ContentValues valores = new ContentValues();
 
-            valores.put("id_graph", id_graph);
             valores.put("name", name);
 
-            db.insert("GRAPH", null, valores);
+            long newRowId;
+
+            newRowId = db.insert("GRAPH", null, valores);
+
             db.close();
+
+            return ((int) newRowId);
         }
+        return -1; //en caso de error en la insercion
     }
 
     public void insertNode(int id_node, int codigo, String atributo, int id_graph) {
