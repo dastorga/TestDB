@@ -17,5 +17,8 @@ public class CrearActivity extends AppCompatActivity {
         etNombreGrafo = (EditText) findViewById(R.id.etNombreGrafo);
 
         Toast.makeText(getApplicationContext(), "Estoy en CREAR", Toast.LENGTH_SHORT).show();
+        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+
+
     }
 }
