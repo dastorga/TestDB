@@ -25,6 +25,8 @@ public class CrearActivity extends AppCompatActivity {
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         btnGuardarNombreGrafo.setOnClickListener(new View.OnClickListener() {
+
+
             public void onClick(View v) {
 
                 String nombreGrafo = etNombreGrafo.getText().toString();
@@ -32,12 +34,12 @@ public class CrearActivity extends AppCompatActivity {
                 int id = MDB.insertGraph(nombreGrafo);
 
                 // set
-                ((MyApplication) this.getApplication()).setSomeVariable("foo");
+                new ClassGlobal(getApplicationContext()).setIdGlobal(id);
 
                 // get
-                String s = ((MyApplication) this.getApplication()).getSomeVariable();
+                int s = new ClassGlobal(getApplicationContext()).getIdGlobal();
 
-                Toast.makeText(getApplicationContext(), " ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Id creado numero: "+ s + " ", Toast.LENGTH_SHORT).show();
 
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
 
@@ -47,6 +49,10 @@ public class CrearActivity extends AppCompatActivity {
 
         btnVolverAtrasGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
+                int c = new ClassGlobal(getApplicationContext()).getIdGlobal();
+                Toast.makeText(getApplicationContext(), "idddddd "+ c + " ", Toast.LENGTH_SHORT).show();
+
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });

@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.app.Application;
+import android.content.Context;
 
 /**
  * Created by dario on 28/9/17.
@@ -11,12 +12,17 @@ public class ClassGlobal extends Application {
 
     private int idGlobal;
 
+    public ClassGlobal(Context applicationContext) {
+
+    }
+
     public int getIdGlobal() {
         return idGlobal;
     }
 
-    public void setIdGlobal(int idGlobal) {
+    public int setIdGlobal(int idGlobal) {
         this.idGlobal = idGlobal;
+        return idGlobal;
     }
 }
 
