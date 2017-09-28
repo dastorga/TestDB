@@ -23,24 +23,23 @@ public class CrearActivity extends AppCompatActivity {
         btnBorrarNombreGrafo = (Button) findViewById(R.id.btnBorrarNombreGrafo);
         btnVolverAtrasGrafo = (Button) findViewById(R.id.btnVolverAtrasGrafo);
 
-        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         btnGuardarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
 
                 String nombreGrafo = etNombreGrafo.getText().toString();
                 MDB.insertGraph(1,nombreGrafo);
 
                 Toast.makeText(getApplicationContext(), "GUARDADO", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
 
             }
         });
 
         btnBorrarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
+                etNombreGrafo.setText("");
                 Toast.makeText(getApplicationContext(), MDB.recoverGraph(1).getNameGraph(), Toast.LENGTH_SHORT).show();
 
             }
@@ -48,10 +47,8 @@ public class CrearActivity extends AppCompatActivity {
 
         btnVolverAtrasGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
                 Toast.makeText(getApplicationContext(), "ATRAS", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-
             }
         });
 

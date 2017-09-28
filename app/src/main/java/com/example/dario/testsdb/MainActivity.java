@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,30 +20,27 @@ public class MainActivity extends AppCompatActivity {
         btnEditar = (Button) findViewById(R.id.btnEditar);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
-
+        MDB.dropTable("Graph");
+        MDB.dropTable("NODE");
+        MDB.dropTable("ENLACE");
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                Toast.makeText(getApplicationContext(), "Opcion Crear", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CrearActivity.class));
-
 
             }
         });
 
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                Toast.makeText(getApplicationContext(), "Opcion Eliminar", Toast.LENGTH_SHORT).show();
+
 
             }
         });
 
         btnEditar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                Toast.makeText(getApplicationContext(), "Opcion Editar", Toast.LENGTH_SHORT).show();
+
 
             }
         });
