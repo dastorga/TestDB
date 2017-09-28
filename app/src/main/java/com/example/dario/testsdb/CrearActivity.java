@@ -31,7 +31,13 @@ public class CrearActivity extends AppCompatActivity {
 
                 int id = MDB.insertGraph(nombreGrafo);
 
-                Toast.makeText(getApplicationContext(), "ID: "+ id + " ", Toast.LENGTH_SHORT).show();
+                // set
+                ((MyApplication) this.getApplication()).setSomeVariable("foo");
+
+                // get
+                String s = ((MyApplication) this.getApplication()).getSomeVariable();
+
+                Toast.makeText(getApplicationContext(), " ", Toast.LENGTH_SHORT).show();
 
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
 

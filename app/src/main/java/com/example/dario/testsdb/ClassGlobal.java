@@ -7,17 +7,16 @@ import android.app.Application;
  */
 
 public class ClassGlobal extends Application {
+    // values around the life cycle of the application regardless which activity running..
 
     private int idGlobal;
-
-    public ClassGlobal(int idGlobal) {
-        this.idGlobal = idGlobal;
-    }
 
     public int getIdGlobal() {
         return idGlobal;
     }
+
     public void setIdGlobal(int idGlobal) {
         this.idGlobal = idGlobal;
     }
 }
+
