@@ -25,33 +25,21 @@ public class CrearActivity extends AppCompatActivity {
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         btnGuardarNombreGrafo.setOnClickListener(new View.OnClickListener() {
-
-
             public void onClick(View v) {
-
                 String nombreGrafo = etNombreGrafo.getText().toString();
-
                 int id = MDB.insertGraph(nombreGrafo);
 
                 Globals g = Globals.getInstance();
-                g.setIdGlobal(id);
+                g.setIdGlobal(id); //Id del ultimo grafo guardado
 
-                Toast.makeText(getApplicationContext(), "Id creado numero: " + g.getIdGlobal() , Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(getApplicationContext(),MDB.recoverGraph(g.getIdGlobal()).getNameGraph()+" Guardado!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
-
             }
         });
 
         btnVolverAtrasGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
-                Globals g = Globals.getInstance();
-                int d = g.getIdGlobal();
-
-                Toast.makeText(getApplicationContext(), "Id creado numero: "+ d , Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-
             }
         });
 
