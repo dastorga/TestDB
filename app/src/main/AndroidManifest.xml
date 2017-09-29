@@ -18,12 +18,13 @@
         </activity>
         <activity
             android:name=".CrearActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="Crear Grafo"/>
+            android:label="Crear Grafo"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CrearNodeEnlaceActivity"
-            android:parentActivityName=".CrearActivity"
-            android:label="Crear Nodo/Arco"/>
+            android:label="Crear Nodo/Arco"
+            android:parentActivityName=".CrearActivity" />
+        <activity android:name=".CrearNodeActivity"></activity>
     </application>
 
 </manifest>

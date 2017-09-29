@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class CrearNodeEnlaceActivity extends AppCompatActivity {
 
@@ -18,15 +19,23 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
         btnCrearNode = (Button) findViewById(R.id.btnCrearNode);
         btnCrearEnlace = (Button) findViewById(R.id.btnCrearEnlace);
         btnVolverAtrasCrearNodeEnlaceActivity = (Button) findViewById(R.id.btnVolverAtrasCrearNodeEnlaceActivity);
+        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         btnCrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                startActivity(new Intent(getApplicationContext(), CrearNodeActivity.class));
             }
         });
 
         btnCrearEnlace.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Globals g = Globals.getInstance();
+                int idGlobal = g.getIdGlobal();
+                if (MDB.existsNodesInGraph(idGlobal)){
+//                    startActivity(new Intent(getApplicationContext(), CrearEnlaceActivity.class));
+                }else{
+                    Toast.makeText(getApplicationContext(),"NO ahi Nodos creados!", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
@@ -39,4 +48,6 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
         });
 
     }
+
+
 }
