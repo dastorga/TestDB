@@ -33,11 +33,8 @@ public class CrearActivity extends AppCompatActivity {
 
                 int id = MDB.insertGraph(nombreGrafo);
 
-                // set
-                ClassGlobal global = new ClassGlobal(id);
-                global.setIdGlobal(id);
 
-                Toast.makeText(getApplicationContext(), "Id creado numero: "+ global.getIdGlobal(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Id creado numero: ", Toast.LENGTH_SHORT).show();
 
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
 
@@ -47,11 +44,10 @@ public class CrearActivity extends AppCompatActivity {
         btnVolverAtrasGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                ClassGlobal global = new ClassGlobal();
-                int idglobal = global.getIdGlobal();
 
-                Toast.makeText(getApplicationContext(), "Id creado numero: "+ idglobal, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Id creado numero: ", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
             }
         });
 
