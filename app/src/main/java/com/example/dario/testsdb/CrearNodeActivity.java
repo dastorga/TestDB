@@ -1,5 +1,6 @@
 package com.example.dario.testsdb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -28,7 +29,7 @@ public class CrearNodeActivity extends AppCompatActivity {
 
         btnVolverAtras_CrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
             }
         });
 
