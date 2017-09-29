@@ -28,6 +28,5 @@ public class Globals {
         return instance;
     }
 
-
 }
 
