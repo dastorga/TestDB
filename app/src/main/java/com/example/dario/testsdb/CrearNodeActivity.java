@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import static android.R.attr.id;
+
 public class CrearNodeActivity extends AppCompatActivity {
 
     Button btnGuardar_CrearNode,btnVolverAtras_CrearNode;
@@ -23,6 +25,15 @@ public class CrearNodeActivity extends AppCompatActivity {
 
         btnGuardar_CrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
+                final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+
+                Globals g = Globals.getInstance();
+                g.setIdGlobal(id); //Id del ultimo grafo guardado
+
+                etNombreNode_CrearNode.getText().toString();
+
+
 
             }
         });

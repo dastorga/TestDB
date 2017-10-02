@@ -32,7 +32,7 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
                 Globals g = Globals.getInstance();
                 int idGlobal = g.getIdGlobal();
                 if (MDB.existsNodesInGraph(idGlobal)){
-//                    startActivity(new Intent(getApplicationContext(), CrearEnlaceActivity.class));
+                    startActivity(new Intent(getApplicationContext(), CrearEnlaceActivity.class));
                 }else{
                     Toast.makeText(getApplicationContext(),"NO ahi Nodos creados!", Toast.LENGTH_SHORT).show();
                 }
