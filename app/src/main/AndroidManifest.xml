@@ -24,8 +24,15 @@
             android:name=".CrearNodeEnlaceActivity"
             android:label="Crear Nodo/Arco"
             android:parentActivityName=".CrearActivity" />
-        <activity android:name=".CrearNodeActivity" />
-        <activity android:name=".CrearEnlaceActivity"></activity>
+        <activity android:name=".CrearNodeActivity"
+            android:label="Crear Nodo"
+            android:parentActivityName=".CrearNodeEnlaceActivity" />
+
+        <activity android:name=".CrearEnlaceActivity"
+            android:label="Crear Arco"
+            android:parentActivityName=".CrearNodeEnlaceActivity">
+
+        </activity>
     </application>
 
 </manifest>
