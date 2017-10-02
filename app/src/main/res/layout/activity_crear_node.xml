@@ -17,21 +17,23 @@
             android:id="@+id/btnGuardar_CrearNode"
             android:layout_width="300dp"
             android:layout_height="250dp"
+            android:layout_alignStart="@+id/btnVolverAtras_CrearNode"
+            android:layout_below="@+id/etNombreNode_CrearNode"
             android:layout_marginTop="73dp"
             android:text="Guardar"
-            tools:ignore="HardcodedText"
-            android:layout_below="@+id/etNombreNode_CrearNode"
-            android:layout_alignStart="@+id/btnVolverAtras_CrearNode" />
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnVolverAtras_CrearNode"
             android:layout_width="300dp"
             android:layout_height="250dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="84dp"
             android:text="Volver Atras"
-            tools:ignore="HardcodedText"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/etNombreNode_CrearNode"
@@ -41,8 +43,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Ingresar Nombre de Nodo"
+            android:inputType="textPersonName"
             tools:ignore="HardcodedText" />
 
     </RelativeLayout>

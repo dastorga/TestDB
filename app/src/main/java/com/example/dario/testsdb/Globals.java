@@ -1,9 +1,5 @@
 package com.example.dario.testsdb;
 
-/**
- * Created by dario on 28/9/17.
- */
-
 public class Globals {
     // values around the life cycle of the application regardless which activity running..
 

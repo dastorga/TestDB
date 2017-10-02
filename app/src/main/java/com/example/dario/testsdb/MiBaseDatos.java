@@ -18,14 +18,14 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     private static final int VERSION_BASEDATOS = 1;
 
     // Nombre de nuestro archivo de base de datos
-    private static final String NOMBRE_BASEDATOS = "mibasedatos7.db";
+    private static final String NOMBRE_BASEDATOS = "mibasedatos8.db";
 
     // Sentencia SQL para la creación de tabla palabra
     private static final String TABLA_WORD = "CREATE TABLE WORD" + "(_id INT PRIMARY KEY, word VARCHAR)";
 
     private static final String TABLA_GRAPH = "CREATE TABLE GRAPH" + "(id_graph INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR)";
 
-    private static final String TABLA_NODE = "CREATE TABLE NODE" + "(id_node INT PRIMARY KEY, codigo INT, atributo VARCHAR, id_graph INT, FOREIGN KEY(id_graph) REFERENCES GRAPH(id_graph) ON DELETE CASCADE)";
+    private static final String TABLA_NODE = "CREATE TABLE NODE" + "(id_node INTEGER PRIMARY KEY AUTOINCREMENT, atributo VARCHAR, id_graph INT, FOREIGN KEY(id_graph) REFERENCES GRAPH(id_graph) ON DELETE CASCADE)";
 
     private static final String TABLA_ENLACE = "CREATE TABLE ENLACE" + "(id_enlace INT PRIMARY KEY, origen INT, destino INT, atributo VARCHAR, id_graph INT, FOREIGN KEY(id_graph) REFERENCES GRAPH(id_graph) ON DELETE CASCADE)";
 
@@ -81,19 +81,21 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return -1; //en caso de error en la insercion
     }
 
-    public void insertNode(int id_node, int codigo, String atributo, int id_graph) {
+    public int insertNode(String atributo, int id_graph) {
         SQLiteDatabase db = getWritableDatabase();
         if(db != null){
             ContentValues valores = new ContentValues();
 
-            valores.put("id_node", id_node);
-            valores.put("codigo", codigo);
             valores.put("atributo", atributo);
             valores.put("id_graph", id_graph);
 
-            db.insert("NODE", null, valores);
+            long newRowId;
+            newRowId = db.insert("NODE", null, valores);
             db.close();
+
+            return ((int) newRowId);
         }
+        return -1; //en caso de error en la insercion
     }
 
     public void insertEnlace(int id_enlace, int origen, int destino, String atributo, int id_graph) {

@@ -1,9 +1,5 @@
 package com.example.dario.testsdb;
 
-/**
- * Created by dario on 20/9/17.
- */
-
 public class Graph {
 
     private int id;
