@@ -9,9 +9,52 @@
     <RelativeLayout
         android:layout_width="585dp"
         android:layout_height="810dp"
+        tools:ignore="MissingConstraints,UselessLeaf"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints,UselessLeaf">
+        tools:layout_editor_absoluteY="8dp">
 
+        <TextView
+            android:id="@+id/tv_CrearArco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:text="Seleccionar NODOS. Recuerda que el primer nodo presede al segundo nodo."
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnPrimerNodo_CrearArco"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/tv_CrearArco"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="PRIMER NODO"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnSegundoNodo_CrearArco"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_alignStart="@+id/btnPrimerNodo_CrearArco"
+            android:layout_below="@+id/btnPrimerNodo_CrearArco"
+            android:layout_marginTop="41dp"
+            android:text="SEGUNDO NODO"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnVolverAtras_CrearArco"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/btnSegundoNodo_CrearArco"
+            android:layout_marginBottom="59dp"
+            android:text="VOLVER ATRAS"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
