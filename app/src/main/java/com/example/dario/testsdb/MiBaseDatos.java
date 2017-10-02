@@ -178,7 +178,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         if(c != null) {
             c.moveToFirst();
         }
-        Node node = new Node(c.getInt(0), c.getInt(1), c.getString(2), c.getInt(3));
+        Node node = new Node(c.getInt(0), c.getString(1), c.getInt(2));
         db.close();
         c.close();
         return node;
@@ -192,7 +192,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         Cursor c = db.query("NODE", valores_recuperar, null, null, null, null, null, null);
         lista_nodes.clear();;
         while (c.moveToNext()){
-            lista_nodes.add(new Node(c.getInt(0), c.getInt(1), c.getString(2), c.getInt(3)));
+            lista_nodes.add(new Node(c.getInt(0), c.getString(1), c.getInt(2)));
         }
         db.close();
         c.close();
@@ -221,7 +221,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
         lista_nodes.clear();;
         while (c.moveToNext()){
-            lista_nodes.add(new Node(c.getInt(0), c.getInt(1), c.getString(2), c.getInt(3)));
+            lista_nodes.add(new Node(c.getInt(0), c.getString(1), c.getInt(2)));
         }
         db.close();
         c.close();
@@ -249,13 +249,13 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     public Boolean existsNodesInGraph(int id_graph) {
         SQLiteDatabase db = getReadableDatabase();
         List<Node> lista_nodes = new ArrayList<Node>();
-        String[] valores_recuperar = {"id_node", "codigo", "atributo", "id_graph"};
+        String[] valores_recuperar = {"id_node", "atributo", "id_graph"};
 
         Cursor c = db.query("NODE", valores_recuperar, "id_graph=" + id_graph, null, null, null, null, null);
 
         lista_nodes.clear();;
         while (c.moveToNext()){
-            lista_nodes.add(new Node(c.getInt(0), c.getInt(1), c.getString(2), c.getInt(3)));
+            lista_nodes.add(new Node(c.getInt(0), c.getString(1), c.getInt(2)));
         }
         db.close();
         c.close();
@@ -361,12 +361,11 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void updateNode(int id_node, int codigo, String atributo, int id_graph){
+    public void updateNode(int id_node, String atributo, int id_graph){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues valores = new ContentValues();
 
         valores.put("id_node", id_node); //ver
-        valores.put("codigo", codigo);
         valores.put("atributo", atributo);
         valores.put("id_graph", id_graph);
 

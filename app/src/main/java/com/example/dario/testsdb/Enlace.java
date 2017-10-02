@@ -1,9 +1,5 @@
 package com.example.dario.testsdb;
 
-/**
- * Created by dario on 22/9/17.
- */
-
 public class Enlace {
 
     private int id;

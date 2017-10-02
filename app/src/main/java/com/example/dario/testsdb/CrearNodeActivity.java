@@ -6,8 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import static android.R.attr.id;
+import android.widget.Toast;
 
 public class CrearNodeActivity extends AppCompatActivity {
 
@@ -29,11 +28,13 @@ public class CrearNodeActivity extends AppCompatActivity {
                 final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
                 Globals g = Globals.getInstance();
-                g.setIdGlobal(id); //Id del ultimo grafo guardado
+                int idglobalGraph = g.getIdGlobal();
 
-                etNombreNode_CrearNode.getText().toString();
+                String atributo = etNombreNode_CrearNode.getText().toString();
 
+                int newRowId = MDB.insertNode(atributo, idglobalGraph);
 
+                Toast.makeText(getApplicationContext(),"newRowId: "+ newRowId + "IdGraph: " + idglobalGraph , Toast.LENGTH_SHORT).show();
 
             }
         });
