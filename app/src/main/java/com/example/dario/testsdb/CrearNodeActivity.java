@@ -28,14 +28,12 @@ public class CrearNodeActivity extends AppCompatActivity {
                 final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
                 Globals g = Globals.getInstance();
-                int idglobalGraph = g.getIdGlobal();
+                int idGlobalGraph = g.getIdGlobal();
 
                 String atributo = etNombreNode_CrearNode.getText().toString();
+                int newRowId = MDB.insertNode(atributo, idGlobalGraph);
 
-                int newRowId = MDB.insertNode(atributo, idglobalGraph);
-
-                Toast.makeText(getApplicationContext(),"newRowId: "+ newRowId + "IdGraph: " + idglobalGraph , Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(getApplicationContext(),"newRowId: "+ newRowId + "IdGraph: " + idGlobalGraph , Toast.LENGTH_SHORT).show();
             }
         });
 

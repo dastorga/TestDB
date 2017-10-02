@@ -17,7 +17,7 @@
 
         <Button
             android:id="@+id/btnCrearNode"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="200dp"
             android:text="CREAR NODO"
             android:textSize="30sp"
@@ -30,7 +30,7 @@
 
         <Button
             android:id="@+id/btnCrearEnlace"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="200dp"
             android:text="CREAR ARCO"
             android:textSize="30sp"
@@ -42,7 +42,7 @@
 
         <Button
             android:id="@+id/btnVolverAtrasCrearNodeEnlaceActivity"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_alignEnd="@+id/btnCrearNode"
             android:layout_alignParentBottom="true"

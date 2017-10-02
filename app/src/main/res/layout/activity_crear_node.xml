@@ -15,7 +15,7 @@
 
         <Button
             android:id="@+id/btnGuardar_CrearNode"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="250dp"
             android:layout_alignStart="@+id/btnVolverAtras_CrearNode"
             android:layout_below="@+id/etNombreNode_CrearNode"
@@ -26,7 +26,7 @@
 
         <Button
             android:id="@+id/btnVolverAtras_CrearNode"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="250dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
