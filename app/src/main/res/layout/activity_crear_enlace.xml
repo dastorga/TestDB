@@ -31,6 +31,7 @@
             android:layout_below="@+id/tv_CrearArco"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="23dp"
+            android:elevation="10dp"
             android:text="PRIMER NODO"
             android:textSize="30sp"
             tools:ignore="HardcodedText" />
@@ -42,6 +43,7 @@
             android:layout_alignStart="@+id/btnPrimerNodo_CrearArco"
             android:layout_below="@+id/btnPrimerNodo_CrearArco"
             android:layout_marginTop="41dp"
+            android:elevation="10dp"
             android:text="SEGUNDO NODO"
             android:textSize="30sp"
             tools:ignore="HardcodedText" />
@@ -53,6 +55,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/btnSegundoNodo_CrearArco"
             android:layout_marginBottom="59dp"
+            android:elevation="10dp"
             android:text="VOLVER ATRAS"
             android:textSize="30sp"
             tools:ignore="HardcodedText" />
