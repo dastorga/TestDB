@@ -30,7 +30,7 @@ public class CrearActivity extends AppCompatActivity {
                 int id = MDB.insertGraph(nombreGrafo);
 
                 Globals g = Globals.getInstance();
-                g.setIdGlobal(id); //Id del ultimo grafo guardado
+                g.setIdGlobal(id); //Id del ultimo grafo actual guardado
 
                 Toast.makeText(getApplicationContext(),MDB.recoverGraph(g.getIdGlobal()).getNameGraph()+" Guardado!" + " IdGraph: " +  g.getIdGlobal(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
