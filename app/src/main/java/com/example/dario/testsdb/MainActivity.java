@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
-        MDB.dropTable("Graph");
+        MDB.dropTable("GRAPH");
         MDB.dropTable("NODE");
         MDB.dropTable("ENLACE");
 

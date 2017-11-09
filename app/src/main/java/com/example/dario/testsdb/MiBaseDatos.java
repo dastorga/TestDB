@@ -53,10 +53,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        db.execSQL("DROP TABLE IF EXISTS " + TABLA_GRAPH);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLA_NODE);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLA_ENLACE);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLA_WORD);
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLA_GRAPH);
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLA_NODE);
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLA_ENLACE);
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLA_WORD);
         onCreate(db);
     }
 
