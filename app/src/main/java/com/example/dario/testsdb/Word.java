@@ -14,22 +14,12 @@ public class Word {
         this.word = word;
     }
 
-    public int getIdWord() {
+    public int getIdWord() {return id;}
 
-        return id;
-    }
-    public void setIdWord(int id) {
+    public void setIdWord(int id) {this.id = id;}
 
-        this.id = id;
-    }
+    public String getWord() {return word;}
 
-    public String getWord() {
-
-        return word;
-    }
-    public void setWord(String word) {
-
-        this.word = word;
-    }
+    public void setWord(String word) {this.word = word;}
 
 }

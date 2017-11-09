@@ -16,10 +16,8 @@ public class Enlace {
         this.id_graph = id_graph;
     }
 
-    public int getIdEnlace() {
-        return id;
+    public int getIdEnlace() {return id;}
 
-    }
     public void setIdEnlace(int id) {
         this.id = id;
     }
@@ -27,6 +25,7 @@ public class Enlace {
     public int getOrigenEnlace() {
         return origen;
     }
+
     public void setOrigenEnlace(int origen) {
         this.origen = origen;
     }
@@ -34,6 +33,7 @@ public class Enlace {
     public int getDestinoEnlace() {
         return destino;
     }
+
     public void setDestinoEnlace(int destino) {
         this.destino = destino;
     }
@@ -41,6 +41,7 @@ public class Enlace {
     public String getAtributoEnlace() {
         return atributo;
     }
+
     public void setAtributoEnlace(String atributo) {
         this.atributo = atributo;
     }
@@ -48,6 +49,7 @@ public class Enlace {
     public int getIdGraphEnlace() {
         return id_graph;
     }
+
     public void setIdGraphEnlace(int id_graph) {
         this.id_graph = id_graph;
     }

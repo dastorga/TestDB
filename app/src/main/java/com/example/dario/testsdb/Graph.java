@@ -13,6 +13,7 @@ public class Graph {
     public int getIdGraph() {
         return id;
     }
+
     public void setIdGraph(int id) {
         this.id = id;
     }
@@ -20,9 +21,6 @@ public class Graph {
     public String getNameGraph() {
         return name;
     }
-    public void setNameGraph(String name) {
-        this.name = name;
-    }
 
-
+    public void setNameGraph(String name) {this.name = name;}
 }
