@@ -28,7 +28,7 @@ public class CrearNodeActivity extends AppCompatActivity {
                 final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
                 Globals g = Globals.getInstance();
-                int idGlobalGraph = g.getIdGlobal();
+                int idGlobalGraph = g.getIdGlobal(); //para obtener el id_globalactual del grafo
 
                 String atributo = etNombreNode_CrearNode.getText().toString();
                 int newRowId = MDB.insertNode(atributo, idGlobalGraph);

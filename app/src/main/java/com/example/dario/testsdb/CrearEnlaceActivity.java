@@ -9,6 +9,7 @@ import android.widget.Button;
 public class CrearEnlaceActivity extends AppCompatActivity {
 
     Button btnPrimerNodo_CrearArco, btnSegundoNodo_CrearArco, btnVolverAtras_CrearArco;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,15 +18,12 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnPrimerNodo_CrearArco = (Button) findViewById(R.id.btnPrimerNodo_CrearArco);
         btnSegundoNodo_CrearArco = (Button) findViewById(R.id.btnSegundoNodo_CrearArco);
         btnVolverAtras_CrearArco = (Button) findViewById(R.id.btnVolverAtras_CrearArco);
-        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         btnPrimerNodo_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             //aca debo mostrar una lista de nodos creados
-
-                //Me retorna una lista de todos los nodos del grafo que paso como parametro.
-//                MDB.recoverNodesInGraph()
-
+                Intent intent = new Intent(CrearEnlaceActivity.this, NodeList.class);
+                startActivity(intent);
             }
         });
 
@@ -42,4 +40,5 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         });
 
     }
+
 }

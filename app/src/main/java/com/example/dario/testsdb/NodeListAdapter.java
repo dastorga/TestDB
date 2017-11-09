@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by dario on 9/11/17.
@@ -17,9 +17,9 @@ public class NodeListAdapter extends BaseAdapter {
 
     private Context context;
     private  int layout;
-    private ArrayList<Node> NodeList;
+    private List<Node> NodeList;
 
-    public NodeListAdapter(Context context, int layout, ArrayList<Node> NodeList) {
+    public NodeListAdapter(Context context,  int layout, List<Node> NodeList) {
         this.context = context;
         this.layout = layout;
         this.NodeList = NodeList;

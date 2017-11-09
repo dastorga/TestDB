@@ -33,9 +33,13 @@
         <activity
             android:name=".CrearEnlaceActivity"
             android:label="Crear Arco"
-            android:parentActivityName=".CrearNodeEnlaceActivity">
+            android:parentActivityName=".CrearNodeEnlaceActivity" />
 
-        </activity>
+        <activity
+            android:name=".NodeList"
+            android:label="Lista de Nodos"
+            android:parentActivityName=".CrearEnlaceActivity" />
+
     </application>
 
 </manifest>
