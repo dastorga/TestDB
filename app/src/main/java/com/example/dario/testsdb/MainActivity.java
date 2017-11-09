@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnCrear,btnEliminar,btnEditar;
+    Button btnCrear,btnEliminar,btnEditar,btnReproducir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         btnCrear = (Button) findViewById(R.id.btnCrear);
         btnEliminar = (Button) findViewById(R.id.btnEliminar);
         btnEditar = (Button) findViewById(R.id.btnEditar);
+        btnReproducir = (Button) findViewById(R.id.btnReproducir);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnReproducir.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+            }
+        });
 
 
     }
