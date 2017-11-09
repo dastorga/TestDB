@@ -17,7 +17,7 @@
 
         <Button
             android:id="@+id/btnCrear"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="150dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -25,12 +25,14 @@
             android:background="@android:color/holo_green_dark"
             android:elevation="10dp"
             android:text="Crear"
+            android:textColor="@android:color/background_light"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnEliminar"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="150dp"
             android:layout_above="@+id/btnReproducir"
             android:layout_alignStart="@+id/btnReproducir"
@@ -38,12 +40,14 @@
             android:background="@android:color/holo_orange_dark"
             android:elevation="10dp"
             android:text="Eliminar"
+            android:textColor="@android:color/background_light"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnEditar"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="150dp"
             android:layout_alignStart="@+id/btnCrear"
             android:layout_below="@+id/btnCrear"
@@ -51,12 +55,14 @@
             android:background="@android:color/holo_blue_light"
             android:elevation="10dp"
             android:text="Editar"
+            android:textColor="@android:color/background_light"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnReproducir"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="150dp"
             android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/btnEditar"
@@ -64,7 +70,9 @@
             android:background="@android:color/holo_purple"
             android:elevation="10dp"
             android:text="Reproducir"
+            android:textColor="@android:color/background_light"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
 
