@@ -21,7 +21,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnPrimerNodo_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            //aca debo mostrar una lista de nodos creados
+            //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
                 Intent intent = new Intent(CrearEnlaceActivity.this, NodeList.class);
                 startActivity(intent);
             }

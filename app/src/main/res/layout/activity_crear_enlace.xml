@@ -32,8 +32,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="23dp"
             android:elevation="10dp"
-            android:text="PRIMER NODO"
+            android:text="NODO ORIGEN"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -44,8 +45,9 @@
             android:layout_below="@+id/btnPrimerNodo_CrearArco"
             android:layout_marginTop="41dp"
             android:elevation="10dp"
-            android:text="SEGUNDO NODO"
+            android:text="NODO DESTINO"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -58,6 +60,7 @@
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

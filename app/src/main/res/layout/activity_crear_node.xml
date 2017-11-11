@@ -23,6 +23,7 @@
             android:elevation="10dp"
             android:text="Guardar"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -35,6 +36,7 @@
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <EditText

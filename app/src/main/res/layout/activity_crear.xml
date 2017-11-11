@@ -37,6 +37,7 @@
             android:elevation="10dp"
             android:text="Guardar"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="200dp"
             tools:layout_editor_absoluteY="160dp" />
@@ -51,6 +52,7 @@
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteX="200dp"
             tools:layout_editor_absoluteY="596dp" />
