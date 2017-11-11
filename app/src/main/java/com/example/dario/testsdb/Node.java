@@ -12,9 +12,8 @@ public class Node {
         this.id_graph = id_graph;
     }
 
-    public int getIdNode() {
-        return id;
-    }
+    public int getIdNode() {return id;}
+
     public void setIdNode(int id) {
         this.id = id;
     }
@@ -22,6 +21,7 @@ public class Node {
     public String getAtributoNode() {
         return atributo;
     }
+
     public void setAtributoNode(String atributo) {
         this.atributo = atributo;
     }
@@ -29,8 +29,8 @@ public class Node {
     public int getIdGraphNode() {
         return id_graph;
     }
+
     public void setIdGraphNode(int id_graph) {
         this.id_graph = id_graph;
     }
-
 }
