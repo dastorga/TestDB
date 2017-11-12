@@ -35,7 +35,7 @@ public class NodeListAdapter extends BaseAdapter {
         return position;
     }
 
-    private class ViewHolder{ TextView txtAtributeNode;}
+    private class ViewHolder{ TextView txtAtributeNode, txtIdNode_Node;}
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
@@ -45,11 +45,13 @@ public class NodeListAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(layout, null);
             holder.txtAtributeNode = (TextView) row.findViewById(R.id.txtAtributeNode);
+            holder.txtIdNode_Node = (TextView) row.findViewById(R.id.txtIdNode_Node);
             row.setTag(holder);
         }
         else { holder = (ViewHolder) row.getTag();}
         Node node = NodeList.get(position);
         holder.txtAtributeNode.setText(node.getAtributoNode());
+        holder.txtIdNode_Node.setText((String.valueOf(node.getIdNode()))); // el identificador es Int pero lo paso a string solo para mostrarlo por pantalla
         return row;
     }
 }

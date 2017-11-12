@@ -216,9 +216,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
         ArrayList<Node> lista_nodes = new ArrayList<Node>();
         String[] valores_recuperar = {"id_node", "atributo", "id_graph"};
-
         Cursor c = db.query("NODE", valores_recuperar, "id_graph=" + id_graph, null, null, null, null, null);
-
         lista_nodes.clear();;
         while (c.moveToNext()){
             lista_nodes.add(new Node(c.getInt(0), c.getString(1), c.getInt(2)));
