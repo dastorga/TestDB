@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class CrearEnlaceActivity extends AppCompatActivity {
 
-    Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco;
+    Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco, btnCrearArco_CrearArco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnNodoOrigen_CrearArco = (Button) findViewById(R.id.btnNodoOrigen_CrearArco);
         btnNodoDestino_CrearArco = (Button) findViewById(R.id.btnNodoDestino_CrearArco);
         btnVolverAtras_CrearArco = (Button) findViewById(R.id.btnVolverAtras_CrearArco);
-
+        btnCrearArco_CrearArco = (Button) findViewById(R.id.btnCrearArco_CrearArco);
 
         MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -42,15 +42,19 @@ public class CrearEnlaceActivity extends AppCompatActivity {
             }
         });
 
+        btnCrearArco_CrearArco.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
-        if ( g.getIdOrigen() != 0 && g.getIdDestino() != 0){
-            //inserto el enlace
-            Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " - DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
+                if ( g.getIdOrigen() != 0 && g.getIdDestino() != 0){
+                    Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " - DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
+                    g.setIdOrigen(0);
+                    g.setIdDestino(0);
 
-        } else {
-            Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO / NO AHI ORIGEN", Toast.LENGTH_SHORT).show();
-        }
-
+                } else {
+                    Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO / NO AHI ORIGEN", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
         btnVolverAtras_CrearArco.setOnClickListener(new View.OnClickListener() {
@@ -62,3 +66,5 @@ public class CrearEnlaceActivity extends AppCompatActivity {
     }
 
 }
+
+
