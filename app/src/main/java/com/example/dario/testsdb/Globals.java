@@ -6,6 +6,9 @@ public class Globals {
     private static Globals instance;
     private static int idGlobal;
 
+    private static int idOrigen;
+    private static int idDestino;
+
     public Globals( ) { }
 
     public void setIdGlobal(int t) {
@@ -15,6 +18,25 @@ public class Globals {
     public int getIdGlobal() {
         return Globals.idGlobal;
     }
+
+
+    public void setIdOrigen(int idOrigen) {
+        Globals.idOrigen = idOrigen;
+    }
+
+    public int getIdOrigen() {
+        return Globals.idOrigen;
+    }
+
+
+    public void setIdDestino(int idDestino) {
+        Globals.idDestino = idDestino;
+    }
+
+    public int getIdDestino() {
+        return Globals.idDestino;
+    }
+
 
     public static synchronized Globals getInstance(){
         if (instance==null){

@@ -22,7 +22,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnNodoOrigen_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
-                Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeList.class);
+                Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeListOrigen.class);
                 startActivity(intentNodeList);
             }
         });
@@ -30,10 +30,13 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnNodoDestino_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
-                Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeList.class);
+                Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeListOrigen.class);
                 startActivity(intentNodeList);
             }
         });
+
+        final Globals g = Globals.getInstance();
+        int id_Origen = g.getIdOrigen();
 
         btnVolverAtras_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

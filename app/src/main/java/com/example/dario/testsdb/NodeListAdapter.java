@@ -48,7 +48,9 @@ public class NodeListAdapter extends BaseAdapter {
             holder.txtIdNode_Node = (TextView) row.findViewById(R.id.txtIdNode_Node);
             row.setTag(holder);
         }
-        else { holder = (ViewHolder) row.getTag();}
+        else {
+            holder = (ViewHolder) row.getTag();
+        }
         Node node = NodeList.get(position);
         holder.txtAtributeNode.setText(node.getAtributoNode());
         holder.txtIdNode_Node.setText((String.valueOf(node.getIdNode()))); // el identificador es Int pero lo paso a string solo para mostrarlo por pantalla

@@ -36,8 +36,13 @@
             android:parentActivityName=".CrearNodeEnlaceActivity" />
 
         <activity
-            android:name=".NodeList"
-            android:label="Lista de Nodos"
+            android:name=".NodeListOrigen"
+            android:label="Lista de Nodos Origen"
+            android:parentActivityName=".CrearEnlaceActivity" />
+
+        <activity
+            android:name=".NodeListDestino"
+            android:label="Lista de Nodos Destino"
             android:parentActivityName=".CrearEnlaceActivity" />
 
     </application>
