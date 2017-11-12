@@ -49,7 +49,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
                     g.setIdOrigen(0);
                     g.setIdDestino(0);
 
-                    Toast.makeText(CrearEnlaceActivity.this, " "+ numeroEnlace, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CrearEnlaceActivity.this, "ENLACE NUMERO: "+ numeroEnlace, Toast.LENGTH_SHORT).show();
 
                 } else {
                     Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO / NO AHI ORIGEN", Toast.LENGTH_SHORT).show();
