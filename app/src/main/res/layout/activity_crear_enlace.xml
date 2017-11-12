@@ -26,11 +26,11 @@
 
         <Button
             android:id="@+id/btnNodoOrigen_CrearArco"
-            android:layout_width="350dp"
-            android:layout_height="200dp"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
             android:layout_below="@+id/tv_CrearArco"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="23dp"
+            android:layout_marginTop="24dp"
             android:elevation="10dp"
             android:text="NODO ORIGEN"
             android:textSize="30sp"
@@ -39,11 +39,11 @@
 
         <Button
             android:id="@+id/btnNodoDestino_CrearArco"
-            android:layout_width="350dp"
-            android:layout_height="200dp"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="38dp"
             android:elevation="10dp"
             android:text="NODO DESTINO"
             android:textSize="30sp"
@@ -52,11 +52,11 @@
 
         <Button
             android:id="@+id/btnVolverAtras_CrearArco"
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/btnNodoDestino_CrearArco"
-            android:layout_marginBottom="27dp"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/btnCrearArco_CrearArco"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
             android:textSize="30sp"
@@ -65,12 +65,15 @@
 
         <Button
             android:id="@+id/btnCrearArco_CrearArco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
             android:layout_below="@+id/btnNodoDestino_CrearArco"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:text="CREAR" />
+            android:elevation="10dp"
+            android:text="CREAR"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

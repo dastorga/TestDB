@@ -21,10 +21,8 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnVolverAtras_CrearArco = (Button) findViewById(R.id.btnVolverAtras_CrearArco);
         btnCrearArco_CrearArco = (Button) findViewById(R.id.btnCrearArco_CrearArco);
 
-        MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
-        int id_Graph = g.getIdGlobal();
-
 
         btnNodoOrigen_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -44,11 +42,14 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnCrearArco_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 if ( g.getIdOrigen() != 0 && g.getIdDestino() != 0){
                     Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " - DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
+
+                    int numeroEnlace = MDB.insertEnlace(g.getIdOrigen(), g.getIdDestino(), "atributo", g.getIdGlobal());
                     g.setIdOrigen(0);
                     g.setIdDestino(0);
+
+                    Toast.makeText(CrearEnlaceActivity.this, " "+ numeroEnlace, Toast.LENGTH_SHORT).show();
 
                 } else {
                     Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO / NO AHI ORIGEN", Toast.LENGTH_SHORT).show();

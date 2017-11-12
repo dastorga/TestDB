@@ -18,7 +18,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     private static final int VERSION_BASEDATOS = 1;
 
     // Nombre de nuestro archivo de base de datos
-    private static final String NOMBRE_BASEDATOS = "mibasedatos9.db";
+    private static final String NOMBRE_BASEDATOS = "mibasedatos10.db";
 
     // Sentencia SQL para la creación de tabla palabra
     private static final String TABLA_WORD = "CREATE TABLE WORD" + "(_id INT PRIMARY KEY, word VARCHAR)";
@@ -98,20 +98,23 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return -1; //en caso de error en la insercion
     }
 
-    public void insertEnlace(int id_enlace, int origen, int destino, String atributo, int id_graph) {
+    public int insertEnlace(int origen, int destino, String atributo, int id_graph) {
         SQLiteDatabase db = getWritableDatabase();
         if(db != null){
             ContentValues valores = new ContentValues();
 
-            valores.put("id_enlace", id_enlace);
             valores.put("origen", origen);
             valores.put("destino", destino);
             valores.put("atributo", atributo);
             valores.put("id_graph", id_graph);
 
-            db.insert("ENLACE", null, valores);
+            long newRowId;
+
+            newRowId =  db.insert("ENLACE", null, valores);
             db.close();
+            return ((int) newRowId);
         }
+        return -1; //en caso de error en la insercion
     }
 
     public void insertUser(int id, String name, int phone, String email) {
@@ -385,5 +388,4 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
-    
 }
