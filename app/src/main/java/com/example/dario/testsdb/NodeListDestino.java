@@ -4,6 +4,7 @@ package com.example.dario.testsdb;
  * Created by dario on 12/11/17.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -49,9 +50,13 @@ public class NodeListDestino extends AppCompatActivity {
 
                 g.setIdDestino(ListViewClickData.getIdNode()); // Guardo id_destino
 
+                Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearEnlaceActivity.class);
+                startActivity(intentCrearEnlace);
+
             }
         });
 
+        g.setIdDestino(0);
 
     }
 }

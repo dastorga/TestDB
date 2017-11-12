@@ -1,5 +1,6 @@
 package com.example.dario.testsdb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -45,9 +46,13 @@ public class NodeListOrigen extends AppCompatActivity {
 
                 g.setIdOrigen(ListViewClickData.getIdNode()); // Guardo id_origen
 
+                Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearEnlaceActivity.class);
+                startActivity(intentCrearEnlace);
+
             }
         });
 
+        g.setIdOrigen(0);
 
     }
 }

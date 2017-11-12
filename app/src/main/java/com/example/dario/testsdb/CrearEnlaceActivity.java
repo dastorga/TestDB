@@ -10,7 +10,6 @@ import android.widget.Toast;
 public class CrearEnlaceActivity extends AppCompatActivity {
 
     Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco;
-    int id_Origen, id_Destino;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +20,6 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnNodoDestino_CrearArco = (Button) findViewById(R.id.btnNodoDestino_CrearArco);
         btnVolverAtras_CrearArco = (Button) findViewById(R.id.btnVolverAtras_CrearArco);
 
-        id_Origen = 0; // las inicializo en cero
-        id_Destino = 0; // las inicializo en cero
-
 
         MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -32,31 +28,24 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnNodoOrigen_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
                 Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeListOrigen.class);
                 startActivity(intentNodeList);
-                id_Origen = g.getIdOrigen();
-
             }
         });
 
         btnNodoDestino_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
                 Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeListDestino.class);
                 startActivity(intentNodeList);
-                id_Destino = g.getIdDestino();
-
             }
         });
 
 
-
-        if (id_Origen != 0 && id_Destino != 0){
+        if ( g.getIdOrigen() != 0 && g.getIdDestino() != 0){
             //inserto el enlace
-            Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + id_Origen + " - DESTINO: " + id_Destino, Toast.LENGTH_SHORT).show();
+            Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " - DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
 
         } else {
             Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO / NO AHI ORIGEN", Toast.LENGTH_SHORT).show();
