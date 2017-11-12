@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class NodeListDestino extends AppCompatActivity {
@@ -46,7 +47,8 @@ public class NodeListDestino extends AppCompatActivity {
                 // printing clicked item on screen using Toast message.
                 Toast.makeText(NodeListDestino.this, "ID DESTINO:"+ListViewClickData.getIdNode(), Toast.LENGTH_SHORT).show();
 
-                g.setIdDestino(ListViewClickData.getIdNode()); // Guardo id_origen
+                g.setIdDestino(ListViewClickData.getIdNode()); // Guardo id_destino
+
             }
         });
 

@@ -44,6 +44,7 @@ public class NodeListOrigen extends AppCompatActivity {
                 Toast.makeText(NodeListOrigen.this, "ID ORIGEN:"+ListViewClickData.getIdNode(), Toast.LENGTH_SHORT).show();
 
                 g.setIdOrigen(ListViewClickData.getIdNode()); // Guardo id_origen
+
             }
         });
 

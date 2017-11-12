@@ -18,7 +18,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     private static final int VERSION_BASEDATOS = 1;
 
     // Nombre de nuestro archivo de base de datos
-    private static final String NOMBRE_BASEDATOS = "mibasedatos8.db";
+    private static final String NOMBRE_BASEDATOS = "mibasedatos9.db";
 
     // Sentencia SQL para la creación de tabla palabra
     private static final String TABLA_WORD = "CREATE TABLE WORD" + "(_id INT PRIMARY KEY, word VARCHAR)";
@@ -27,7 +27,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     private static final String TABLA_NODE = "CREATE TABLE NODE" + "(id_node INTEGER PRIMARY KEY AUTOINCREMENT, atributo VARCHAR, id_graph INT, FOREIGN KEY(id_graph) REFERENCES GRAPH(id_graph) ON DELETE CASCADE)";
 
-    private static final String TABLA_ENLACE = "CREATE TABLE ENLACE" + "(id_enlace INT PRIMARY KEY, origen INT, destino INT, atributo VARCHAR, id_graph INT, FOREIGN KEY(id_graph) REFERENCES GRAPH(id_graph) ON DELETE CASCADE)";
+    private static final String TABLA_ENLACE = "CREATE TABLE ENLACE" + "(id_enlace INTEGER PRIMARY KEY AUTOINCREMENT, origen INT, destino INT, atributo VARCHAR, id_graph INT, FOREIGN KEY(id_graph) REFERENCES GRAPH(id_graph) ON DELETE CASCADE)";
 
     // CONSTRUCTOR de la clase
     public MiBaseDatos(Context context) {
@@ -38,7 +38,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     public void onOpen(SQLiteDatabase db) {
         super.onOpen(db);
         // para habilitar el uso de FOREIGN KEY(id_graph)
-        db.execSQL("PRAGMA foreign_keys = ON;");
+        db.execSQL("PRAGMA foreign_keys = 'ON'");
     }
 
     @Override
@@ -53,10 +53,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        db.execSQL("DROP TABLE IF EXISTS "+ TABLA_GRAPH);
-        db.execSQL("DROP TABLE IF EXISTS "+ TABLA_NODE);
-        db.execSQL("DROP TABLE IF EXISTS "+ TABLA_ENLACE);
-        db.execSQL("DROP TABLE IF EXISTS "+ TABLA_WORD);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_GRAPH);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_NODE);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_ENLACE);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_WORD);
         onCreate(db);
     }
 
