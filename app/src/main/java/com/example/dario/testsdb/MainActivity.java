@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), CrearActivity.class));
+                startActivity(new Intent(getApplicationContext(), CrearGrafo.class));
             }
         });
 

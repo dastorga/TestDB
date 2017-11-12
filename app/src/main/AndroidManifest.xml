@@ -17,13 +17,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CrearActivity"
+            android:name=".CrearGrafo"
             android:label="Crear Grafo"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CrearNodeEnlaceActivity"
             android:label="Crear Nodo/Arco"
-            android:parentActivityName=".CrearActivity" />
+            android:parentActivityName=".CrearGrafo" />
 
         <activity
             android:name=".CrearNodeActivity"

@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CrearActivity extends AppCompatActivity {
+public class CrearGrafo extends AppCompatActivity {
 
     EditText etNombreGrafo;
     Button btnGuardarNombreGrafo,btnVolverAtrasGrafo;
@@ -16,7 +16,7 @@ public class CrearActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crear);
+        setContentView(R.layout.activity_crear_grafo);
 
         etNombreGrafo = (EditText) findViewById(R.id.etNombreGrafo);
         btnGuardarNombreGrafo = (Button) findViewById(R.id.btnGuardarNombreGrafo);
@@ -26,11 +26,12 @@ public class CrearActivity extends AppCompatActivity {
 
         btnGuardarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 String nombreGrafo = etNombreGrafo.getText().toString();
                 int id = MDB.insertGraph(nombreGrafo);
 
                 Globals g = Globals.getInstance();
-                g.setIdGlobal(id); //Id del ultimo grafo actual guardado
+                g.setIdGlobal(id); //guardo el Id de este ultimo grafo actual
 
                 Toast.makeText(getApplicationContext(),MDB.recoverGraph(g.getIdGlobal()).getNameGraph()+" Guardado!" + " IdGraph: " +  g.getIdGlobal(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
