@@ -43,10 +43,8 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
         btnVolverAtrasCrearNodeEnlaceActivity.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CrearGrafo.class));
-
             }
         });
 
     }
-
 }

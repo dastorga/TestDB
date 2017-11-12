@@ -25,7 +25,7 @@
             tools:ignore="HardcodedText" />
 
         <Button
-            android:id="@+id/btnPrimerNodo_CrearArco"
+            android:id="@+id/btnNodoOrigen_CrearArco"
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_below="@+id/tv_CrearArco"
@@ -38,7 +38,7 @@
             tools:ignore="HardcodedText" />
 
         <Button
-            android:id="@+id/btnSegundoNodo_CrearArco"
+            android:id="@+id/btnNodoDestino_CrearArco"
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_alignStart="@+id/btnPrimerNodo_CrearArco"

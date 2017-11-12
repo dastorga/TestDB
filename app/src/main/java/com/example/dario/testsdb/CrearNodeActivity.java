@@ -34,7 +34,6 @@ public class CrearNodeActivity extends AppCompatActivity {
                 int newRowId = MDB.insertNode(atributo, idGlobalGraph);
 
                 Toast.makeText(getApplicationContext(),"newRowId: "+ newRowId + "IdGraph: " + idGlobalGraph , Toast.LENGTH_SHORT).show();
-                //startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
             }
         });
 

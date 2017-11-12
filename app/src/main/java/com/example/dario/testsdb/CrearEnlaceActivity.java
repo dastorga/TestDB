@@ -8,18 +8,18 @@ import android.widget.Button;
 
 public class CrearEnlaceActivity extends AppCompatActivity {
 
-    Button btnPrimerNodo_CrearArco, btnSegundoNodo_CrearArco, btnVolverAtras_CrearArco;
+    Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_enlace);
 
-        btnPrimerNodo_CrearArco = (Button) findViewById(R.id.btnPrimerNodo_CrearArco);
-        btnSegundoNodo_CrearArco = (Button) findViewById(R.id.btnSegundoNodo_CrearArco);
+        btnNodoOrigen_CrearArco = (Button) findViewById(R.id.btnNodoOrigen_CrearArco);
+        btnNodoDestino_CrearArco = (Button) findViewById(R.id.btnNodoDestino_CrearArco);
         btnVolverAtras_CrearArco = (Button) findViewById(R.id.btnVolverAtras_CrearArco);
 
-        btnPrimerNodo_CrearArco.setOnClickListener(new View.OnClickListener() {
+        btnNodoOrigen_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
                 Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeList.class);
@@ -27,7 +27,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
             }
         });
 
-        btnSegundoNodo_CrearArco.setOnClickListener(new View.OnClickListener() {
+        btnNodoDestino_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
                 Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeList.class);
