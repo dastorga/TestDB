@@ -29,6 +29,8 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnSegundoNodo_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Intent intent = new Intent(CrearEnlaceActivity.this, NodeList.class);
+                startActivity(intent);
 
             }
         });
