@@ -4,7 +4,6 @@ public class Globals {
     // values around the life cycle of the application regardless which activity running..
 
     private static Globals instance;
-
     private static int idGlobal;
 
     public Globals( ) { }

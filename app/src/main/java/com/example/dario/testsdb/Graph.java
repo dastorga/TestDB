@@ -1,7 +1,6 @@
 package com.example.dario.testsdb;
 
 public class Graph {
-
     private int id;
     private String name;
 

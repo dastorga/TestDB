@@ -1,9 +1,5 @@
 package com.example.dario.testsdb;
 
-/**
- * Created by dario on 27/9/17.
- */
-
 public class Word {
 
     private int id;

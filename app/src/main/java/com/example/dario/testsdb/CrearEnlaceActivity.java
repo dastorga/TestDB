@@ -21,17 +21,17 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnPrimerNodo_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
-                Intent intent = new Intent(CrearEnlaceActivity.this, NodeList.class);
-                startActivity(intent);
+                //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
+                Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeList.class);
+                startActivity(intentNodeList);
             }
         });
 
         btnSegundoNodo_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(CrearEnlaceActivity.this, NodeList.class);
-                startActivity(intent);
-
+                //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
+                Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeList.class);
+                startActivity(intentNodeList);
             }
         });
 
@@ -42,5 +42,4 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         });
 
     }
-
 }

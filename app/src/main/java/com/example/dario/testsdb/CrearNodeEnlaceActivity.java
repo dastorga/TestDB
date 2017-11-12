@@ -49,5 +49,4 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
 
     }
 
-
 }

@@ -6,10 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import java.util.ArrayList;
 
-/**
- * Created by dario on 9/11/17.
- */
-
 public class NodeList extends AppCompatActivity {
 
     ListView ListViewPrimerNodo;
