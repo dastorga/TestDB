@@ -38,7 +38,7 @@ public class GraphListEdit extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
 
                 Globals g = Globals.getInstance();
-                g.setIdGlobalEdit(ListViewClickData.getIdGraph()); //guardo el Id de este ultimo grafo actual a EDITAR
+                g.setIdGlobalEdit(ListViewClickData.getIdGraph()); // Guardo el Id de este ultimo grafo actual a EDITAR
             }
         });
 

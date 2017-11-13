@@ -8,7 +8,9 @@ public class EditarNombreGrafo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_editar_nombre_grafo);
 
+        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
     }
 }

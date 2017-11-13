@@ -20,8 +20,6 @@ public class EditarGrafo extends AppCompatActivity {
         btnEditarEnlacesGrafo = (Button) findViewById(R.id.btnEditarEnlacesGrafo);
         btnVolverAtrasEditarGrafo = (Button) findViewById(R.id.btnVolverAtrasEditarGrafo);
 
-        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
-
         btnEditarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), EditarNombreGrafo.class));
@@ -30,13 +28,13 @@ public class EditarGrafo extends AppCompatActivity {
 
         btnEditarNodosGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                // startActivity(new Intent(getApplicationContext(), .class));
             }
         });
 
         btnEditarEnlacesGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                // startActivity(new Intent(getApplicationContext(), .class));
             }
         });
 

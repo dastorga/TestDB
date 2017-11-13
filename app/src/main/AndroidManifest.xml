@@ -77,7 +77,7 @@
 
         <activity
             android:name=".EditarNombreGrafo"
-            android:label="Editar Nombre Grafo"
+            android:label="Editar nombre de Grafo"
             android:parentActivityName=".EditarGrafo"/>
 
     </application>
