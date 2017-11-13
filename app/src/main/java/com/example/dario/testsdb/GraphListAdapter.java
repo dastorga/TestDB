@@ -55,7 +55,7 @@ public class GraphListAdapter extends BaseAdapter {
         }
         Graph graph = GraphList.get(position);
         holder.txtViewGraph.setText(graph.getNameGraph());
-        holder.txtViewIdGraph.setText(graph.getIdGraph());
+        holder.txtViewIdGraph.setText(String.valueOf(graph.getIdGraph()));
         return row;
     }
 }

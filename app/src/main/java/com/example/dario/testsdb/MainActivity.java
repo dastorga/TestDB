@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
-        MDB.dropTable("GRAPH");
-        MDB.dropTable("NODE");
-        MDB.dropTable("ENLACE");
+//        MDB.dropTable("GRAPH");
+//        MDB.dropTable("NODE");
+//        MDB.dropTable("ENLACE");
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

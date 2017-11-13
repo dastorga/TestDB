@@ -20,9 +20,6 @@ public class GraphList extends AppCompatActivity {
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
-        final Globals g = Globals.getInstance();
-        int idGlobalGraph = g.getIdGlobal();
-
         ListViewGraph = (ListView) findViewById(R.id.ListViewGraph);
 
         adapter = new GraphListAdapter(this, R.layout.graph, MDB.recoverGraphs());
@@ -33,7 +30,12 @@ public class GraphList extends AppCompatActivity {
 
         ListViewGraph.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GraphList.this, "MERCAAAAAA", Toast.LENGTH_SHORT).show();
+
+                Graph ListViewClickData = (Graph) parent.getItemAtPosition(position);
+
+                MDB.deleteGraph(ListViewClickData.getIdGraph());
+
+                Toast.makeText(GraphList.this, "GRAFO "+ListViewClickData.getIdGraph()+" ELIMINADO", Toast.LENGTH_SHORT).show();
             }
         });
 
