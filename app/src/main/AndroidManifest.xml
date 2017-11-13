@@ -45,6 +45,10 @@
             android:label="Lista de Nodos Destino"
             android:parentActivityName=".CrearEnlaceActivity" />
 
+        <activity
+            android:name=".GraphList"
+            android:label="Lista de Grafos" />
+
     </application>
 
 </manifest>

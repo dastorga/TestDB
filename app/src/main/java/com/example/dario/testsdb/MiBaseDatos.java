@@ -162,10 +162,14 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     public List<Graph> recoverGraphs() {
         SQLiteDatabase db = getReadableDatabase();
+
         List<Graph> lista_graphs = new ArrayList<Graph>();
+
         String[] valores_recuperar = {"id_graph", "name"};
+
         Cursor c = db.query("GRAPH", valores_recuperar, null, null, null, null, null, null);
-        lista_graphs.clear();;
+
+        lista_graphs.clear();
         while (c.moveToNext()){
             lista_graphs.add(new Graph(c.getInt(0), c.getString(1)));
         }
