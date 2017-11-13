@@ -65,6 +65,11 @@
             android:label="Lista de Grafos"
             android:parentActivityName=".MainActivity"/>
 
+        <activity
+            android:name=".WarningNotice"
+            android:label="Aviso de alerta"
+            android:parentActivityName=".MainActivity"/>
+
     </application>
 
 </manifest>

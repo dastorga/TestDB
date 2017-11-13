@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class GraphListDelete extends AppCompatActivity {
 
@@ -30,13 +29,12 @@ public class GraphListDelete extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Graph ListViewClickData = (Graph) parent.getItemAtPosition(position);
+                // MDB.deleteGraph(ListViewClickData.getIdGraph());
 
-                MDB.deleteGraph(ListViewClickData.getIdGraph());
+                Intent intent = new Intent(getApplicationContext(), WarningNotice.class);
+                intent.putExtra("id_graph", String.valueOf(ListViewClickData.getIdGraph()));
+                startActivity(intent);
 
-                Toast.makeText(GraphListDelete.this, "GRAFO "+ListViewClickData.getIdGraph()+" ELIMINADO", Toast.LENGTH_SHORT).show();
-
-                Intent intentDeleteGraph = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intentDeleteGraph);
             }
         });
 
