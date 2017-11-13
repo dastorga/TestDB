@@ -20,11 +20,11 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="140dp"
-            android:text="WarningNotice"
+            android:text="Seguro desea eliminar el Grafo?"
             android:textColor="@android:color/holo_orange_light"
             android:textSize="30sp"
             android:textStyle="bold"
-            tools:text="Seguro desea eliminar el Grafo?" />
+            tools:text="WarnigNotice" />
 
         <Button
             android:id="@+id/btnAceptarWarningNotice"
