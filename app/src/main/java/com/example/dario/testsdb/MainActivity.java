@@ -21,12 +21,6 @@ public class MainActivity extends AppCompatActivity {
         btnReproducir = (Button) findViewById(R.id.btnReproducir);
         btnExportar = (Button) findViewById(R.id.btnExportar);
 
-        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
-
-//        MDB.dropTable("GRAPH");
-//        MDB.dropTable("NODE");
-//        MDB.dropTable("ENLACE");
-
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CrearGrafo.class));

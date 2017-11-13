@@ -161,10 +161,9 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     }
 
     public ArrayList<Graph> recoverGraphs() {
+
         SQLiteDatabase db = getReadableDatabase();
-
         ArrayList<Graph> lista_graphs = new ArrayList<Graph>();
-
         String[] valores_recuperar = {"id_graph", "name"};
 
         Cursor c = db.query("GRAPH", valores_recuperar, null, null, null, null, null, null);

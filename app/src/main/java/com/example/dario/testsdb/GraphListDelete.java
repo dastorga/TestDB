@@ -22,11 +22,8 @@ public class GraphListDelete extends AppCompatActivity {
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         ListViewGraph = (ListView) findViewById(R.id.ListViewGraph);
-
         adapter = new GraphListAdapter(this, R.layout.graph, MDB.recoverGraphs());
-
         ListViewGraph.setAdapter(adapter);
-
         adapter.notifyDataSetChanged();
 
         ListViewGraph.setOnItemClickListener(new AdapterView.OnItemClickListener() {
