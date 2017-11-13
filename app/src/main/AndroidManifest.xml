@@ -47,7 +47,8 @@
 
         <activity
             android:name=".GraphList"
-            android:label="Lista de Grafos" />
+            android:label="Lista de Grafos"
+            android:parentActivityName=".MainActivity"/>
 
     </application>
 

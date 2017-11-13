@@ -160,10 +160,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return graph;
     }
 
-    public List<Graph> recoverGraphs() {
+    public ArrayList<Graph> recoverGraphs() {
         SQLiteDatabase db = getReadableDatabase();
 
-        List<Graph> lista_graphs = new ArrayList<Graph>();
+        ArrayList<Graph> lista_graphs = new ArrayList<Graph>();
 
         String[] valores_recuperar = {"id_graph", "name"};
 

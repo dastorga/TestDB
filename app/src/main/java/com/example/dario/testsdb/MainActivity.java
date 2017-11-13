@@ -32,15 +32,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnEliminar.setOnClickListener(new View.OnClickListener() {
+        btnEditar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
             }
         });
 
-        btnEditar.setOnClickListener(new View.OnClickListener() {
+        btnEliminar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                startActivity(new Intent(getApplicationContext(), GraphList.class));
             }
         });
 

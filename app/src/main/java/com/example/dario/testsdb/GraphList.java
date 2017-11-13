@@ -3,14 +3,14 @@ package com.example.dario.testsdb;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-
-import java.util.ArrayList;
+import android.widget.Toast;
 
 public class GraphList extends AppCompatActivity {
 
     ListView ListViewGraph;
-    ArrayList<Graph> list;
     GraphListAdapter adapter = null;
 
     @Override
@@ -25,16 +25,18 @@ public class GraphList extends AppCompatActivity {
 
         ListViewGraph = (ListView) findViewById(R.id.ListViewGraph);
 
-        list = new ArrayList<>();
-
-        //Probablemente deba pasar todo a arraylist!!!!
-        adapter = new GraphListAdapter(this, R.layout.graph, (ArrayList<Graph>) MDB.recoverGraphs());
+        adapter = new GraphListAdapter(this, R.layout.graph, MDB.recoverGraphs());
 
         ListViewGraph.setAdapter(adapter);
 
         adapter.notifyDataSetChanged();
 
+        ListViewGraph.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(GraphList.this, "MERCAAAAAA", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
     }
-
 }
