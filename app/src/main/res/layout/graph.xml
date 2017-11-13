@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/txtViewGraph"
-        android:layout_width="335dp"
+        android:layout_width="330dp"
         android:layout_height="51dp"
         android:text="Graph"
         android:textColor="@color/colorAccent"
