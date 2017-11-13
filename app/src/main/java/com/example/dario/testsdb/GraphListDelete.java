@@ -30,11 +30,9 @@ public class GraphListDelete extends AppCompatActivity {
 
                 Graph ListViewClickData = (Graph) parent.getItemAtPosition(position);
                 // MDB.deleteGraph(ListViewClickData.getIdGraph());
-
                 Intent intent = new Intent(getApplicationContext(), WarningNotice.class);
                 intent.putExtra("id_graph", String.valueOf(ListViewClickData.getIdGraph()));
                 startActivity(intent);
-
             }
         });
 

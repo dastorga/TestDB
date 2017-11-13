@@ -35,8 +35,10 @@ public class GraphListEdit extends AppCompatActivity {
 
                 Toast.makeText(GraphListEdit.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA EDITAR", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(), EditarGrafo.class);
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
+
+                Globals g = Globals.getInstance();
+                g.setIdGlobalEdit(ListViewClickData.getIdGraph()); //guardo el Id de este ultimo grafo actual a EDITAR
             }
         });
 

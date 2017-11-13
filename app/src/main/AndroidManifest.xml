@@ -75,6 +75,11 @@
             android:label="Editar Grafo"
             android:parentActivityName=".GraphListEdit"/>
 
+        <activity
+            android:name=".EditarNombreGrafo"
+            android:label="Editar Nombre Grafo"
+            android:parentActivityName=".EditarGrafo"/>
+
     </application>
 
 </manifest>

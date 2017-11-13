@@ -1,5 +1,6 @@
 package com.example.dario.testsdb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,9 +20,30 @@ public class EditarGrafo extends AppCompatActivity {
         btnEditarEnlacesGrafo = (Button) findViewById(R.id.btnEditarEnlacesGrafo);
         btnVolverAtrasEditarGrafo = (Button) findViewById(R.id.btnVolverAtrasEditarGrafo);
 
+        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+
         btnEditarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), EditarNombreGrafo.class));
+            }
+        });
 
+        btnEditarNodosGrafo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnEditarEnlacesGrafo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnVolverAtrasEditarGrafo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), GraphListEdit.class);
+                startActivity(intent);
             }
         });
 
