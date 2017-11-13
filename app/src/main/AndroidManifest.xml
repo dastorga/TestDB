@@ -70,6 +70,11 @@
             android:label="Aviso de alerta"
             android:parentActivityName=".MainActivity"/>
 
+        <activity
+            android:name=".EditarGrafo"
+            android:label="Editar Grafo"
+            android:parentActivityName=".GraphListEdit"/>
+
     </application>
 
 </manifest>

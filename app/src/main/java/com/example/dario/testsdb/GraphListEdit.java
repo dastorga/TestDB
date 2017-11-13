@@ -1,5 +1,6 @@
 package com.example.dario.testsdb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -34,6 +35,8 @@ public class GraphListEdit extends AppCompatActivity {
 
                 Toast.makeText(GraphListEdit.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA EDITAR", Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(getApplicationContext(), EditarGrafo.class);
+                startActivity(intent);
             }
         });
 
