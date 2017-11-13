@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnCrear,btnEliminar,btnEditar,btnReproducir;
+    Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         btnEliminar = (Button) findViewById(R.id.btnEliminar);
         btnEditar = (Button) findViewById(R.id.btnEditar);
         btnReproducir = (Button) findViewById(R.id.btnReproducir);
+        btnExportar = (Button) findViewById(R.id.btnExportar);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnEditar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                startActivity(new Intent(getApplicationContext(), GraphListEdit.class));
             }
         });
 
@@ -46,10 +47,15 @@ public class MainActivity extends AppCompatActivity {
 
         btnReproducir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                startActivity(new Intent(getApplicationContext(), GraphListPlay.class));
             }
         });
 
+        btnExportar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), GraphListExport.class));
+            }
+        });
 
     }
 }

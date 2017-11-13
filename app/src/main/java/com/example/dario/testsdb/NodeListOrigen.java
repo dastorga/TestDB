@@ -28,13 +28,9 @@ public class NodeListOrigen extends AppCompatActivity {
         int idGlobalGraph = g.getIdGlobal();
 
         ListViewNodo = (ListView) findViewById(R.id.ListViewNodo);
-
         list = new ArrayList<>();
-
         adapter = new NodeListAdapter(this, R.layout.node, MDB.recoverNodesInGraph(idGlobalGraph));
-
         ListViewNodo.setAdapter(adapter);
-
         adapter.notifyDataSetChanged();
 
         ListViewNodo.setOnItemClickListener(new AdapterView.OnItemClickListener() {

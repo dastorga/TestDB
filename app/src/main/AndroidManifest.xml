@@ -50,6 +50,21 @@
             android:label="Lista de Grafos"
             android:parentActivityName=".MainActivity"/>
 
+        <activity
+            android:name=".GraphListEdit"
+            android:label="Lista de Grafos"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".GraphListPlay"
+            android:label="Lista de Grafos"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".GraphListExport"
+            android:label="Lista de Grafos"
+            android:parentActivityName=".MainActivity"/>
+
     </application>
 
 </manifest>

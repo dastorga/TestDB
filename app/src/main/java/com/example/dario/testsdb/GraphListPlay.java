@@ -8,8 +8,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * Created by dario on 13/11/17.
+ */
 
-public class GraphListEdit extends AppCompatActivity {
+public class GraphListPlay extends AppCompatActivity {
 
     ListView ListViewGraph;
     GraphListAdapter adapter = null;
@@ -32,10 +35,11 @@ public class GraphListEdit extends AppCompatActivity {
                 Graph ListViewClickData = (Graph) parent.getItemAtPosition(position);
                 ListViewClickData.getIdGraph();
 
-                Toast.makeText(GraphListEdit.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA EDITAR", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GraphListPlay.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA REPRODUCIR", Toast.LENGTH_SHORT).show();
 
             }
         });
+
 
     }
 }
