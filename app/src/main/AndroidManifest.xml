@@ -80,6 +80,11 @@
             android:label="Editar nombre de Grafo"
             android:parentActivityName=".EditarGrafo"/>
 
+        <activity
+            android:name=".EditarNodoGrafo"
+            android:label="Editar nombre de Grafo"
+            android:parentActivityName=".EditarGrafo"/>
+
     </application>
 
 </manifest>
