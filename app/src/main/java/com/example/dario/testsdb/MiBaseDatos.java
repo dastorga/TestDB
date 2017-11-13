@@ -358,7 +358,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues valores = new ContentValues();
 
-        valores.put("id_graph", id_graph); //ver
+        valores.put("id_graph", id_graph); //ver! No es necesario, debido a que ya se realiza debajo en el update.
         valores.put("name", name);
 
         db.update("GRAPH", valores, "id_graph=" + id_graph, null);
