@@ -8,10 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-/**
- * Created by dario on 13/11/17.
- */
-
 public class GraphListPlay extends AppCompatActivity {
 
     ListView ListViewGraph;
@@ -34,9 +30,7 @@ public class GraphListPlay extends AppCompatActivity {
 
                 Graph ListViewClickData = (Graph) parent.getItemAtPosition(position);
                 ListViewClickData.getIdGraph();
-
                 Toast.makeText(GraphListPlay.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA REPRODUCIR", Toast.LENGTH_SHORT).show();
-
             }
         });
 

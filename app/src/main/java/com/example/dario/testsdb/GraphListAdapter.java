@@ -35,9 +35,7 @@ public class GraphListAdapter extends BaseAdapter {
         return position;
     }
 
-    private class ViewHolder {
-        TextView txtViewGraph, txtViewIdGraph;
-    }
+    private class ViewHolder {TextView txtViewGraph, txtViewIdGraph;}
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {

@@ -6,10 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
-/**
- * Created by dario on 13/11/17.
- */
+import android.widget.Toast;
 
 public class GraphListExport extends AppCompatActivity {
 
@@ -33,6 +30,7 @@ public class GraphListExport extends AppCompatActivity {
 
                 Graph ListViewClickData = (Graph) parent.getItemAtPosition(position);
                 ListViewClickData.getIdGraph();
+                Toast.makeText(GraphListExport.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA EXPORTAR", Toast.LENGTH_SHORT).show();
 
             }
         });
