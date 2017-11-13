@@ -1,5 +1,6 @@
 package com.example.dario.testsdb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class GraphList extends AppCompatActivity {
+public class GraphListDelete extends AppCompatActivity {
 
     ListView ListViewGraph;
     GraphListAdapter adapter = null;
@@ -35,7 +36,10 @@ public class GraphList extends AppCompatActivity {
 
                 MDB.deleteGraph(ListViewClickData.getIdGraph());
 
-                Toast.makeText(GraphList.this, "GRAFO "+ListViewClickData.getIdGraph()+" ELIMINADO", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GraphListDelete.this, "GRAFO "+ListViewClickData.getIdGraph()+" ELIMINADO", Toast.LENGTH_SHORT).show();
+
+                Intent intentDeleteGraph = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intentDeleteGraph);
             }
         });
 

@@ -46,7 +46,7 @@
             android:parentActivityName=".CrearEnlaceActivity" />
 
         <activity
-            android:name=".GraphList"
+            android:name=".GraphListDelete"
             android:label="Lista de Grafos"
             android:parentActivityName=".MainActivity"/>
 

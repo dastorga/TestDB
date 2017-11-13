@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), GraphList.class));
+                startActivity(new Intent(getApplicationContext(), GraphListDelete.class));
             }
         });
 
