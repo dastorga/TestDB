@@ -36,6 +36,7 @@ public class Globals {
 
     public int getIdDestino() {return Globals.idDestino;}
 
+
     public void setIdGlobalEdit(int idGlobalEdit) {
         Globals.idGlobalEdit = idGlobalEdit;
     }
@@ -43,6 +44,7 @@ public class Globals {
     public int getIdGlobalEdit() {
         return Globals.idGlobalEdit;
     }
+
 
     public static synchronized Globals getInstance(){
         if (instance==null){
