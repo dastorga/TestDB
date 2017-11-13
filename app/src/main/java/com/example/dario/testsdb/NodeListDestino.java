@@ -43,16 +43,15 @@ public class NodeListDestino extends AppCompatActivity {
 
         ListViewNodo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Getting Search ListView clicked item.
+
                 Node ListViewClickData = (Node) parent.getItemAtPosition(position);
-                // printing clicked item on screen using Toast message.
+
                 Toast.makeText(NodeListDestino.this, "ID DESTINO:"+ListViewClickData.getIdNode(), Toast.LENGTH_SHORT).show();
 
                 g.setIdDestino(ListViewClickData.getIdNode()); // Guardo id_destino
 
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearEnlaceActivity.class);
                 startActivity(intentCrearEnlace);
-
             }
         });
 

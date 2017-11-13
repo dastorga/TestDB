@@ -26,7 +26,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnNodoOrigen_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
+                //Aqui debo mostrar una lista de nodos creados
                 Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeListOrigen.class);
                 startActivity(intentNodeList);
             }
@@ -34,7 +34,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnNodoDestino_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Aqui debo mostrar una lista de nodos creados y dar la posibilidad de seleccionar uno
+                //Aqui debo mostrar una lista de nodos creados
                 Intent intentNodeList = new Intent(CrearEnlaceActivity.this, NodeListDestino.class);
                 startActivity(intentNodeList);
             }
@@ -42,21 +42,19 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnCrearArco_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                if ( g.getIdOrigen() == 0 && g.getIdDestino() != 0){Toast.makeText(CrearEnlaceActivity.this, "NO AHI ORIGEN SELECCIONADO ))", Toast.LENGTH_SHORT).show();}
+                if ( g.getIdOrigen() != 0 && g.getIdDestino() == 0){Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO SELECCIONADO ))", Toast.LENGTH_SHORT).show();}
+                if ( g.getIdOrigen() == 0 && g.getIdDestino() == 0){ Toast.makeText(CrearEnlaceActivity.this, "NO AHI NI ORIGEN NI DESTINO SELECCIONADO", Toast.LENGTH_SHORT).show();}
+
                 if ( g.getIdOrigen() != 0 && g.getIdDestino() != 0){
                     Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " - DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
-
                     int numeroEnlace = MDB.insertEnlace(g.getIdOrigen(), g.getIdDestino(), "atributo", g.getIdGlobal());
                     g.setIdOrigen(0);
                     g.setIdDestino(0);
-
-                    Toast.makeText(CrearEnlaceActivity.this, "ENLACE NUMERO: "+ numeroEnlace, Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO / NO AHI ORIGEN", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CrearEnlaceActivity.this, "ENLACE CREADO NUMERO: "+ numeroEnlace, Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
 
         btnVolverAtras_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

@@ -39,16 +39,15 @@ public class NodeListOrigen extends AppCompatActivity {
 
         ListViewNodo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Getting Search ListView clicked item.
+
                 Node ListViewClickData = (Node) parent.getItemAtPosition(position);
-                // printing clicked item on screen using Toast message.
+
                 Toast.makeText(NodeListOrigen.this, "ID ORIGEN:"+ListViewClickData.getIdNode(), Toast.LENGTH_SHORT).show();
 
                 g.setIdOrigen(ListViewClickData.getIdNode()); // Guardo id_origen
 
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearEnlaceActivity.class);
                 startActivity(intentCrearEnlace);
-
             }
         });
 
