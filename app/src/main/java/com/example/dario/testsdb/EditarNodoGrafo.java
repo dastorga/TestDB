@@ -15,7 +15,7 @@ public class EditarNodoGrafo extends AppCompatActivity {
     NodeListAdapter adapter = null;
 
     // Aqui debere se deben listar todos los nodos del grafo (idGlobalEdit).
-    // luego se debe poder seleccionar uno para luego terminar editandolo (solo el atributo se puede editar, or el momento debido a que no posee otra cosa).
+    // luego se debe poder seleccionar uno para luego terminar editandolo (solo el atributo se puede editar, por el momento debido a que no posee otra cosa).
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
