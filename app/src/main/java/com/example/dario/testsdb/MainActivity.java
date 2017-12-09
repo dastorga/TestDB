@@ -8,7 +8,7 @@ import android.widget.Button;
 
 /**
  *
- * MAIN DE LA PLAICACION
+ * MAIN DE LA APLICACION
  */
 
 public class MainActivity extends AppCompatActivity {

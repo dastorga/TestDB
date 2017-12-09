@@ -1,9 +1,5 @@
 package com.example.dario.testsdb;
 
-/**
- * Created by dario on 12/11/17.
- */
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,8 +8,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
+
+/**
+ * AÑADIR COMENTARIO DE LA CLASE
+ */
 
 public class NodeListDestino extends AppCompatActivity {
 

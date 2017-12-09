@@ -1,12 +1,15 @@
 package com.example.dario.testsdb;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+/**
+ * AÑADIR COMENTARIO DE LA CLASE
+ */
 
 public class WarningNotice extends AppCompatActivity {
 

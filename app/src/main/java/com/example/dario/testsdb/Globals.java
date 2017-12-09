@@ -1,5 +1,9 @@
 package com.example.dario.testsdb;
 
+/**
+ * AÑADIR COMENTARIO DE LA CLASE
+ */
+
 public class Globals {
     // values around the life cycle of the application regardless which activity running..
 

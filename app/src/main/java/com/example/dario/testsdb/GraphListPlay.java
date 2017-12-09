@@ -8,6 +8,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * AÑADIR COMENTARIO DE LA CLASE
+ */
+
 public class GraphListPlay extends AppCompatActivity {
 
     ListView ListViewGraph;
@@ -33,7 +37,6 @@ public class GraphListPlay extends AppCompatActivity {
                 Toast.makeText(GraphListPlay.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA REPRODUCIR", Toast.LENGTH_SHORT).show();
             }
         });
-
 
     }
 }
