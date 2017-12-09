@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by dario on 9/12/17.
@@ -30,12 +31,14 @@ public class EditarNombreNodo extends AppCompatActivity {
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         Globals g = Globals.getInstance();
         final int idNodeEdit = g.getIdNodeEdit();
+        final int idGlobalEdit = g.getIdGlobalEdit();
 
-        etNombre_EditarNodo.setText(MDB.recoverNode(idNodeEdit).getAtributoNode());
-
+        etNombre_EditarNodo.setText(MDB.recoverNode(idNodeEdit).getAtributoNode()); // pongo el nombre actual enel campo a editar
 
         btnGuardarCambios_EditarNodo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                MDB.updateNode(idNodeEdit, etNombre_EditarNodo.getText().toString(), idGlobalEdit);
+                Toast.makeText(EditarNombreNodo.this, "EDITADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
             }
         });
