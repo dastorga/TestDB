@@ -81,7 +81,7 @@
             android:parentActivityName=".EditarGrafo"/>
 
         <activity
-            android:name=".EditarNodoGrafo"
+            android:name=".NodoListEdit"
             android:label="Editar nodo de Grafo"
             android:parentActivityName=".EditarGrafo"/>
 

@@ -7,6 +7,8 @@ public class Globals {
     private static int idGlobal;
     private static int idGlobalEdit;
 
+    private static int idNodeEdit;
+
     private static int idOrigen;
     private static int idDestino;
 
@@ -37,14 +39,18 @@ public class Globals {
     public int getIdDestino() {return Globals.idDestino;}
 
 
-    public void setIdGlobalEdit(int idGlobalEdit) {
-        Globals.idGlobalEdit = idGlobalEdit;
+    public void setIdGlobalEdit(int idGlobalEdit) { Globals.idGlobalEdit = idGlobalEdit; }
+
+    public int getIdGlobalEdit() { return Globals.idGlobalEdit; }
+
+
+    public void setIdNodeEdit(int idNodeEdit) {
+        Globals.idNodeEdit = idNodeEdit;
     }
 
-    public int getIdGlobalEdit() {
-        return Globals.idGlobalEdit;
+    public int getIdNodeEdit() {
+        return Globals.idNodeEdit;
     }
-
 
     public static synchronized Globals getInstance(){
         if (instance==null){

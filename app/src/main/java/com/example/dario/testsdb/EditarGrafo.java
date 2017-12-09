@@ -28,7 +28,7 @@ public class EditarGrafo extends AppCompatActivity {
 
         btnEditarNodosGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                 startActivity(new Intent(getApplicationContext(), EditarNodoGrafo.class));
+                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
             }
         });
 
