@@ -46,7 +46,7 @@ public class NodoListEdit extends AppCompatActivity {
                 final Globals g = Globals.getInstance();
                 g.setIdNodeEdit(ListViewClickData.getIdNode()); // guardo el nodo a editar en la variable global
 
-                startActivity(new Intent(getApplicationContext(), EditarNodo.class));
+                startActivity(new Intent(getApplicationContext(), EditarNombreNodo.class));
 
             }
         });
