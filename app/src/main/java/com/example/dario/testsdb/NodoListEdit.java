@@ -8,8 +8,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
+
+/**
+ * Created by dario on 9/12/17.
+ * LISTA DE NODOS A EDITAR
+ */
+
 
 public class NodoListEdit extends AppCompatActivity {
 
@@ -47,7 +52,6 @@ public class NodoListEdit extends AppCompatActivity {
                 g.setIdNodeEdit(ListViewClickData.getIdNode()); // guardo el nodo a editar en la variable global
 
                 startActivity(new Intent(getApplicationContext(), EditarNombreNodo.class));
-
             }
         });
 

@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 /**
  * Created by dario on 9/12/17.
+ * EDITA EL NOMBRE DEL NODO SELECIONADO
  */
+
 
 public class EditarNombreNodo extends AppCompatActivity {
 
@@ -26,7 +28,6 @@ public class EditarNombreNodo extends AppCompatActivity {
 
         btnGuardarCambios_EditarNodo = (Button) findViewById(R.id.btnGuardarCambios_EditarNodo);
         btnVolver_EditarNodo = (Button) findViewById(R.id.btnVolver_EditarNodo);
-
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         Globals g = Globals.getInstance();
