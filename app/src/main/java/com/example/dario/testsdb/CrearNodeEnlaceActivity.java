@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/**
+ * AÑADIR COMENTARIO
+ */
+
 public class CrearNodeEnlaceActivity extends AppCompatActivity {
 
     Button btnCrearNode, btnCrearEnlace, btnVolverAtrasCrearNodeEnlaceActivity;

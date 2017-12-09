@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 /**
- * Created by dario on 9/12/17.
  * EDITA EL NOMBRE DEL NODO SELECIONADO
  */
 

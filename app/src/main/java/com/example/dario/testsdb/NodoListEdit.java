@@ -11,7 +11,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 /**
- * Created by dario on 9/12/17.
  * LISTA DE NODOS A EDITAR
  */
 

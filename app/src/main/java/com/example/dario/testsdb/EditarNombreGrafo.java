@@ -8,6 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * EDITA EL NOMBRE DEL GRAFO
+ */
+
+
 public class EditarNombreGrafo extends AppCompatActivity {
 
     Button btnGuardarEdicion_EditarNombreGrafo, btnVolverAtras_EditarNombreGrafo;

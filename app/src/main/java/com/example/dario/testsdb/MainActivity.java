@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ *
+ * MAIN DE LA PLAICACION
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar;

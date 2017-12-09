@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * AÑADIR COMENTARIO DE LA CLASE
+ */
+
 public class CrearNodeActivity extends AppCompatActivity {
 
     Button btnGuardar_CrearNode,btnVolverAtras_CrearNode;

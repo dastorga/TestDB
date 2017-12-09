@@ -179,7 +179,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     public Node recoverNode(int id_node) {
         SQLiteDatabase db = getReadableDatabase();
-        String[] valores_recuperar = {"id_node", "codigo", "atributo", "id_graph"};
+        String[] valores_recuperar = {"id_node", "atributo", "id_graph"};
         Cursor c = db.query("NODE", valores_recuperar, "id_node=" + id_node, null, null, null, null, null);
         if(c != null) {
             c.moveToFirst();
