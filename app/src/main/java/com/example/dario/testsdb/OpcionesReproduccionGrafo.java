@@ -26,14 +26,16 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         Globals g = Globals.getInstance();
         final int idGlobalPlay = g.getIdGlobalPlay(); // obtengo el id del grafo actual para reproducir
 
-        final Play p = new Play(); // instancio la clase Play
+
 
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // mi idea es instanciar la clase play y pasarle el grafo que quiero reproducir.
                 // luego, esta clase sera la encargada de reproducirlo.
 
-                p.onCreate();
+                final Play p = new Play();
+
+
             }
         });
 
