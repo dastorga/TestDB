@@ -9,35 +9,40 @@
         android:layout_width="585dp"
         android:layout_height="810dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnEscuchargrafocompleto"
             android:layout_width="350dp"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="92dp"
             android:elevation="10dp"
-            android:text="Button" />
+            android:text="Reproducir Grafo Completo"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnReproducirNodos_ReproducirGrafo"
             android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:layout_above="@+id/btnVolver_ReproduccionGrafo"
+            android:layout_height="150dp"
+            android:layout_below="@+id/btnEscuchargrafocompleto"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="21dp"
+            android:layout_marginTop="37dp"
             android:elevation="10dp"
-            android:text="Button" />
+            android:text="Reproducir nodos"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnVolver_ReproduccionGrafo"
             android:layout_width="350dp"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="64dp"
+            android:layout_marginBottom="55dp"
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
