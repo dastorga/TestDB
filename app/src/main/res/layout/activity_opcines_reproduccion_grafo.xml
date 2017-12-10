@@ -25,18 +25,6 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/test"
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:layout_alignStart="@+id/btnEscuchargrafocompleto"
-            android:layout_below="@+id/btnEscuchargrafocompleto"
-            android:layout_marginTop="27dp"
-            android:elevation="10dp"
-            android:text="test"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <Button
             android:id="@+id/btnVolver_ReproduccionGrafo"
             android:layout_width="350dp"
             android:layout_height="200dp"

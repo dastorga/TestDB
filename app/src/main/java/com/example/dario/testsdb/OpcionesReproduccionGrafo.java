@@ -13,7 +13,7 @@ import android.widget.Button;
 public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
     // Aqui debo poner las opcines de reproduccion del grafo actual
-    Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto, test;
+    Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,6 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         setContentView(R.layout.activity_opcines_reproduccion_grafo);
 
         btnEscuchargrafocompleto = (Button) findViewById(R.id.btnEscuchargrafocompleto);
-        test = (Button) findViewById(R.id.test);
         btnVolver_ReproduccionGrafo = (Button) findViewById(R.id.btnVolver_ReproduccionGrafo);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
@@ -29,12 +28,6 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         int idGlobalPlay = g.getIdGlobalPlay(); // obtengo el id del grafo actual para reproducir
 
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-            }
-        });
-
-        test.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
             }
