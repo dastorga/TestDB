@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 /**
- * EDITA EL NOMBRE DEL GRAFO
+ * Edita el nombre del grafo seleccionado.
  */
 
 

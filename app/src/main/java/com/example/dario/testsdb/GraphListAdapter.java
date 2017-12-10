@@ -8,6 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
 
+/**
+ * Adaptador para listar grafos.
+ */
+
 public class GraphListAdapter extends BaseAdapter {
 
     private Context context;

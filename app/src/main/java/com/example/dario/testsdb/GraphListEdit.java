@@ -9,6 +9,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * Lista todos los grafos, para luego poder seleccionar
+ * uno para poder editarlo.
+ */
 
 public class GraphListEdit extends AppCompatActivity {
 

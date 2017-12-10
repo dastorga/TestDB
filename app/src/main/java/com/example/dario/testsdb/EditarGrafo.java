@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Opciones para editar: nombre de grafo, nodos, arcos
+ */
+
 public class EditarGrafo extends AppCompatActivity {
 
     Button btnEditarNombreGrafo, btnEditarNodosGrafo, btnEditarEnlacesGrafo, btnVolverAtrasEditarGrafo;

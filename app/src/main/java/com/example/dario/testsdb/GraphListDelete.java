@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+/**
+ * Lista todos los grafos, para luego seleccionar
+ * uno para poder eliminarlo de la base de datos en (cascade).
+ */
+
 public class GraphListDelete extends AppCompatActivity {
 
     ListView ListViewGraph;

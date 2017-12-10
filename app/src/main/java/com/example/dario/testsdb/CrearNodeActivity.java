@@ -39,7 +39,6 @@ public class CrearNodeActivity extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(),"newRowId: "+ newRowId + "IdGraph: " + idGlobalGraph , Toast.LENGTH_SHORT).show();
 
-
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class);
                 startActivity(intentCrearEnlace);
             }

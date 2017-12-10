@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 /**
- * EDITA EL NOMBRE DEL NODO SELECIONADO
+ * Edita el nombre del nodo seleccionado.
  */
 
 

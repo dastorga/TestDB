@@ -9,7 +9,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
- * AÑADIR COMENTARIO DE LA CLASE
+ * Lista todos los grafos, para luego poder seleccionar
+ * uno pra poder exportarlo en algun formato.
  */
 
 public class GraphListExport extends AppCompatActivity {

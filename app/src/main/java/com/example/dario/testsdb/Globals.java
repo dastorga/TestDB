@@ -1,7 +1,8 @@
 package com.example.dario.testsdb;
 
 /**
- * AÑADIR COMENTARIO DE LA CLASE
+ * Variables globales con valores alrededor del ciclo de vida de la aplicación,
+ * independientemente de la actividad que se ejecute.
  */
 
 public class Globals {
