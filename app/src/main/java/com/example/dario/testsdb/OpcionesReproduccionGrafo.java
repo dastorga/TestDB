@@ -23,13 +23,17 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         btnEscuchargrafocompleto = (Button) findViewById(R.id.btnEscuchargrafocompleto);
         btnVolver_ReproduccionGrafo = (Button) findViewById(R.id.btnVolver_ReproduccionGrafo);
 
-        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         Globals g = Globals.getInstance();
-        int idGlobalPlay = g.getIdGlobalPlay(); // obtengo el id del grafo actual para reproducir
+        final int idGlobalPlay = g.getIdGlobalPlay(); // obtengo el id del grafo actual para reproducir
+
+        final Play p = new Play(); // instancio la clase Play
 
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                // mi idea es instanciar la clase play y pasarle el grafo que quiero reproducir.
+                // luego, esta clase sera la encargada de reproducirlo.
 
+                p.PlayGraphComplet(idGlobalPlay);
             }
         });
 

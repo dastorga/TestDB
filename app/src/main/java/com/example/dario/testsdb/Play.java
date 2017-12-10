@@ -9,5 +9,14 @@ import android.support.v7.app.AppCompatActivity;
 
 public class Play extends AppCompatActivity {
 
-    //methods the play
+    final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+
+    // Constructor de la clase
+    public Play( ) { }
+
+    // Dado un id de un grafo, lo reproduce en el dispositivo movil.
+    public void PlayGraphComplet(int idGlobalPlay){
+        return;
+    }
+
 }

@@ -18,7 +18,7 @@
             android:layout_height="200dp"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/btnVolver_ReproduccionGrafo"
-            android:layout_marginTop="78dp"
+            android:layout_marginTop="152dp"
             android:elevation="10dp"
             android:text="Reproducir Grafo Completo"
             android:textSize="30sp"
@@ -28,12 +28,13 @@
             android:id="@+id/btnVolver_ReproduccionGrafo"
             android:layout_width="350dp"
             android:layout_height="200dp"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/btnEscuchargrafocompleto"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="55dp"
+            android:layout_marginTop="68dp"
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
             android:textStyle="bold" />
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
