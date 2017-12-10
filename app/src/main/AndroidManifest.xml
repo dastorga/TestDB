@@ -95,6 +95,11 @@
             android:label="Opciones de Reproduccion"
             android:parentActivityName=".GraphListPlay"/>
 
+        <activity
+            android:name=".Play"
+            android:label="Play"
+            android:parentActivityName=".OpcionesReproduccionGrafo"/>
+
 
     </application>
 
