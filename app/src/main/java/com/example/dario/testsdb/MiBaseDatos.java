@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by dario on 14/9/17.
+ * Base de datos local de la app.
  */
 
 public class MiBaseDatos extends SQLiteOpenHelper {

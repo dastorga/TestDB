@@ -15,31 +15,31 @@
         <Button
             android:id="@+id/btnEscuchargrafocompleto"
             android:layout_width="350dp"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="92dp"
+            android:layout_alignStart="@+id/btnVolver_ReproduccionGrafo"
+            android:layout_marginTop="78dp"
             android:elevation="10dp"
             android:text="Reproducir Grafo Completo"
             android:textSize="30sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnReproducirNodos_ReproducirGrafo"
+            android:id="@+id/test"
             android:layout_width="350dp"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
+            android:layout_alignStart="@+id/btnEscuchargrafocompleto"
             android:layout_below="@+id/btnEscuchargrafocompleto"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="27dp"
             android:elevation="10dp"
-            android:text="Reproducir nodos"
+            android:text="test"
             android:textSize="30sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnVolver_ReproduccionGrafo"
             android:layout_width="350dp"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="55dp"

@@ -10,18 +10,18 @@ import android.widget.Button;
  * Opciones de reproduccion del grafo seleccionado.
  */
 
-public class ReproducirGrafo extends AppCompatActivity {
+public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
-    // Aqui debo poner las opcines dereproduccion delgrafo actual
-    Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto, btnReproducirNodos_ReproducirGrafo;
+    // Aqui debo poner las opcines dereproduccion del grafo actual
+    Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto, test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reproduccion_grafo);
+        setContentView(R.layout.activity_opcines_reproduccion_grafo);
 
         btnEscuchargrafocompleto = (Button) findViewById(R.id.btnEscuchargrafocompleto);
-        btnReproducirNodos_ReproducirGrafo = (Button) findViewById(R.id.btnReproducirNodos_ReproducirGrafo);
+        test = (Button) findViewById(R.id.test);
         btnVolver_ReproduccionGrafo = (Button) findViewById(R.id.btnVolver_ReproduccionGrafo);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
@@ -34,7 +34,7 @@ public class ReproducirGrafo extends AppCompatActivity {
             }
         });
 
-        btnReproducirNodos_ReproducirGrafo.setOnClickListener(new View.OnClickListener() {
+        test.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
             }

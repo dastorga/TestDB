@@ -91,7 +91,7 @@
             android:parentActivityName=".NodoListEdit"/>
 
         <activity
-            android:name=".ReproducirGrafo"
+            android:name=".OpcionesReproduccionGrafo"
             android:label="Opciones de Reproduccion"
             android:parentActivityName=".GraphListPlay"/>
 

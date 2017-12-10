@@ -37,7 +37,7 @@ public class GraphListPlay extends AppCompatActivity {
                 ListViewClickData.getIdGraph();
                 Toast.makeText(GraphListPlay.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA REPRODUCIR", Toast.LENGTH_SHORT).show();
 
-                startActivity(new Intent(getApplicationContext(), ReproducirGrafo.class));
+                startActivity(new Intent(getApplicationContext(), OpcionesReproduccionGrafo.class));
 
                 Globals g = Globals.getInstance();
                 g.setIdGlobalPlay(ListViewClickData.getIdGraph()); // Guardo el Id de este ultimo grafo actual a REPRODUCIR

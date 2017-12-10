@@ -14,7 +14,6 @@ import java.util.ArrayList;
  * Lista de nodos, para luego seleccionar uno para editar.
  */
 
-
 public class NodoListEdit extends AppCompatActivity {
 
     ListView ListViewNodo;
