@@ -33,7 +33,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 // mi idea es instanciar la clase play y pasarle el grafo que quiero reproducir.
                 // luego, esta clase sera la encargada de reproducirlo.
 
-                p.PlayGraphComplet(idGlobalPlay);
+                p.onCreate();
             }
         });
 

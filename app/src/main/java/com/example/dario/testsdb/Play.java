@@ -1,13 +1,19 @@
 package com.example.dario.testsdb;
 
+import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.speech.tts.TextToSpeech;
 
 import java.util.Locale;
+import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.Locale;
 
@@ -16,59 +22,44 @@ import java.util.Locale;
  * Se instancian todos los metodos necesarios para la reproduccion de frases, que se pasaran como parametro.
  */
 
-public class Play extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class Play extends AppCompatActivity {
 
-    private TextToSpeech tts;
-    private Button speak;
-    private EditText getTextToSpeak;
-
+    TextToSpeech tt;
+    Button b1;
+    EditText ed;
     @Override
-    protected void onCreate(BundlesavedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tts = new TextToSpeech(this, this);
-        getTextToSpeak = (EditText) findViewById(R.id.editTextT);
-        speak = (Button) findViewById(R.id.speakOut);
-
-        speak.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(Viewview) {
-                speakOutNow();
+        tt=new TextToSpeech(getApplicationContext(),new TextToSpeech.OnInitListener()
+        {
+            public void onInit(int status)
+            {
+                if(status!=TextToSpeech.ERROR)
+                    tt.setLanguage(Locale.getDefault());
             }
         });
+
+        b1=(Button)findViewById(R.id.button);
+        ed=(EditText)findViewById(R.id.editText);
     }
 
-    @Override
-    public void onInit(inttext) {
-        if (text ==TextToSpeech.SUCCESS) {
-            int language = tts.setLanguage(Locale.ENGLISH); //YOU CAN CHANGE YOUR LANGUAGE
-            if (language ==TextToSpeech.LANG_MISSING_DATA || language ==TextToSpeech.LANG_NOT_SUPPORTED){
-                speak.setEnabled(true);
-                speakOutNow(); //YOU CAN TRY REMOVE THIS LINE
-            }
-            else {
-                //put a toast
-            }
-        }
-        else{
-        }
+    public void speak_my_text(View vv)
+    {
+        String string =ed.getText().toString();
+        tt.speak(string,TextToSpeech.QUEUE_FLUSH,null,null);
     }
-
-    private void speakOutNow (){
-        String text = getTextToSpeak.getText().toString();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-    }
-
-    @Override
-    public void onDestroy() {
-        // Don't forget to shutdown tts!
-        if (tts != null) {
-            tts.stop();
-            tts.shutdown();
-        }
-        super.onDestroy();
-    }
-
 
 }
+
+
+
+
+
+
+
+
+
+
+
