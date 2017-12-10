@@ -1,5 +1,6 @@
 package com.example.dario.testsdb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -35,6 +36,11 @@ public class GraphListPlay extends AppCompatActivity {
                 Graph ListViewClickData = (Graph) parent.getItemAtPosition(position);
                 ListViewClickData.getIdGraph();
                 Toast.makeText(GraphListPlay.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA REPRODUCIR", Toast.LENGTH_SHORT).show();
+
+                startActivity(new Intent(getApplicationContext(), ReproducirGrafo.class));
+
+                Globals g = Globals.getInstance();
+                g.setIdGlobalPlay(ListViewClickData.getIdGraph()); // Guardo el Id de este ultimo grafo actual a REPRODUCIR
             }
         });
 

@@ -82,13 +82,19 @@
 
         <activity
             android:name=".NodoListEdit"
-            android:label="Editar nodo de Grafo"
+            android:label="Lista de Nodos"
             android:parentActivityName=".EditarGrafo"/>
 
         <activity
-            android:name=".EditarNombreNodo"
+            android:name=".EditarNodo"
             android:label="Editar nodo"
             android:parentActivityName=".NodoListEdit"/>
+
+        <activity
+            android:name=".ReproducirGrafo"
+            android:label="Opciones de Reproduccion"
+            android:parentActivityName=".GraphListPlay"/>
+
 
     </application>
 

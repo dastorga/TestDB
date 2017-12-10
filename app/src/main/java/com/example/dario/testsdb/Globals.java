@@ -10,12 +10,15 @@ public class Globals {
 
     private static Globals instance;
     private static int idGlobal;
-    private static int idGlobalEdit;
 
+    private static int idGlobalEdit;
     private static int idNodeEdit;
 
     private static int idOrigen;
     private static int idDestino;
+
+    private static int idGlobalPlay;
+
 
     public Globals( ) { }
 
@@ -55,6 +58,15 @@ public class Globals {
 
     public int getIdNodeEdit() {
         return Globals.idNodeEdit;
+    }
+
+
+    public void setIdGlobalPlay(int idGlobalPlay) {
+        Globals.idGlobalPlay = idGlobalPlay;
+    }
+
+    public int getIdGlobalPlay() {
+        return Globals.idGlobalPlay;
     }
 
     public static synchronized Globals getInstance(){

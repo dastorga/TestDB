@@ -13,7 +13,7 @@ import android.widget.Toast;
  */
 
 
-public class EditarNombreNodo extends AppCompatActivity {
+public class EditarNodo extends AppCompatActivity {
 
     Button btnVolver_EditarNodo, btnGuardarCambios_EditarNodo, btnEliminarNodo_ClassEditarNodo;
     EditText etNombre_EditarNodo;
@@ -38,7 +38,7 @@ public class EditarNombreNodo extends AppCompatActivity {
         btnGuardarCambios_EditarNodo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 MDB.updateNode(idNodeEdit, etNombre_EditarNodo.getText().toString(), idGlobalEdit);
-                Toast.makeText(EditarNombreNodo.this, "EDITADO ))", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditarNodo.this, "EDITADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
             }
         });
@@ -46,7 +46,7 @@ public class EditarNombreNodo extends AppCompatActivity {
         btnEliminarNodo_ClassEditarNodo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 MDB.deleteNode(idNodeEdit);
-                Toast.makeText(EditarNombreNodo.this, "ELIMINADO ))", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditarNodo.this, "ELIMINADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
             }
         });
