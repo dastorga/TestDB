@@ -9,13 +9,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 /**
- * Edita el nombre del nodo seleccionado.
+ * Edita el nodo del nodo seleccionado.
  */
 
 
 public class EditarNombreNodo extends AppCompatActivity {
 
-    Button btnVolver_EditarNodo, btnGuardarCambios_EditarNodo;
+    Button btnVolver_EditarNodo, btnGuardarCambios_EditarNodo, btnEliminarNodo_ClassEditarNodo;
     EditText etNombre_EditarNodo;
 
     @Override
@@ -24,8 +24,8 @@ public class EditarNombreNodo extends AppCompatActivity {
         setContentView(R.layout.activity_editar_nodo);
 
         etNombre_EditarNodo = (EditText) findViewById(R.id.etNombre_EditarNodo);
-
         btnGuardarCambios_EditarNodo = (Button) findViewById(R.id.btnGuardarCambios_EditarNodo);
+        btnEliminarNodo_ClassEditarNodo = (Button) findViewById(R.id.btnEliminarNodo_ClassEditarNodo);
         btnVolver_EditarNodo = (Button) findViewById(R.id.btnVolver_EditarNodo);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
@@ -39,6 +39,14 @@ public class EditarNombreNodo extends AppCompatActivity {
             public void onClick(View v) {
                 MDB.updateNode(idNodeEdit, etNombre_EditarNodo.getText().toString(), idGlobalEdit);
                 Toast.makeText(EditarNombreNodo.this, "EDITADO ))", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
+            }
+        });
+
+        btnEliminarNodo_ClassEditarNodo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                MDB.deleteNode(idNodeEdit);
+                Toast.makeText(EditarNombreNodo.this, "ELIMINADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
             }
         });

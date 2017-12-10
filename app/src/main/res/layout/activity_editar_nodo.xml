@@ -17,8 +17,8 @@
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="119dp"
+            android:layout_alignStart="@+id/btnEliminarNodo_ClassEditarNodo"
+            android:layout_marginBottom="48dp"
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
@@ -28,9 +28,9 @@
             android:id="@+id/btnGuardarCambios_EditarNodo"
             android:layout_width="350dp"
             android:layout_height="200dp"
-            android:layout_above="@+id/btnVolver_EditarNodo"
-            android:layout_alignStart="@+id/btnVolver_EditarNodo"
-            android:layout_marginBottom="74dp"
+            android:layout_below="@+id/etNombre_EditarNodo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
             android:elevation="10dp"
             android:text="Guardar Cambios"
             android:textSize="30sp"
@@ -44,6 +44,18 @@
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnEliminarNodo_ClassEditarNodo"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_above="@+id/btnVolver_EditarNodo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="23dp"
+            android:elevation="10dp"
+            android:text="Eliminar nodo"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

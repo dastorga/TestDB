@@ -11,7 +11,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 /**
- * Lista de nodos a editar.
+ * Lista de nodos, para luego seleccionar uno para editar.
  */
 
 
