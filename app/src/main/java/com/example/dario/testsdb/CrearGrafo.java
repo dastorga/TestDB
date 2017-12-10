@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Creacion del grafo actual.
+ */
+
 public class CrearGrafo extends AppCompatActivity {
 
     EditText etNombreGrafo;
@@ -43,7 +47,6 @@ public class CrearGrafo extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
-
 
     }
 }
