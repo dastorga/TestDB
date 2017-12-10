@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
-    // Aqui debo poner las opcines dereproduccion del grafo actual
+    // Aqui debo poner las opcines de reproduccion del grafo actual
     Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto, test;
 
     @Override
