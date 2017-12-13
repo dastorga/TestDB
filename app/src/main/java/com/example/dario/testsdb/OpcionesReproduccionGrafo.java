@@ -39,7 +39,8 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 // Por otro lado me gustaria tener una clase Play, la cual posea metodos que tomen un string y lo reproduscan.
                 // por el momento una reproduccion simple no mas.
 
-                final Play p = new Play();
+                // final Play p = new Play();
+
 
 
             }
