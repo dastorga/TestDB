@@ -51,7 +51,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 // Pensar el tema de reproducir cualquier cosa que se me ocurra!.
                 startActivity(new Intent(getApplicationContext(), Play.class));
 
-            }
+            }   df
         });
 
         btnVolver_ReproduccionGrafo.setOnClickListener(new View.OnClickListener() {
