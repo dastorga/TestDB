@@ -1,5 +1,4 @@
 package com.example.dario.testsdb;
-
 import android.content.Context;
 
 /**

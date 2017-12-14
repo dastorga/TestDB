@@ -27,21 +27,22 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
         Globals g = Globals.getInstance();
         final int idGlobalPlay = g.getIdGlobalPlay(); // obtengo el id del grafo actual para reproducir
-        
 
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                /**
+                 * Mi idea en esta instancia es, tener una clase que posee varias funciones que permitan,
+                 * pasar a string lo que se les pase como parametro.
+                 * compilar todito el grafo almacenado en la base de datos y devolverlo en string, para su
+                 * posterior reproduccion.
 
-                // Mi idea en esta instancia es, tener una clase que posee varias funciones que permitan,
-                // pasar a string lo que se les pase como parametro.
-                // compilar todito el grafo almacenado en la base de datos y devolverlo en string, para su
-                // posterior reproduccion.
+                 * Por otro lado me gustaria tener una clase Play, la cual posea metodos que tomen un string y lo reproduscan.
+                 * por el momento una reproduccion simple no mas.
+                 * luego ver el tema de la longitud de reproduccion y velocidad, y repeticion de la reproduccion.
+                 */
 
-                // Por otro lado me gustaria tener una clase Play, la cual posea metodos que tomen un string y lo reproduscan.
-                // por el momento una reproduccion simple no mas.
-
-                // final Play p = new Play();
-                c = new ConstructionGraph(getApplicationContext());
+                final Play p = new Play(getApplicationContext()); // Paso contexto de la aplicacion actual
+                c = new ConstructionGraph(getApplicationContext()); // Paso contexto de la aplicacion actual
                 String s = c.ConstrucctionNodesString(idGlobalPlay);
                 Toast.makeText(OpcionesReproduccionGrafo.this, s  , Toast.LENGTH_SHORT).show();
 
