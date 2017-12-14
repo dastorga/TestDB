@@ -33,5 +33,12 @@ public class ConstructionGraph {
         return lista_nodes_string;
     }
 
+    /**
+     * Dado un identificador de grafo (idGrafo),
+     */
+    public String ConstrucctionEnlacesString(int idGraph){
+        final MiBaseDatos MDB = new MiBaseDatos(context); // La paso el contexto que traigo al invocar esta clase
+        return "";
+    }
 
 }
