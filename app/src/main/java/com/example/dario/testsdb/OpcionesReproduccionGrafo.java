@@ -47,6 +47,8 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
                 // Me debo ir a la clase Play para reproducir lo que deseo
                 // Podria pasarle el grafo "idGlobalPlay" que quiero reproducir, q se yo.
+                // El tema, es que cuando desea reproducir me lleva a una nueva activity que solo reproduce.
+                // Pensar el tema de reproducir cualquier cosa que se me ocurra!.
                 startActivity(new Intent(getApplicationContext(), Play.class));
 
             }
