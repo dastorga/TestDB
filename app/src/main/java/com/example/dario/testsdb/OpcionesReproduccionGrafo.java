@@ -25,8 +25,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
         Globals g = Globals.getInstance();
         final int idGlobalPlay = g.getIdGlobalPlay(); // obtengo el id del grafo actual para reproducir
-
-
+        
 
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -40,6 +39,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 // por el momento una reproduccion simple no mas.
 
                 // final Play p = new Play();
+                // final ConstructionGraph c = new ConstructionGraph();
 
 
 
