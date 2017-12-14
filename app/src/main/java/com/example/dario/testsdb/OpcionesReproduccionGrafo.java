@@ -42,10 +42,8 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
                 // final Play p = new Play();
                 c = new ConstructionGraph(getApplicationContext());
-
                 String s = c.ConstrucctionNodesString(idGlobalPlay);
-
-                Toast.makeText(OpcionesReproduccionGrafo.this, s+""  , Toast.LENGTH_SHORT).show();
+                Toast.makeText(OpcionesReproduccionGrafo.this, s  , Toast.LENGTH_SHORT).show();
 
 
             }

@@ -1,6 +1,6 @@
 package com.example.dario.testsdb;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
 
 /**
  * Clase dedicada a la reproduccion de frases.
@@ -8,7 +8,16 @@ import android.support.v7.app.AppCompatActivity;
  */
 
 
-public class Play extends AppCompatActivity {
+public class Play {
+
+    private Context context;
+
+    /**
+     * Constructor de la clase con contexto.
+     */
+    public  Play(Context context){
+        this.context = context;
+    }
 
 
 }
