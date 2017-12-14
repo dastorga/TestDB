@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Opciones de reproduccion del grafo seleccionado.
@@ -14,6 +15,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
     // Aqui debo poner las opcines de reproduccion del grafo actual
     Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto;
+    ConstructionGraph c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +41,11 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 // por el momento una reproduccion simple no mas.
 
                 // final Play p = new Play();
-                // final ConstructionGraph c = new ConstructionGraph();
+                c = new ConstructionGraph(getApplicationContext());
 
+                String s = c.ConstrucctionNodesString(idGlobalPlay);
+
+                Toast.makeText(OpcionesReproduccionGrafo.this, s+""  , Toast.LENGTH_SHORT).show();
 
 
             }

@@ -1,28 +1,37 @@
 package com.example.dario.testsdb;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+
+import java.util.ArrayList;
 
 /**
  * Clase distinada a facilitar diferentes construcciones de grafos.
  */
 
-public class ConstructionGraph extends AppCompatActivity {
+public class ConstructionGraph {
+    private Context context;
 
-    // Instanciacion de la DB.
-    final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
-
-    // Constructor
-    public ConstructionGraph(){
-
+    public ConstructionGraph(Context context) {
+        this.context = context;
     }
 
     /**
-     * Dado un grafo, me devuelve como resultado todos sus nodos en una sola cadena de string
+     * Dado un identificador de grafo (idGrafo), me retorna como resultado todos sus nodos en una sola cadena de string
      */
-    public String ConstrucctionNodes(){
+    public String ConstrucctionNodesString(int idGraph){
+        MiBaseDatos MDB = new MiBaseDatos(context);
+        ArrayList<Node> lista_nodes = MDB.recoverNodesInGraph(idGraph);
+        String lista_nodes_string = ""; //Inicializo en vacio
 
+        for(int i = 0; i< lista_nodes.size(); i++){
+            //Aqui armo una cadena de los atributos de todos los nodos del grafo que se pasa como parametro
+            lista_nodes_string = lista_nodes_string + lista_nodes.get(i).getAtributoNode();
+        }
 
-        return "";
+        return lista_nodes_string;
     }
+
+
+
 
 }
