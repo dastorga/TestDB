@@ -41,11 +41,12 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  * luego ver el tema de la longitud de reproduccion y velocidad, y repeticion de la reproduccion.
                  */
 
-                final Play p = new Play(getApplicationContext()); // Paso contexto actual
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String s = c.ConstrucctionNodesString(idGlobalPlay);
                 Toast.makeText(OpcionesReproduccionGrafo.this, s  , Toast.LENGTH_SHORT).show();
 
+                // Me debo ir a la clase Play para reproducir lo que deseo
+                startActivity(new Intent(getApplicationContext(), Play.class));
 
             }
         });

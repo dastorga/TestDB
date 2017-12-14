@@ -1,5 +1,8 @@
 package com.example.dario.testsdb;
-import android.content.Context;
+
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Clase dedicada a la reproduccion de frases.
@@ -7,15 +10,16 @@ import android.content.Context;
  */
 
 
-public class Play {
+public class Play extends AppCompatActivity {
 
-    private Context context;
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_play);
 
-    /**
-     * Constructor de la clase con contexto.
-     */
-    public  Play(Context context){
-        this.context = context;
+//        final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+
+
     }
 
 
