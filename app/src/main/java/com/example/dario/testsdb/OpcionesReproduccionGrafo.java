@@ -46,6 +46,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 Toast.makeText(OpcionesReproduccionGrafo.this, s  , Toast.LENGTH_SHORT).show();
 
                 // Me debo ir a la clase Play para reproducir lo que deseo
+                // Podria pasarle el grafo "idGlobalPlay" que quiero reproducir, q se yo.
                 startActivity(new Intent(getApplicationContext(), Play.class));
 
             }
