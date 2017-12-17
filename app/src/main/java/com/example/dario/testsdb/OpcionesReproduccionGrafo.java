@@ -31,12 +31,12 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 /**
-                 * Mi idea en esta instancia es, tener una clase que posee varias funciones que permitan,
+                 * Mi idea en esta instancia es, tener una clase "ConstructionGraph" que posee varias funciones que permitan,
                  * pasar a string lo que se les pase como parametro.
                  * compilar todito el grafo almacenado en la base de datos y devolverlo en string, para su
                  * posterior reproduccion.
 
-                 * Por otro lado me gustaria tener una clase Play, la cual posea metodos que tomen un string y lo reproduzcan.
+                 * Por otro lado me gustaria tener una clase "Play", la cual posea metodos que tomen un string y lo reproduzcan.
                  * por el momento una reproduccion simple no mas.
                  * luego ver el tema de la longitud de reproduccion y velocidad, y repeticion de la reproduccion.
                  */

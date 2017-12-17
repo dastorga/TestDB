@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
- * AÑADIR COMENTARIO DE LA CLASE
+ * Lista de grafos para reproducir.
  */
 
 public class GraphListPlay extends AppCompatActivity {
