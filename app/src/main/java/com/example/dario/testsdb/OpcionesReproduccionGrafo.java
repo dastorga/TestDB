@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
-    // Aqui debo poner las opcines de reproduccion del grafo actual
+    // Opcines de reproduccion del grafo actual
     Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto;
     ConstructionGraph c;
 
@@ -36,7 +36,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  * compilar todito el grafo almacenado en la base de datos y devolverlo en string, para su
                  * posterior reproduccion.
 
-                 * Por otro lado me gustaria tener una clase Play, la cual posea metodos que tomen un string y lo reproduscan.
+                 * Por otro lado me gustaria tener una clase Play, la cual posea metodos que tomen un string y lo reproduzcan.
                  * por el momento una reproduccion simple no mas.
                  * luego ver el tema de la longitud de reproduccion y velocidad, y repeticion de la reproduccion.
                  */
