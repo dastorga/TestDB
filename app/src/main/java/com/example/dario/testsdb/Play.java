@@ -75,7 +75,7 @@ public class Play extends ActionBarActivity implements TextToSpeech.OnInitListen
         // TTS is successfully initialized
         if (status == TextToSpeech.SUCCESS) {
             // Setting speech language
-            int result = tts.setLanguage(Locale.US);
+            int result = tts.setLanguage(Locale.getDefault());
             // If your device doesn't support language you set above
             if (result == TextToSpeech.LANG_MISSING_DATA
                     || result == TextToSpeech.LANG_NOT_SUPPORTED) {
