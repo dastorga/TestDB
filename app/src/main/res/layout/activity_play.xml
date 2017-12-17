@@ -12,5 +12,29 @@
         tools:layout_editor_absoluteY="8dp"
         tools:ignore="MissingConstraints">
 
+        <Button
+            android:id="@+id/btnReproducir_PLay"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="84dp"
+            android:elevation="10dp"
+            android:text="Reproducir"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnVolverAtras_PLay"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/btnReproducir_PLay"
+            android:layout_marginBottom="67dp"
+            android:elevation="10dp"
+            android:text="Volver Atras"
+            android:textSize="30sp"
+            android:textStyle="bold" />
     </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>

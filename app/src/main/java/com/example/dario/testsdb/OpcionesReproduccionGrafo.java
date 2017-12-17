@@ -26,7 +26,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         btnVolver_ReproduccionGrafo = (Button) findViewById(R.id.btnVolver_ReproduccionGrafo);
 
         Globals g = Globals.getInstance();
-        final int idGlobalPlay = g.getIdGlobalPlay(); // obtengo el id del grafo actual para reproducir
+        final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducir
 
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -42,10 +42,10 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  */
 
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
-                String s = c.ConstrucctionNodesString(idGlobalPlay);
-                Toast.makeText(OpcionesReproduccionGrafo.this, s  , Toast.LENGTH_SHORT).show();
+                String nodosString = c.ConstrucctionNodesString(idGlobalPlay);
+                Toast.makeText(OpcionesReproduccionGrafo.this, nodosString  , Toast.LENGTH_SHORT).show();
 
-                // Me debo ir a la clase Play para reproducir lo que deseo
+                // Me debo ir a la clase Play para reproducir lo que deseo.
                 // Podria pasarle el grafo "idGlobalPlay" que quiero reproducir, q se yo.
                 // El tema, es que cuando desea reproducir me lleva a una nueva activity que solo reproduce.
                 // Pensar el tema de reproducir cualquier cosa que se me ocurra!.

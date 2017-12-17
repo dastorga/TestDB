@@ -25,7 +25,7 @@ public class ConstructionGraph {
     public String ConstrucctionNodesString(int idGraph){
         final MiBaseDatos MDB = new MiBaseDatos(context); // La paso el contexto que traigo al invocar esta clase
         ArrayList<Node> lista_nodes = MDB.recoverNodesInGraph(idGraph);
-        String lista_nodes_string = ""; //Inicializo en vacio
+        String lista_nodes_string = ""; //Inicializo en vacio, variable para almacenar el resultado final.
         for(int i = 0; i< lista_nodes.size(); i++){
             //Aqui armo una cadena de los atributos de todos los nodos del grafo que se pasa como parametro
             lista_nodes_string = lista_nodes_string + " " +lista_nodes.get(i).getAtributoNode();
