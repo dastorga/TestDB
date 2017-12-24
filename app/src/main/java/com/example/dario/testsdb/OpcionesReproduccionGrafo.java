@@ -13,8 +13,7 @@ import android.widget.Toast;
 
 public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
-    // Opcines de reproduccion del grafo actual
-    Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto;
+    private Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto, btnReproducirNodos;
     ConstructionGraph c;
 
     @Override
@@ -23,6 +22,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         setContentView(R.layout.activity_opcines_reproduccion_grafo);
 
         btnEscuchargrafocompleto = (Button) findViewById(R.id.btnEscuchargrafocompleto);
+        btnReproducirNodos = (Button) findViewById(R.id.btnReproducirNodos);
         btnVolver_ReproduccionGrafo = (Button) findViewById(R.id.btnVolver_ReproduccionGrafo);
 
         Globals g = Globals.getInstance();
@@ -50,6 +50,15 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 // El tema, es que cuando desea reproducir me lleva a una nueva activity que solo reproduce.
                 // Pensar el tema de reproducir cualquier cosa que se me ocurra!.
                 startActivity(new Intent(getApplicationContext(), Play.class));
+            }
+        });
+
+        btnReproducirNodos.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                /**
+                 *
+                 */
+
             }
         });
 

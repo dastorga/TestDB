@@ -19,7 +19,7 @@ import java.util.Locale;
 public class Play extends ActionBarActivity implements TextToSpeech.OnInitListener {
 
     private TextToSpeech tts;
-    Button btnReproducir_PLay,btnVolverAtras_PLay;
+    private Button btnReproducir_PLay,btnVolverAtras_PLay;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
