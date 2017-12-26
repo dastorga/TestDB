@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 import java.util.Locale;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Locale;
  * Se instancian todos los metodos necesarios para la reproduccion de frases, que se pasaran como parametro.
  */
 
-public class Play extends ActionBarActivity implements TextToSpeech.OnInitListener {
+public class Play extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
     private TextToSpeech tts;
     private Button btnReproducir_PLay,btnVolverAtras_PLay;
