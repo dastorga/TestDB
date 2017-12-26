@@ -56,8 +56,11 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         btnReproducirNodos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 /**
-                 *
+                 * Construyo todos los nodos del grafo actual a reproducir
                  */
+                c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
+                String nodosString = c.ConstrucctionNodesString(idGlobalPlay);
+                Toast.makeText(OpcionesReproduccionGrafo.this, nodosString  , Toast.LENGTH_SHORT).show();
 
             }
         });
