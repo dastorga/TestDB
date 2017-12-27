@@ -23,10 +23,10 @@ public class EditarNodo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_nodo);
 
-        etNombre_EditarNodo = (EditText) findViewById(R.id.etNombre_EditarNodo);
-        btnGuardarCambios_EditarNodo = (Button) findViewById(R.id.btnGuardarCambios_EditarNodo);
-        btnEliminarNodo_ClassEditarNodo = (Button) findViewById(R.id.btnEliminarNodo_ClassEditarNodo);
-        btnVolver_EditarNodo = (Button) findViewById(R.id.btnVolver_EditarNodo);
+        etNombre_EditarNodo = findViewById(R.id.etNombre_EditarNodo);
+        btnGuardarCambios_EditarNodo = findViewById(R.id.btnGuardarCambios_EditarNodo);
+        btnEliminarNodo_ClassEditarNodo = findViewById(R.id.btnEliminarNodo_ClassEditarNodo);
+        btnVolver_EditarNodo = findViewById(R.id.btnVolver_EditarNodo);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         Globals g = Globals.getInstance();

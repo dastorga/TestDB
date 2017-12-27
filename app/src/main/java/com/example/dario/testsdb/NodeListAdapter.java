@@ -44,8 +44,8 @@ public class NodeListAdapter extends BaseAdapter {
         if(row == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(layout, null);
-            holder.txtAtributeNode = (TextView) row.findViewById(R.id.txtAtributeNode);
-            holder.txtIdNode_Node = (TextView) row.findViewById(R.id.txtIdNode_Node);
+            holder.txtAtributeNode = row.findViewById(R.id.txtAtributeNode);
+            holder.txtIdNode_Node = row.findViewById(R.id.txtIdNode_Node);
             row.setTag(holder);
         }
         else {

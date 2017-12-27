@@ -16,10 +16,10 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_enlace);
 
-        btnNodoOrigen_CrearArco = (Button) findViewById(R.id.btnNodoOrigen_CrearArco);
-        btnNodoDestino_CrearArco = (Button) findViewById(R.id.btnNodoDestino_CrearArco);
-        btnVolverAtras_CrearArco = (Button) findViewById(R.id.btnVolverAtras_CrearArco);
-        btnCrearArco_CrearArco = (Button) findViewById(R.id.btnCrearArco_CrearArco);
+        btnNodoOrigen_CrearArco = findViewById(R.id.btnNodoOrigen_CrearArco);
+        btnNodoDestino_CrearArco = findViewById(R.id.btnNodoDestino_CrearArco);
+        btnVolverAtras_CrearArco = findViewById(R.id.btnVolverAtras_CrearArco);
+        btnCrearArco_CrearArco = findViewById(R.id.btnCrearArco_CrearArco);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();

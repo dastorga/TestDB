@@ -19,10 +19,10 @@ public class EditarGrafo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_grafo);
 
-        btnEditarNombreGrafo = (Button) findViewById(R.id.btnEditarNombreGrafo);
-        btnEditarNodosGrafo = (Button) findViewById(R.id.btnEditarNodosGrafo);
-        btnEditarEnlacesGrafo = (Button) findViewById(R.id.btnEditarEnlacesGrafo);
-        btnVolverAtrasEditarGrafo = (Button) findViewById(R.id.btnVolverAtrasEditarGrafo);
+        btnEditarNombreGrafo = findViewById(R.id.btnEditarNombreGrafo);
+        btnEditarNodosGrafo = findViewById(R.id.btnEditarNodosGrafo);
+        btnEditarEnlacesGrafo = findViewById(R.id.btnEditarEnlacesGrafo);
+        btnVolverAtrasEditarGrafo = findViewById(R.id.btnVolverAtrasEditarGrafo);
 
         btnEditarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

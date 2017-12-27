@@ -196,7 +196,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         List<Node> lista_nodes = new ArrayList<Node>();
         String[] valores_recuperar = {"id_node", "atributo", "id_graph"};
         Cursor c = db.query("NODE", valores_recuperar, null, null, null, null, null, null);
-        lista_nodes.clear();;
+        lista_nodes.clear();
         while (c.moveToNext()){
             lista_nodes.add(new Node(c.getInt(0), c.getString(1), c.getInt(2)));
         }
@@ -223,7 +223,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         ArrayList<Node> lista_nodes = new ArrayList<Node>();
         String[] valores_recuperar = {"id_node", "atributo", "id_graph"};
         Cursor c = db.query("NODE", valores_recuperar, "id_graph=" + id_graph, null, null, null, null, null);
-        lista_nodes.clear();;
+        lista_nodes.clear();
         while (c.moveToNext()){
             lista_nodes.add(new Node(c.getInt(0), c.getString(1), c.getInt(2)));
         }
@@ -257,16 +257,13 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
         Cursor c = db.query("NODE", valores_recuperar, "id_graph=" + id_graph, null, null, null, null, null);
 
-        lista_nodes.clear();;
+        lista_nodes.clear();
         while (c.moveToNext()){
             lista_nodes.add(new Node(c.getInt(0), c.getString(1), c.getInt(2)));
         }
         db.close();
         c.close();
-        if (lista_nodes.size()==0){
-            return false;
-        }
-        return true;
+        return lista_nodes.size() != 0;
     }
 
     //Dado un grafo me indica si existen enlaces para ese grafo.
@@ -277,16 +274,13 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
         Cursor c = db.query("ENLACE", valores_recuperar, "id_graph=" + id_graph, null, null, null, null, null);
 
-        lista_enlaces.clear();;
+        lista_enlaces.clear();
         while (c.moveToNext()){
             lista_enlaces.add(new Enlace(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3), c.getInt(4)));
         }
         db.close();
         c.close();
-        if (lista_enlaces.size()==0){
-            return false;
-        }
-        return true;
+        return lista_enlaces.size() != 0;
     }
 
     //////////////////////////////// ELIMINAR /////////////////////////////////////////////////

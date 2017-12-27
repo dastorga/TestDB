@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnCrear = (Button) findViewById(R.id.btnCrear);
-        btnEliminar = (Button) findViewById(R.id.btnEliminar);
-        btnEditar = (Button) findViewById(R.id.btnEditar);
-        btnReproducir = (Button) findViewById(R.id.btnReproducir);
-        btnExportar = (Button) findViewById(R.id.btnExportar);
+        btnCrear = findViewById(R.id.btnCrear);
+        btnEliminar = findViewById(R.id.btnEliminar);
+        btnEditar = findViewById(R.id.btnEditar);
+        btnReproducir = findViewById(R.id.btnReproducir);
+        btnExportar = findViewById(R.id.btnExportar);
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

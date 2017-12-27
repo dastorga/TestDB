@@ -20,9 +20,9 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_node_enlace);
 
-        btnCrearNode = (Button) findViewById(R.id.btnCrearNode);
-        btnCrearEnlace = (Button) findViewById(R.id.btnCrearEnlace);
-        btnVolverAtrasCrearNodeEnlaceActivity = (Button) findViewById(R.id.btnVolverAtrasCrearNodeEnlaceActivity);
+        btnCrearNode = findViewById(R.id.btnCrearNode);
+        btnCrearEnlace = findViewById(R.id.btnCrearEnlace);
+        btnVolverAtrasCrearNodeEnlaceActivity = findViewById(R.id.btnVolverAtrasCrearNodeEnlaceActivity);
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         btnCrearNode.setOnClickListener(new View.OnClickListener() {

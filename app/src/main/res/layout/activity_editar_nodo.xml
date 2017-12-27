@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="585dp"
-        android:layout_height="810dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        android:layout_width="776dp"
+        android:layout_height="1116dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <Button
             android:id="@+id/btnVolver_EditarNodo"
@@ -49,9 +49,9 @@
             android:id="@+id/btnEliminarNodo_ClassEditarNodo"
             android:layout_width="350dp"
             android:layout_height="200dp"
-            android:layout_above="@+id/btnVolver_EditarNodo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="23dp"
+            android:layout_alignStart="@+id/btnGuardarCambios_EditarNodo"
+            android:layout_below="@+id/btnGuardarCambios_EditarNodo"
+            android:layout_marginTop="99dp"
             android:elevation="10dp"
             android:text="Eliminar nodo"
             android:textSize="30sp"

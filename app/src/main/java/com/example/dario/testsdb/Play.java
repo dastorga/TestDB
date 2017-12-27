@@ -30,8 +30,8 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         tts = new TextToSpeech(this, this);
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
-        btnReproducir_PLay = (Button) findViewById(R.id.btnReproducir_PLay);
-        btnVolverAtras_PLay = (Button) findViewById(R.id.btnVolverAtras_PLay);
+        btnReproducir_PLay = findViewById(R.id.btnReproducir_PLay);
+        btnVolverAtras_PLay = findViewById(R.id.btnVolverAtras_PLay);
 
         btnReproducir_PLay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {

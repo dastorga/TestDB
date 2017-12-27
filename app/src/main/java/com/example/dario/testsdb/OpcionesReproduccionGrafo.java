@@ -21,9 +21,9 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opcines_reproduccion_grafo);
 
-        btnEscuchargrafocompleto = (Button) findViewById(R.id.btnEscuchargrafocompleto);
-        btnReproducirNodos = (Button) findViewById(R.id.btnReproducirNodos);
-        btnVolver_ReproduccionGrafo = (Button) findViewById(R.id.btnVolver_ReproduccionGrafo);
+        btnEscuchargrafocompleto = findViewById(R.id.btnEscuchargrafocompleto);
+        btnReproducirNodos = findViewById(R.id.btnReproducirNodos);
+        btnVolver_ReproduccionGrafo = findViewById(R.id.btnVolver_ReproduccionGrafo);
 
         Globals g = Globals.getInstance();
         final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducir

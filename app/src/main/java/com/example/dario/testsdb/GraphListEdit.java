@@ -26,7 +26,7 @@ public class GraphListEdit extends AppCompatActivity {
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
-        ListViewGraph = (ListView) findViewById(R.id.ListViewGraph);
+        ListViewGraph = findViewById(R.id.ListViewGraph);
         adapter = new GraphListAdapter(this, R.layout.graph, MDB.recoverGraphs());
         ListViewGraph.setAdapter(adapter);
         adapter.notifyDataSetChanged();

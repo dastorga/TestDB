@@ -48,8 +48,8 @@ public class GraphListAdapter extends BaseAdapter {
         if(row == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(layout, null);
-            holder.txtViewGraph = (TextView) row.findViewById(R.id.txtViewGraph);
-            holder.txtViewIdGraph = (TextView) row.findViewById(R.id.txtViewIdGraph);
+            holder.txtViewGraph = row.findViewById(R.id.txtViewGraph);
+            holder.txtViewIdGraph = row.findViewById(R.id.txtViewIdGraph);
             row.setTag(holder);
         }
         else {

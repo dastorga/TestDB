@@ -22,9 +22,9 @@ public class CrearNodeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_node);
 
-        btnGuardar_CrearNode = (Button) findViewById(R.id.btnGuardar_CrearNode);
-        btnVolverAtras_CrearNode = (Button) findViewById(R.id.btnVolverAtras_CrearNode);
-        etNombreNode_CrearNode = (EditText) findViewById(R.id.etNombreNode_CrearNode);
+        btnGuardar_CrearNode = findViewById(R.id.btnGuardar_CrearNode);
+        btnVolverAtras_CrearNode = findViewById(R.id.btnVolverAtras_CrearNode);
+        etNombreNode_CrearNode = findViewById(R.id.etNombreNode_CrearNode);
 
         btnGuardar_CrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

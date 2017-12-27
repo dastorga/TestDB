@@ -20,8 +20,8 @@ public class WarningNotice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.warning_notice);
 
-        btnAceptarWarningNotice = (Button) findViewById(R.id.btnAceptarWarningNotice);
-        btnCancelarWarningNotice = (Button) findViewById(R.id.btnCancelarWarningNotice);
+        btnAceptarWarningNotice = findViewById(R.id.btnAceptarWarningNotice);
+        btnCancelarWarningNotice = findViewById(R.id.btnCancelarWarningNotice);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 

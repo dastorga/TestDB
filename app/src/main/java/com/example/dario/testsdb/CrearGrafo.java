@@ -22,9 +22,9 @@ public class CrearGrafo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_grafo);
 
-        etNombreGrafo = (EditText) findViewById(R.id.etNombreGrafo);
-        btnGuardarNombreGrafo = (Button) findViewById(R.id.btnGuardarNombreGrafo);
-        btnVolverAtrasGrafo = (Button) findViewById(R.id.btnVolverAtrasGrafo);
+        etNombreGrafo = findViewById(R.id.etNombreGrafo);
+        btnGuardarNombreGrafo = findViewById(R.id.btnGuardarNombreGrafo);
+        btnVolverAtrasGrafo = findViewById(R.id.btnVolverAtrasGrafo);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 

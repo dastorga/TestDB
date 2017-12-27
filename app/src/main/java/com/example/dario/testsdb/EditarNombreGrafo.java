@@ -23,9 +23,9 @@ public class EditarNombreGrafo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_nombre_grafo);
 
-        btnGuardarEdicion_EditarNombreGrafo = (Button) findViewById(R.id.btnGuardarEdicion_EditarNombreGrafo);
-        btnVolverAtras_EditarNombreGrafo = (Button) findViewById(R.id.btnVolverAtras_EditarNombreGrafo);
-        etEditarNombreGrafo = (EditText) findViewById(R.id.etEditarNombreGrafo);
+        btnGuardarEdicion_EditarNombreGrafo = findViewById(R.id.btnGuardarEdicion_EditarNombreGrafo);
+        btnVolverAtras_EditarNombreGrafo = findViewById(R.id.btnVolverAtras_EditarNombreGrafo);
+        etEditarNombreGrafo = findViewById(R.id.etEditarNombreGrafo);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 

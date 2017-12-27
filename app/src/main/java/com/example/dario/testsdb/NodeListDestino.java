@@ -30,7 +30,7 @@ public class NodeListDestino extends AppCompatActivity {
         final Globals g = Globals.getInstance();
         int idGlobalGraph = g.getIdGlobal();
 
-        ListViewNodo = (ListView) findViewById(R.id.ListViewNodo);
+        ListViewNodo = findViewById(R.id.ListViewNodo);
         list = new ArrayList<>();
         adapter = new NodeListAdapter(this, R.layout.node, MDB.recoverNodesInGraph(idGlobalGraph));
         ListViewNodo.setAdapter(adapter);

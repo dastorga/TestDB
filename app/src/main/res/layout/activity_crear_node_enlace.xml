@@ -9,8 +9,8 @@
 
     <RelativeLayout
         android:id="@+id/idCrearNodeEnlaceActivity"
-        android:layout_width="581dp"
-        android:layout_height="810dp"
+        android:layout_width="761dp"
+        android:layout_height="1103dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="8dp">
@@ -35,7 +35,8 @@
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_alignStart="@+id/btnCrearNode"
-            android:layout_centerVertical="true"
+            android:layout_below="@+id/btnCrearNode"
+            android:layout_marginTop="81dp"
             android:elevation="10dp"
             android:text="CREAR ARCO"
             android:textSize="30sp"
