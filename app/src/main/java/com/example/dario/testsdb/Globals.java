@@ -19,7 +19,6 @@ public class Globals {
 
     private static int idGlobalPlay;
 
-
     public Globals( ) { }
 
     public void setIdGlobal(int t) {

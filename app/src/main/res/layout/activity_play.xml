@@ -26,11 +26,11 @@
 
         <Button
             android:id="@+id/btnVolverAtras_PLay"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
-            android:layout_alignParentBottom="true"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
             android:layout_alignStart="@+id/btnReproducir_PLay"
-            android:layout_marginBottom="67dp"
+            android:layout_below="@+id/btnReproducir_PLay"
+            android:layout_marginTop="207dp"
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
