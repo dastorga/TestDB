@@ -38,7 +38,7 @@ public class EditarGrafo extends AppCompatActivity {
 
         btnEditarEnlacesGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // startActivity(new Intent(getApplicationContext(), .class));
+                 startActivity(new Intent(getApplicationContext(), EnlaceListEdit.class));
             }
         });
 
