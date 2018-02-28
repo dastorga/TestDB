@@ -39,7 +39,7 @@ public class EnlaceListAdapter extends BaseAdapter {
         return position;
     }
 
-    private class ViewHolder{ TextView txtAtributeNode, txtIdNode_Node;}
+    private class ViewHolder{TextView txtViewEnalce, textViewNodoOrigen, textViewNodoDestino;}
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
@@ -48,16 +48,18 @@ public class EnlaceListAdapter extends BaseAdapter {
         if(row == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(layout, null);
-            holder.txtAtributeNode = row.findViewById(R.id.txtAtributeNode);
-            holder.txtIdNode_Node = row.findViewById(R.id.txtIdNode_Node);
+            holder.txtViewEnalce = row.findViewById(R.id.txtViewEnalce);
+            holder.textViewNodoOrigen = row.findViewById(R.id.textViewNodoOrigen);
+            holder.textViewNodoDestino = row.findViewById(R.id.textViewNodoDestino);
             row.setTag(holder);
         }
         else {
             holder = (EnlaceListAdapter.ViewHolder) row.getTag();
         }
         Enlace enlace = EnlaceList.get(position);
-//        holder.txtAtributeNode.setText(node.getAtributoNode());
-//        holder.txtIdNode_Node.setText((String.valueOf(node.getIdNode()))); // el identificador es Int pero lo paso a string solo para mostrarlo por pantalla
+        holder.txtViewEnalce.setText(enlace.getAtributoEnlace());
+        holder.textViewNodoOrigen.setText((String.valueOf(enlace.getOrigenEnlace())));
+        holder.textViewNodoDestino.setText((String.valueOf(enlace.getDestinoEnlace())));
         return row;
     }
 }
