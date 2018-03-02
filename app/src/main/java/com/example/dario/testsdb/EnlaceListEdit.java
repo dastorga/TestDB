@@ -21,8 +21,8 @@ public class EnlaceListEdit extends AppCompatActivity {
     ArrayList<Enlace> list;
     EnlaceListAdapter adapter = null;
 
-    // Aqui debere se deben listar todos los enlaces del grafo (idGlobalEdit).
-    // luego se debe poder seleccionar un enlace para luego editarlo (atributo por el momento).
+    // Aqui debere se deben listar todos los enlaces del grafo (idGlobalEdit) seleccionado.
+    // Luego se debe poder seleccionar un enlace para luego editarlo (atributo por el momento).
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class EnlaceListEdit extends AppCompatActivity {
 
         ListViewEnlace = findViewById(R.id.ListViewEnlace);
         list = new ArrayList<>();
-//      adapter = new EnlaceListAdapter(this, R.layout.enlace, MDB.recoverEnlacesInGraph(idGlobalEdit));
+        adapter = new EnlaceListAdapter(this, R.layout.enlace, MDB.recoverEnlacesInGraph(idGlobalEdit));
         ListViewEnlace.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
@@ -46,10 +46,10 @@ public class EnlaceListEdit extends AppCompatActivity {
                 ListViewClickData.getIdEnlace();
 
                 Toast.makeText(EnlaceListEdit.this, "ENLACE "+ListViewClickData.getIdEnlace()+" A EDITAR", Toast.LENGTH_SHORT).show();
-//
-//                final Globals g = Globals.getInstance();
-//                g.setIdNodeEdit(ListViewClickData.getIdNode()); // guardo el enlace a editar en la variable global
-//
+
+                final Globals g = Globals.getInstance();
+                g.setIdEnlaceEdit(ListViewClickData.getIdEnlace()); // guardo el enlace a editar en la variable global
+
 //                startActivity(new Intent(getApplicationContext(), EditarEnlace.class));
             }
         });

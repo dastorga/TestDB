@@ -19,6 +19,8 @@ public class Globals {
 
     private static int idGlobalPlay;
 
+    private static int idEnlaceEdit;
+
     public Globals( ) { }
 
     public void setIdGlobal(int t) {
@@ -57,6 +59,14 @@ public class Globals {
 
     public int getIdNodeEdit() {
         return Globals.idNodeEdit;
+    }
+
+    public void setIdEnlaceEdit(int idEnlaceEdit) {
+        Globals.idEnlaceEdit = idEnlaceEdit;
+    }
+
+    public int getIdEnlaceEdit() {
+        return Globals.idEnlaceEdit;
     }
 
 

@@ -233,19 +233,19 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     }
 
 
-//    public ArrayList<Enlace> recoverEnlacesInGraph(int id_graph) {
-//        SQLiteDatabase db = getReadableDatabase();
-//        ArrayList<Enlace> lista_enlaces = new ArrayList<Enlace>();
-//        String[] valores_recuperar = {"id_node", "atributo", "id_graph"};
-//        Cursor c = db.query("NODE", valores_recuperar, "id_graph=" + id_graph, null, null, null, null, null);
-//        lista_enlaces.clear();
-//        while (c.moveToNext()){
-//            lista_enlaces.add(new Enlace(c.getInt(0), c.getString(1), c.getInt(2)));
-//        }
-//        db.close();
-//        c.close();
-//        return lista_enlaces;
-//    }
+    public ArrayList<Enlace> recoverEnlacesInGraph(int id_graph) {
+        SQLiteDatabase db = getReadableDatabase();
+        ArrayList<Enlace> lista_enlaces = new ArrayList<Enlace>();
+        String[] valores_recuperar = {"id_enlace", "origen", "destino" , "atributo" , "id_graph"};
+        Cursor c = db.query("ENLACE", valores_recuperar, "id_graph=" + id_graph, null, null, null, null, null);
+        lista_enlaces.clear();
+        while (c.moveToNext()){
+            lista_enlaces.add(new Enlace(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3), c.getInt(4)));
+        }
+        db.close();
+        c.close();
+        return lista_enlaces;
+    }
 
     public List<Word> recoverWords() {
         SQLiteDatabase db = getReadableDatabase();
