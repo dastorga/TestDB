@@ -105,6 +105,11 @@
             android:label="Reproduccion"
             android:parentActivityName=".OpcionesReproduccionGrafo"/>
 
+        <activity
+            android:name=".EditarEnlace"
+            android:label="Editar enlace"
+            android:parentActivityName=".EnlaceListEdit"/>
+
     </application>
 
 </manifest>
