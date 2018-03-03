@@ -9,23 +9,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button_editar_atributo_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
+        <EditText
+            android:id="@+id/et_editar_atributo_enlace"
+            android:layout_width="549dp"
+            android:layout_height="59dp"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/button_editar_nodo_origen_enlace"
-            android:text="Editar atributo"
-            android:textSize="36sp"
-            android:textStyle="bold" />
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/button_editar_nodo_origen_enlace"
             android:layout_width="400dp"
             android:layout_height="150dp"
+            android:layout_above="@+id/button_editar_nodo_destino_enlace"
             android:layout_alignStart="@+id/button_editar_nodo_destino_enlace"
-            android:layout_below="@+id/button_editar_atributo_enlace"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="43dp"
             android:text="Editar origen"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -34,9 +33,9 @@
             android:id="@+id/button_editar_nodo_destino_enlace"
             android:layout_width="400dp"
             android:layout_height="150dp"
+            android:layout_above="@+id/button_editar_guardar_enlace"
             android:layout_alignStart="@+id/button_editar_guardar_enlace"
-            android:layout_below="@+id/button_editar_nodo_origen_enlace"
-            android:layout_marginTop="32dp"
+            android:layout_marginBottom="43dp"
             android:text="Editar destino"
             android:textSize="36sp"
             android:textStyle="bold" />
