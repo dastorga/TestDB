@@ -14,11 +14,11 @@
 
         <Button
             android:id="@+id/btnVolver_EditarNodo"
-            android:layout_width="350dp"
+            android:layout_width="450dp"
             android:layout_height="200dp"
-            android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/btnEliminarNodo_ClassEditarNodo"
-            android:layout_marginBottom="48dp"
+            android:layout_below="@+id/btnEliminarNodo_ClassEditarNodo"
+            android:layout_marginTop="53dp"
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
@@ -26,11 +26,11 @@
 
         <Button
             android:id="@+id/btnGuardarCambios_EditarNodo"
-            android:layout_width="350dp"
+            android:layout_width="450dp"
             android:layout_height="200dp"
-            android:layout_alignStart="@+id/etNombre_EditarNodo"
             android:layout_below="@+id/etNombre_EditarNodo"
-            android:layout_marginTop="38dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp"
             android:elevation="10dp"
             android:text="Guardar Cambios"
             android:textSize="30sp"
@@ -47,7 +47,7 @@
 
         <Button
             android:id="@+id/btnEliminarNodo_ClassEditarNodo"
-            android:layout_width="350dp"
+            android:layout_width="450dp"
             android:layout_height="200dp"
             android:layout_alignStart="@+id/btnGuardarCambios_EditarNodo"
             android:layout_below="@+id/btnGuardarCambios_EditarNodo"

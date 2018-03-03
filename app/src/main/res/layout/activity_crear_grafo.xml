@@ -7,8 +7,8 @@
     tools:context="com.example.dario.testsdb.CrearGrafo">
 
     <RelativeLayout
-        android:layout_width="583dp"
-        android:layout_height="804dp"
+        android:layout_width="754dp"
+        android:layout_height="873dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="11dp">

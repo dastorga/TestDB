@@ -9,11 +9,11 @@
 
     <RelativeLayout
         android:id="@+id/idCrearNodeEnlaceActivity"
-        android:layout_width="761dp"
-        android:layout_height="1103dp"
+        android:layout_width="729dp"
+        android:layout_height="862dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <Button
             android:id="@+id/btnCrearNode"

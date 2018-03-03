@@ -17,11 +17,11 @@
 
         <Button
             android:id="@+id/btnCrear"
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="120dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="47dp"
             android:background="@android:color/holo_green_dark"
             android:elevation="10dp"
             android:text="Crear"
@@ -32,7 +32,7 @@
 
         <Button
             android:id="@+id/btnEliminar"
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="120dp"
             android:layout_alignStart="@+id/btnEditar"
             android:layout_below="@+id/btnEditar"
@@ -47,7 +47,7 @@
 
         <Button
             android:id="@+id/btnEditar"
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="120dp"
             android:layout_alignStart="@+id/btnCrear"
             android:layout_below="@+id/btnCrear"
@@ -62,7 +62,7 @@
 
         <Button
             android:id="@+id/btnReproducir"
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="120dp"
             android:layout_below="@+id/btnEliminar"
             android:layout_centerHorizontal="true"
@@ -77,7 +77,7 @@
 
         <Button
             android:id="@+id/btnExportar"
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="120dp"
             android:layout_below="@+id/btnReproducir"
             android:layout_centerHorizontal="true"

@@ -7,8 +7,8 @@
     tools:context="com.example.dario.testsdb.CrearEnlaceActivity">
 
     <RelativeLayout
-        android:layout_width="585dp"
-        android:layout_height="810dp"
+        android:layout_width="752dp"
+        android:layout_height="870dp"
         tools:ignore="MissingConstraints,UselessLeaf"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
