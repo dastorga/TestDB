@@ -27,7 +27,7 @@
 
         <Button
             android:id="@+id/btnGuardarEdicion_EditarNombreGrafo"
-            android:layout_width="350dp"
+            android:layout_width="450dp"
             android:layout_height="250dp"
             android:layout_below="@+id/etEditarNombreGrafo"
             android:layout_centerHorizontal="true"
@@ -39,7 +39,7 @@
 
         <Button
             android:id="@+id/btnVolverAtras_EditarNombreGrafo"
-            android:layout_width="350dp"
+            android:layout_width="450dp"
             android:layout_height="250dp"
             android:layout_alignStart="@+id/btnGuardarEdicion_EditarNombreGrafo"
             android:layout_below="@+id/btnGuardarEdicion_EditarNombreGrafo"
