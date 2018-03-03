@@ -111,7 +111,12 @@
             android:parentActivityName=".EnlaceListEdit"/>
 
         <activity
-            android:name=".ListNodos"
+            android:name=".ListNodosUpdateOrigen"
+            android:label="Lista de Nodos"
+            android:parentActivityName=".EditarEnlace"/>
+
+        <activity
+            android:name=".ListNodosUpdateDestino"
             android:label="Lista de Nodos"
             android:parentActivityName=".EditarEnlace"/>
 

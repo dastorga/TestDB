@@ -8,14 +8,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 /**
- * Clase encargada de mostrar todos los nodos y receptar el nodo que fue seleccionado.
+ * Clase encargada de mostrar todos los nodos y receptar o no el nodo origen.
  */
 
-public class ListNodos extends AppCompatActivity {
+public class ListNodosUpdateOrigen extends AppCompatActivity {
 
     ListView ListViewNodo;
     ArrayList<Node> list;
@@ -42,10 +41,10 @@ public class ListNodos extends AppCompatActivity {
                 Node ListViewClickData = (Node) parent.getItemAtPosition(position);
                 ListViewClickData.getIdNode();
 
-                Toast.makeText(ListNodos.this, "NODO "+ListViewClickData.getIdNode()+" SELECCIONADO", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListNodosUpdateOrigen.this, "NODO "+ListViewClickData.getIdNode()+" SELECCIONADO", Toast.LENGTH_SHORT).show();
 
                 final Globals g = Globals.getInstance();
-                g.setIdNodeEdit(ListViewClickData.getIdNode()); // guardo el nodo a editar en la variable global
+                g.setIdOrigenEdit(ListViewClickData.getIdNode()); // guardo el nodo origen a editar en la variable global
 
                 startActivity(new Intent(getApplicationContext(), EditarEnlace.class));
             }

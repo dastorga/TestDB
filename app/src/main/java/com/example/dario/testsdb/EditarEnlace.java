@@ -52,7 +52,7 @@ public class EditarEnlace extends AppCompatActivity {
             public void onClick(View v) {
                 //Aqui debo mostrar la lista de todos los nodos creados
                 // luego de mostrar la lista de nodos, actualizar la variable global del nodo seleccionado.
-                Intent intentListNodos = new Intent(EditarEnlace.this, ListNodos.class);
+                Intent intentListNodos = new Intent(EditarEnlace.this, ListNodosUpdateOrigen.class);
                 startActivity(intentListNodos);
             }
         });
@@ -64,7 +64,8 @@ public class EditarEnlace extends AppCompatActivity {
             public void onClick(View v) {
                 //Aqui debo mostrar la lista de todos los nodos creados
                 // luego de mostrar la lista de nodos, actualizar la variable global del nodo seleccionado.
-                Intent intentListNodos = new Intent(EditarEnlace.this, ListNodos.class);
+
+                Intent intentListNodos = new Intent(EditarEnlace.this, ListNodosUpdateDestino.class);
                 startActivity(intentListNodos);
             }
         });
@@ -74,7 +75,6 @@ public class EditarEnlace extends AppCompatActivity {
          */
         button_editar_guardar_enlace.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
 
                 // Lo ultimo que termino haciendo es actualizar el enlace con lo que se alla modificado o no.
                 //MDB.updateEnlace(idEnlaceEdit, et_editar_atributo_enlace.getText().toString(), idOrigenEdit, idDestinoEdit, idGlobalEdit);
