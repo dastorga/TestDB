@@ -400,4 +400,40 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void updateOrigenEnlace(int id_enlace, int origen, int id_graph){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues valores = new ContentValues();
+
+        valores.put("id_enlace", id_enlace); //ver
+        valores.put("origen", origen);
+        valores.put("id_graph", id_graph);
+
+        db.update("ENLACE", valores, "id_enlace=" + id_enlace, null);
+        db.close();
+    }
+
+    public void updateDestinoEnlace(int id_enlace, int destino, int id_graph){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues valores = new ContentValues();
+
+        valores.put("id_enlace", id_enlace); //ver
+        valores.put("destino", destino);
+        valores.put("id_graph", id_graph);
+
+        db.update("ENLACE", valores, "id_enlace=" + id_enlace, null);
+        db.close();
+    }
+
+    public void updateAtributoEnlace(int id_enlace, String atributo, int id_graph){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues valores = new ContentValues();
+
+        valores.put("id_enlace", id_enlace); //ver
+        valores.put("atributo", atributo);
+        valores.put("id_graph", id_graph);
+
+        db.update("ENLACE", valores, "id_enlace=" + id_enlace, null);
+        db.close();
+    }
+
 }

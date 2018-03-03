@@ -46,6 +46,12 @@ public class ListNodosUpdateDestino extends AppCompatActivity {
                 final Globals g = Globals.getInstance();
                 g.setIdDestinoEdit(ListViewClickData.getIdNode()); // guardo el nodo destino a editar en la variable global
 
+                final int idEnlaceEdit = g.getIdEnlaceEdit(); // recupero el id del enlace a editar
+                final int idGlobalEdit = g.getIdGlobalEdit(); // recupero el id del grafo a editar
+
+                // Update en la base de datos del nodo destino
+                MDB.updateDestinoEnlace(idEnlaceEdit, ListViewClickData.getIdNode(), idGlobalEdit);
+
                 startActivity(new Intent(getApplicationContext(), EditarEnlace.class));
             }
         });

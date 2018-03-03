@@ -44,14 +44,12 @@ public class EditarEnlace extends AppCompatActivity {
         // pongo el atributo actual del enlace, en el campo a editar
         et_editar_atributo_enlace.setText(MDB.recoverEnlace(idEnlaceEdit).getAtributoEnlace());
 
-
         /**
          * Cambiar nodo Origen
          */
         button_editar_nodo_origen_enlace.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Aqui debo mostrar la lista de todos los nodos creados
-                // luego de mostrar la lista de nodos, actualizar la variable global del nodo seleccionado.
+                // Listo todos los nodos para dar la opcion de actualizar el origen
                 Intent intentListNodos = new Intent(EditarEnlace.this, ListNodosUpdateOrigen.class);
                 startActivity(intentListNodos);
             }
@@ -62,9 +60,7 @@ public class EditarEnlace extends AppCompatActivity {
          */
         button_editar_nodo_destino_enlace.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Aqui debo mostrar la lista de todos los nodos creados
-                // luego de mostrar la lista de nodos, actualizar la variable global del nodo seleccionado.
-
+                // Listo todos los nodos para dar la opcion de actualizar el destino
                 Intent intentListNodos = new Intent(EditarEnlace.this, ListNodosUpdateDestino.class);
                 startActivity(intentListNodos);
             }
@@ -75,9 +71,8 @@ public class EditarEnlace extends AppCompatActivity {
          */
         button_editar_guardar_enlace.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
-                // Lo ultimo que termino haciendo es actualizar el enlace con lo que se alla modificado o no.
-                //MDB.updateEnlace(idEnlaceEdit, et_editar_atributo_enlace.getText().toString(), idOrigenEdit, idDestinoEdit, idGlobalEdit);
+                // Lo ultimo que termino haciendo es actualizar el atributo del enlace.
+                MDB.updateAtributoEnlace(idEnlaceEdit, et_editar_atributo_enlace.getText().toString(), idGlobalEdit);
                 Toast.makeText(EditarEnlace.this, "EDITADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), EnlaceListEdit.class));
             }

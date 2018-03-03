@@ -46,6 +46,12 @@ public class ListNodosUpdateOrigen extends AppCompatActivity {
                 final Globals g = Globals.getInstance();
                 g.setIdOrigenEdit(ListViewClickData.getIdNode()); // guardo el nodo origen a editar en la variable global
 
+                final int idEnlaceEdit = g.getIdEnlaceEdit(); // recupero el id del enlace a editar
+                final int idGlobalEdit = g.getIdGlobalEdit(); // recupero el id del grafo a editar
+
+                // Update en la base de datos del nodo origen
+                MDB.updateOrigenEnlace(idEnlaceEdit, ListViewClickData.getIdNode(), idGlobalEdit);
+
                 startActivity(new Intent(getApplicationContext(), EditarEnlace.class));
             }
         });
