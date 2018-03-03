@@ -110,6 +110,11 @@
             android:label="Editar enlace"
             android:parentActivityName=".EnlaceListEdit"/>
 
+        <activity
+            android:name=".ListNodos"
+            android:label="Lista de Nodos"
+            android:parentActivityName=".EditarEnlace"/>
+
     </application>
 
 </manifest>

@@ -21,6 +21,10 @@ public class Globals {
 
     private static int idEnlaceEdit;
 
+    private static int idOrigenEdit;
+    private static int idDestinoEdit;
+
+
     public Globals( ) { }
 
     public void setIdGlobal(int t) {
@@ -61,9 +65,8 @@ public class Globals {
         return Globals.idNodeEdit;
     }
 
-    public void setIdEnlaceEdit(int idEnlaceEdit) {
-        Globals.idEnlaceEdit = idEnlaceEdit;
-    }
+
+    public void setIdEnlaceEdit(int idEnlaceEdit) { Globals.idEnlaceEdit = idEnlaceEdit; }
 
     public int getIdEnlaceEdit() {
         return Globals.idEnlaceEdit;
@@ -76,6 +79,23 @@ public class Globals {
 
     public int getIdGlobalPlay() {
         return Globals.idGlobalPlay;
+    }
+
+
+    public void setIdOrigenEdit(int idOrigenEdit) {
+        Globals.idOrigenEdit = idOrigenEdit;
+    }
+
+    public int getIdOrigenEdit() {
+        return Globals.idOrigenEdit;
+    }
+
+    public void setIdDestinoEdit(int idDestinoEdit) {
+        Globals.idDestinoEdit = idDestinoEdit;
+    }
+
+    public int getIdDestinoEdit() {
+        return Globals.idDestinoEdit;
     }
 
     public static synchronized Globals getInstance(){
