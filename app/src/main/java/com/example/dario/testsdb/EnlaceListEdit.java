@@ -1,5 +1,6 @@
 package com.example.dario.testsdb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -50,7 +51,7 @@ public class EnlaceListEdit extends AppCompatActivity {
                 final Globals g = Globals.getInstance();
                 g.setIdEnlaceEdit(ListViewClickData.getIdEnlace()); // guardo el enlace a editar en la variable global
 
-//                startActivity(new Intent(getApplicationContext(), EditarEnlace.class));
+                startActivity(new Intent(getApplicationContext(), EditarEnlace.class));
             }
         });
 
