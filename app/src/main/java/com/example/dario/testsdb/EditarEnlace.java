@@ -70,7 +70,7 @@ public class EditarEnlace extends AppCompatActivity {
          */
         button_editar_volver_atras_enlace.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), GraphListEdit.class);
+                Intent intent = new Intent(getApplicationContext(), EnlaceListEdit.class);
                 startActivity(intent);
             }
         });

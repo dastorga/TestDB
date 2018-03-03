@@ -5,89 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <LinearLayout
-        android:layout_width="752dp"
-        android:layout_height="127dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button_editar_atributo_enlace"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Atributo"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button_editar_nodo_origen_enlace"
+            android:text="Editar atributo"
             android:textSize="36sp"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="752dp"
-        android:layout_height="142dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="143dp"
-        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/button_editar_nodo_origen_enlace"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Origen"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:layout_alignStart="@+id/button_editar_nodo_destino_enlace"
+            android:layout_below="@+id/button_editar_atributo_enlace"
+            android:layout_marginTop="20dp"
+            android:text="Editar origen"
             android:textSize="36sp"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="752dp"
-        android:layout_height="140dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="293dp"
-        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/button_editar_nodo_destino_enlace"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Destino"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:layout_alignStart="@+id/button_editar_guardar_enlace"
+            android:layout_below="@+id/button_editar_nodo_origen_enlace"
+            android:layout_marginTop="32dp"
+            android:text="Editar destino"
             android:textSize="36sp"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="752dp"
-        android:layout_height="138dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="441dp"
-        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/button_editar_guardar_enlace"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Guardar"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:layout_above="@+id/button_editar_volver_atras_enlace"
+            android:layout_alignStart="@+id/button_editar_volver_atras_enlace"
+            android:layout_marginBottom="26dp"
+            android:text="Guardar cambios"
             android:textSize="36sp"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="752dp"
-        android:layout_height="147dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="587dp"
-        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/button_editar_volver_atras_enlace"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="47dp"
             android:text="Volver atras"
             android:textSize="36sp"
             android:textStyle="bold" />
-    </LinearLayout>
+
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
