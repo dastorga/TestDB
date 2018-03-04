@@ -20,7 +20,7 @@ import java.util.Locale;
 public class Play extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
     private TextToSpeech tts;
-    private Button btnReproducir_PLay,btnVolverAtras_PLay;
+    private Button btnReproducir_PLay, btnVolverAtras_PLay, btnRepetirReproduccion;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,11 +31,19 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         btnReproducir_PLay = findViewById(R.id.btnReproducir_PLay);
+        btnRepetirReproduccion = findViewById(R.id.btnRepetirReproduccion);
         btnVolverAtras_PLay = findViewById(R.id.btnVolverAtras_PLay);
 
         btnReproducir_PLay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 // Method yet to be defined
+                speakOut();
+            }
+        });
+
+        btnRepetirReproduccion.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                // Repito la reproduccion
                 speakOut();
             }
         });
@@ -48,7 +56,7 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
 
     }
 
-    private void speakOut() {
+    public void speakOut() {
         // Get the text typed
         String text = "Probando, probando!!";
         // If no text is typed, tts will read out 'You haven't typed text'

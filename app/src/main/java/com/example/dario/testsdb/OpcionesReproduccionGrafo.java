@@ -61,6 +61,8 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  */
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String nodosString = c.ConstrucctionNodesString(idGlobalPlay); // obtengo todos los nodos del grafo pasado como parametro.
+
+
                 Toast.makeText(OpcionesReproduccionGrafo.this, nodosString  , Toast.LENGTH_SHORT).show();
             }
         });
