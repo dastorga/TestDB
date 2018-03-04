@@ -120,6 +120,11 @@
             android:label="Lista de Nodos"
             android:parentActivityName=".EditarEnlace"/>
 
+        <activity
+            android:name=".WhatsAppExport"
+            android:label="Exportar Grafo"
+            android:parentActivityName=".GraphListExport"/>
+
     </application>
 
 </manifest>
