@@ -43,8 +43,8 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  */
 
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
-                String nodosString = c.ConstrucctionNodesString(idGlobalPlay);
-                Toast.makeText(OpcionesReproduccionGrafo.this, nodosString  , Toast.LENGTH_SHORT).show();
+                String graphCompletString = c.ConstrucctionGraphString(idGlobalPlay);
+                Toast.makeText(OpcionesReproduccionGrafo.this, graphCompletString  , Toast.LENGTH_SHORT).show();
 
                 // Me debo ir a la clase Play para reproducir solamente.
                 // Podria pasarle el grafo "idGlobalPlay" que quiero reproducir, q se yo.
@@ -60,7 +60,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  * Construyo todos los nodos del grafo actual a reproducir
                  */
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
-                String nodosString = c.ConstrucctionNodesString(idGlobalPlay);
+                String nodosString = c.ConstrucctionNodesString(idGlobalPlay); // obtengo todos los nodos del grafo pasado como parametro.
                 Toast.makeText(OpcionesReproduccionGrafo.this, nodosString  , Toast.LENGTH_SHORT).show();
             }
         });

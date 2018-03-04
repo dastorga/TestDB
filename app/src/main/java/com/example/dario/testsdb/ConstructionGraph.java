@@ -47,7 +47,7 @@ public class ConstructionGraph {
      */
     public String ConstrucctionGraphString(int idGraph){
         final MiBaseDatos MDB = new MiBaseDatos(context); // La paso el contexto que traigo al invocar esta clase
-        return "";
+        return "Grafo completo listo para reproducir";
     }
 
 }
