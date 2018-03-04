@@ -24,6 +24,8 @@ public class Globals {
     private static int idOrigenEdit;
     private static int idDestinoEdit;
 
+    private static String nodeCompletString;
+
 
     public Globals( ) { }
 
@@ -86,17 +88,20 @@ public class Globals {
         Globals.idOrigenEdit = idOrigenEdit;
     }
 
-    public int getIdOrigenEdit() {
-        return Globals.idOrigenEdit;
-    }
-
     public void setIdDestinoEdit(int idDestinoEdit) {
         Globals.idDestinoEdit = idDestinoEdit;
     }
 
-    public int getIdDestinoEdit() {
-        return Globals.idDestinoEdit;
-    }
+    public int getIdDestinoEdit() { return Globals.idDestinoEdit;}
+
+    public int getIdOrigenEdit() { return Globals.idOrigenEdit; }
+
+
+
+    public void setNodeCompletString(String nodeCompletString) {Globals.nodeCompletString = nodeCompletString;}
+
+    public String getNodeCompletString() { return Globals.nodeCompletString;}
+
 
     public static synchronized Globals getInstance(){
         if (instance==null){

@@ -25,7 +25,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         btnReproducirNodos = findViewById(R.id.btnReproducirNodos);
         btnVolver_ReproduccionGrafo = findViewById(R.id.btnVolver_ReproduccionGrafo);
 
-        Globals g = Globals.getInstance();
+        final Globals g = Globals.getInstance();
         final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducir
 
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
@@ -61,9 +61,10 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  */
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String nodosString = c.ConstrucctionNodesString(idGlobalPlay); // obtengo todos los nodos del grafo pasado como parametro.
-
+                g.setNodeCompletString(nodosString); // Guardo todos los nodos para reproducir en otra clase.
 
                 Toast.makeText(OpcionesReproduccionGrafo.this, nodosString  , Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), Play.class));
             }
         });
 
@@ -76,3 +77,10 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
     }
 
 }
+
+
+
+
+
+
+

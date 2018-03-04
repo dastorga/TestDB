@@ -29,6 +29,7 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
 
         tts = new TextToSpeech(this, this);
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+        final Globals g = Globals.getInstance();
 
         btnReproducir_PLay = findViewById(R.id.btnReproducir_PLay);
         btnRepetirReproduccion = findViewById(R.id.btnRepetirReproduccion);
@@ -37,14 +38,15 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         btnReproducir_PLay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 // Method yet to be defined
-                speakOut();
+
+                speakOut(g.getNodeCompletString());
             }
         });
 
         btnRepetirReproduccion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 // Repito la reproduccion
-                speakOut();
+                speakOut(g.getNodeCompletString());
             }
         });
 
@@ -56,9 +58,11 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
 
     }
 
-    public void speakOut() {
+    private void speakOut(String dataEntry) {
         // Get the text typed
-        String text = "Probando, probando!!";
+        //String text = "Probando, probando!!";
+        String text = dataEntry;
+
         // If no text is typed, tts will read out 'You haven't typed text'
         // else it reads out the text you typed
         if (text.length() == 0) {
