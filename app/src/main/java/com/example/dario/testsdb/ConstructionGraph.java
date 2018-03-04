@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 /**
  * Clase distinada a facilitar diferentes construcciones de grafos.
+ * Tambien diferentes recorridos (futuro).
  */
 
 public class ConstructionGraph {
@@ -37,6 +38,14 @@ public class ConstructionGraph {
      * Dado un identificador de grafo (idGrafo),
      */
     public String ConstrucctionEnlacesString(int idGraph){
+        final MiBaseDatos MDB = new MiBaseDatos(context); // La paso el contexto que traigo al invocar esta clase
+        return "";
+    }
+
+    /**
+     * Dado un identificador de grafo (idGrafo), me retorna como resultado el grafo completo en string.
+     */
+    public String ConstrucctionGraphString(int idGraph){
         final MiBaseDatos MDB = new MiBaseDatos(context); // La paso el contexto que traigo al invocar esta clase
         return "";
     }

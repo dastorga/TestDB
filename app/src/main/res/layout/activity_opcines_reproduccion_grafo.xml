@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="585dp"
-        android:layout_height="810dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        android:layout_width="757dp"
+        android:layout_height="878dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/btnEscuchargrafocompleto"
-            android:layout_width="350dp"
+            android:layout_width="450dp"
             android:layout_height="200dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -26,7 +26,7 @@
 
         <Button
             android:id="@+id/btnVolver_ReproduccionGrafo"
-            android:layout_width="350dp"
+            android:layout_width="450dp"
             android:layout_height="200dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
@@ -38,7 +38,7 @@
 
         <Button
             android:id="@+id/btnReproducirNodos"
-            android:layout_width="350dp"
+            android:layout_width="450dp"
             android:layout_height="200dp"
             android:layout_below="@+id/btnEscuchargrafocompleto"
             android:layout_centerHorizontal="true"

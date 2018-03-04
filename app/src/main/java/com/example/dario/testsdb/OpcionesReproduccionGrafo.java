@@ -36,9 +36,10 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  * compilar todito el grafo almacenado en la base de datos y devolverlo en string, para su
                  * posterior reproduccion.
 
-                 * Por otro lado me gustaria tener una clase "Play", la cual posea metodos que tomen un string y lo reproduzcan.
-                 * por el momento una reproduccion simple no mas.
-                 * luego ver el tema de la longitud de reproduccion y velocidad, y repeticion de la reproduccion.
+                 * Por otro lado me gustaria tener una clase "Play", la cual posea metodos que tomen un string y lo reproduzcan directamente
+                 * en cualquier instancia de la aplicacion donde yo la llame.
+                 * Por el momento con una reproduccion simple no mas me alcanza
+                 * Luego ver el tema de la longitud de reproduccion y velocidad, y repeticion de la reproduccion.
                  */
 
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
@@ -48,7 +49,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 // Me debo ir a la clase Play para reproducir solamente.
                 // Podria pasarle el grafo "idGlobalPlay" que quiero reproducir, q se yo.
                 // El tema, es que cuando desea reproducir me lleva a una nueva activity que solo reproduce.
-                // Pensar el tema de reproducir cualquier cosa que se me ocurra!.
+                // Pensar el tema de reproducir cualquier cosa que se me ocurra y en cualquier lugar de la App.
                 startActivity(new Intent(getApplicationContext(), Play.class));
             }
         });
@@ -61,7 +62,6 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String nodosString = c.ConstrucctionNodesString(idGlobalPlay);
                 Toast.makeText(OpcionesReproduccionGrafo.this, nodosString  , Toast.LENGTH_SHORT).show();
-
             }
         });
 

@@ -35,9 +35,6 @@ public class EditarEnlace extends AppCompatActivity {
         final int idEnlaceEdit = g.getIdEnlaceEdit(); // recupero el id del enlace a editar
         final int idGlobalEdit = g.getIdGlobalEdit(); // recupero el id del grafo a editar
 
-        final int idOrigenEdit = g.getIdOrigenEdit(); // recupero el id del nodo origen a editar
-        final int idDestinoEdit = g.getIdDestinoEdit(); // recupero el id del nodo destino a editar
-
         /**
          * Cambiar valor de atributo
          */
