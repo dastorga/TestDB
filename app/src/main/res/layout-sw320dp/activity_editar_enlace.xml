@@ -7,12 +7,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <EditText
             android:id="@+id/et_editar_atributo_enlace"
-            android:layout_width="549dp"
-            android:layout_height="59dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ems="10"
@@ -20,44 +22,44 @@
 
         <Button
             android:id="@+id/button_editar_nodo_origen_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
-            android:layout_above="@+id/button_editar_nodo_destino_enlace"
-            android:layout_alignStart="@+id/button_editar_nodo_destino_enlace"
-            android:layout_marginBottom="43dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/et_editar_atributo_enlace"
+            android:layout_marginTop="81dp"
             android:text="Editar origen"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_nodo_destino_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
-            android:layout_above="@+id/button_editar_guardar_enlace"
-            android:layout_alignStart="@+id/button_editar_guardar_enlace"
-            android:layout_marginBottom="43dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button_editar_nodo_origen_enlace"
+            android:layout_marginTop="49dp"
             android:text="Editar destino"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_guardar_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
-            android:layout_above="@+id/button_editar_volver_atras_enlace"
-            android:layout_alignStart="@+id/button_editar_volver_atras_enlace"
-            android:layout_marginBottom="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/button_editar_nodo_destino_enlace"
+            android:layout_marginTop="94dp"
             android:text="Guardar cambios"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_volver_atras_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button_editar_guardar_enlace"
+            android:layout_marginTop="54dp"
             android:text="Volver atras"
             android:textSize="36sp"
             android:textStyle="bold" />
