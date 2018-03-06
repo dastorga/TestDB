@@ -7,7 +7,7 @@
     tools:context="com.example.dario.testsdb.CrearGrafo">
 
     <RelativeLayout
-        android:layout_width="754dp"
+        android:layout_width="match_parent"
         android:layout_height="873dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="9dp"
@@ -15,8 +15,8 @@
 
         <EditText
             android:id="@+id/etNombreGrafo"
-            android:layout_width="549dp"
-            android:layout_height="59dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ems="10"
@@ -29,11 +29,11 @@
 
         <Button
             android:id="@+id/btnGuardarNombreGrafo"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
-            android:layout_alignStart="@+id/btnVolverAtrasGrafo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/etNombreGrafo"
-            android:layout_marginTop="89dp"
+            android:layout_marginTop="48dp"
             android:elevation="10dp"
             android:text="Guardar"
             android:textSize="30sp"
@@ -44,11 +44,11 @@
 
         <Button
             android:id="@+id/btnVolverAtrasGrafo"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnGuardarNombreGrafo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="122dp"
+            android:layout_marginTop="89dp"
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"

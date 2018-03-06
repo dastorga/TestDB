@@ -7,16 +7,16 @@
     tools:context="com.example.dario.testsdb.CrearNodeActivity">
 
     <RelativeLayout
-        android:layout_width="758dp"
-        android:layout_height="876dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/btnGuardar_CrearNode"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
             android:layout_alignStart="@+id/btnVolverAtras_CrearNode"
             android:layout_below="@+id/etNombreNode_CrearNode"
             android:layout_marginTop="73dp"
@@ -28,11 +28,11 @@
 
         <Button
             android:id="@+id/btnVolverAtras_CrearNode"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="84dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnGuardar_CrearNode"
+            android:layout_marginTop="108dp"
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
@@ -41,7 +41,7 @@
 
         <EditText
             android:id="@+id/etNombreNode_CrearNode"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
