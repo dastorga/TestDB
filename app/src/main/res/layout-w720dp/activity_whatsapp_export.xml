@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="585dp"
+        android:layout_height="810dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/editText_telefono_whatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btn_enviar_whatsapp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/btn_enviar_whatsapp"
+            android:ems="10"
+            android:hint="Ingresa numero de telefono "
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/btn_enviar_whatsapp"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/editText_telefono_whatsapp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="Enviar"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_volver_inicio"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/btn_enviar_whatsapp"
+            android:layout_marginBottom="58dp"
+            android:text="Volver al Inicio"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

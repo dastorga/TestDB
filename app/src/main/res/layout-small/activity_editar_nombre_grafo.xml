@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="784dp"
+        android:layout_height="1153dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/etEditarNombreGrafo"
+            android:layout_width="549dp"
+            android:layout_height="59dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Editar nombre de grafo..."
+            android:inputType="textPersonName"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="55dp" />
+
+        <Button
+            android:id="@+id/btnGuardarEdicion_EditarNombreGrafo"
+            android:layout_width="450dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/etEditarNombreGrafo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="98dp"
+            android:elevation="10dp"
+            android:text="GUARDAR EDICION"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnVolverAtras_EditarNombreGrafo"
+            android:layout_width="450dp"
+            android:layout_height="250dp"
+            android:layout_alignStart="@+id/btnGuardarEdicion_EditarNombreGrafo"
+            android:layout_below="@+id/btnGuardarEdicion_EditarNombreGrafo"
+            android:layout_marginTop="69dp"
+            android:elevation="10dp"
+            android:text="VOLVER ATRAS"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

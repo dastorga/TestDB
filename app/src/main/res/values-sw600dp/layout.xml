@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="layout_width_relative"> </dimen>
+    <dimen name="layout_height_relative">819dp</dimen>
+
+    <dimen name="layout_width_button"> 600dp</dimen>
+    <dimen name="layout_height_button"> 150dp</dimen>
+
+</resources>
