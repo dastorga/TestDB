@@ -6,8 +6,8 @@
     tools:context="com.example.dario.testsdb.CrearEnlaceActivity">
 
     <RelativeLayout
-        android:layout_width="752dp"
-        android:layout_height="870dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints,UselessLeaf"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
@@ -25,11 +25,10 @@
 
         <Button
             android:id="@+id/btnNodoOrigen_CrearArco"
-            android:layout_width="450dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_CrearArco"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
             android:elevation="10dp"
             android:text="NODO ORIGEN"
             android:textSize="30sp"
@@ -38,11 +37,11 @@
 
         <Button
             android:id="@+id/btnNodoDestino_CrearArco"
-            android:layout_width="450dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="38dp"
+            android:layout_marginTop="10dp"
             android:elevation="10dp"
             android:text="NODO DESTINO"
             android:textSize="30sp"
@@ -51,11 +50,11 @@
 
         <Button
             android:id="@+id/btnVolverAtras_CrearArco"
-            android:layout_width="450dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnCrearArco_CrearArco"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
             android:textSize="30sp"
@@ -64,8 +63,8 @@
 
         <Button
             android:id="@+id/btnCrearArco_CrearArco"
-            android:layout_width="450dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/btnNodoDestino_CrearArco"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"

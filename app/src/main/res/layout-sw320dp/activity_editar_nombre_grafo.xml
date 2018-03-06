@@ -6,16 +6,16 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="784dp"
-        android:layout_height="1153dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
         <EditText
             android:id="@+id/etEditarNombreGrafo"
-            android:layout_width="549dp"
-            android:layout_height="59dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ems="10"
@@ -27,11 +27,11 @@
 
         <Button
             android:id="@+id/btnGuardarEdicion_EditarNombreGrafo"
-            android:layout_width="450dp"
-            android:layout_height="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/etEditarNombreGrafo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="98dp"
+            android:layout_marginTop="70dp"
             android:elevation="10dp"
             android:text="GUARDAR EDICION"
             android:textSize="30sp"
@@ -39,8 +39,8 @@
 
         <Button
             android:id="@+id/btnVolverAtras_EditarNombreGrafo"
-            android:layout_width="450dp"
-            android:layout_height="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
             android:layout_alignStart="@+id/btnGuardarEdicion_EditarNombreGrafo"
             android:layout_below="@+id/btnGuardarEdicion_EditarNombreGrafo"
             android:layout_marginTop="69dp"
