@@ -7,6 +7,13 @@
     <dimen name="layout_width_button"> </dimen>
     <dimen name="layout_height_button">50dp </dimen>
 
+    <dimen name="layout_height_button_60"> 60dp</dimen>
+
     <dimen name="layout_height_button_"> 110dp</dimen>
+
+    <dimen name="layout_height_button_80"> 80dp</dimen>
+
+
+
 
 </resources>
