@@ -10,4 +10,6 @@
     <dimen name="layout_height_button_80">80dp </dimen>
     <dimen name="layout_height_button_"> 110dp</dimen>
 
+    <dimen name="layout_height_button_120"> 120dp</dimen>
+
 </resources>
