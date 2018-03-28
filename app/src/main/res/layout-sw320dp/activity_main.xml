@@ -9,8 +9,8 @@
     tools:layout_editor_absoluteX="0dp">
 
     <RelativeLayout
-        android:layout_width="@dimen/layout_width_relative"
-        android:layout_height="@dimen/layout_height_relative"
+        android:layout_width="412dp"
+        android:layout_height="597dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-5dp"
         tools:layout_editor_absoluteY="0dp">

@@ -6,16 +6,16 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="776dp"
-        android:layout_height="1116dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp">
 
         <Button
             android:id="@+id/btnVolver_EditarNodo"
-            android:layout_width="450dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
             android:layout_alignStart="@+id/btnEliminarNodo_ClassEditarNodo"
             android:layout_below="@+id/btnEliminarNodo_ClassEditarNodo"
             android:layout_marginTop="53dp"
@@ -26,11 +26,11 @@
 
         <Button
             android:id="@+id/btnGuardarCambios_EditarNodo"
-            android:layout_width="450dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/etNombre_EditarNodo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="41dp"
+            android:layout_marginTop="44dp"
             android:elevation="10dp"
             android:text="Guardar Cambios"
             android:textSize="30sp"
@@ -38,8 +38,8 @@
 
         <EditText
             android:id="@+id/etNombre_EditarNodo"
-            android:layout_width="549dp"
-            android:layout_height="59dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ems="10"
@@ -47,11 +47,11 @@
 
         <Button
             android:id="@+id/btnEliminarNodo_ClassEditarNodo"
-            android:layout_width="450dp"
-            android:layout_height="200dp"
-            android:layout_alignStart="@+id/btnGuardarCambios_EditarNodo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_button_"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnGuardarCambios_EditarNodo"
-            android:layout_marginTop="99dp"
+            android:layout_marginTop="72dp"
             android:elevation="10dp"
             android:text="Eliminar nodo"
             android:textSize="30sp"
