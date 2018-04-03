@@ -64,11 +64,24 @@ public class ConstructionGraph {
 
 
     /**
-     * Dado un identificador de grafo (idGrafo), me retorna como resultado el grafo completo en string.
+     * Dado un identificador de grafo (idGrafo), me retorna como resultado el grafo completo en en formato Graphviz
+     * Ejemplo:
+     *
+     *  digraph G {
+     *  A -> B
+     *  B -> C
+     *  C -> A
+     *
+     *  }
+     *
      */
-    public String ConstrucctionGraphString(int idGraph){
+    public String ConstructionGraphString(int idGraph){
         final MiBaseDatos MDB = new MiBaseDatos(context); // La paso el contexto que traigo al invocar esta clase
-        return "Grafo completo listo para reproducir";
+        String listaDeEnlaces= ConstrucctionEnlacesString(idGraph);
+        String nameGraph = MDB.recoverGraph(idGraph).getNameGraph(); //nombre del grafo
+        String resultadoFinal;
+        resultadoFinal = "digraph " + nameGraph + " {" + "\n" + listaDeEnlaces + "\n" + "}";
+        return resultadoFinal;
     }
 
 }
