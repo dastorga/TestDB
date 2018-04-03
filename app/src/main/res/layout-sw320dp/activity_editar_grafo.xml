@@ -39,7 +39,7 @@
             android:layout_height="@dimen/layout_height_button_"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarEnlacesGrafo"
-            android:layout_marginTop="51dp"
+            android:layout_marginTop="18dp"
             android:text="Volver Atras"
             android:textSize="30sp"
             android:textStyle="bold" />

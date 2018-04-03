@@ -43,14 +43,10 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  */
 
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
-                String graphCompletString = c.ConstrucctionGraphString(idGlobalPlay);
-                Toast.makeText(OpcionesReproduccionGrafo.this, graphCompletString  , Toast.LENGTH_SHORT).show();
+                String construcctionEnlacesString = c.ConstrucctionEnlacesString(idGlobalPlay); // paso id del grafo a construir
 
-                // Me debo ir a la clase Play para reproducir solamente.
-                // Podria pasarle el grafo "idGlobalPlay" que quiero reproducir, q se yo.
-                // El tema, es que cuando desea reproducir me lleva a una nueva activity que solo reproduce.
-                // Pensar el tema de reproducir cualquier cosa que se me ocurra y en cualquier lugar de la App.
-                startActivity(new Intent(getApplicationContext(), Play.class));
+                Toast.makeText(OpcionesReproduccionGrafo.this, construcctionEnlacesString  , Toast.LENGTH_SHORT).show();
+
             }
         });
 

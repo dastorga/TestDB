@@ -1,6 +1,8 @@
 package com.example.dario.testsdb;
 
 import android.content.Context;
+import android.util.Log;
+
 import java.util.ArrayList;
 
 /**
@@ -19,7 +21,6 @@ public class ConstructionGraph {
         this.context = context;
     }
 
-
     /**
      * Dado un identificador de grafo (idGrafo), me retorna como resultado todos sus nodos como una sola cadena de string.
      */
@@ -35,12 +36,32 @@ public class ConstructionGraph {
     }
 
     /**
-     * Dado un identificador de grafo (idGrafo),
+     * Aqui la idea seria poder construir todos los enlaces del grafo que se pasa como parametro,
+     * luego devolver como resultado en un string todos los enlaces de ese grafo, en un string.
+     *
+     * Ejemplo:
+     *
+     *      A->B
+     *      A->A
+     *      B->C
+     *      C->A
+     *
+     *      Asi obtengo el nodo origen del enlace y del destino
+     *      resultFinal = arrayListEnlaces.get(i).getOrigenEnlace() + "->"+ arrayListEnlaces.get(i).getDestinoEnlace() + "\n";
      */
     public String ConstrucctionEnlacesString(int idGraph){
         final MiBaseDatos MDB = new MiBaseDatos(context); // La paso el contexto que traigo al invocar esta clase
-        return "";
+        String resultFinal = "";
+        ArrayList<Enlace> arrayListEnlaces = MDB.recoverEnlacesInGraph(idGraph);
+
+        for(int i = 0; i< arrayListEnlaces.size(); i++){
+            resultFinal = MDB.recoverNode(arrayListEnlaces.get(i).getOrigenEnlace()).getAtributoNode() + "->"+
+                          MDB.recoverNode(arrayListEnlaces.get(i).getDestinoEnlace()).getAtributoNode() + "\n";
+            Log.i(resultFinal, resultFinal);
+        }
+        return resultFinal;
     }
+
 
     /**
      * Dado un identificador de grafo (idGrafo), me retorna como resultado el grafo completo en string.
