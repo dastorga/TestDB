@@ -15,8 +15,8 @@
 
         <TextView
             android:id="@+id/tv_CrearArco"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/layout_height_button_80"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="13dp"
@@ -28,7 +28,7 @@
         <Button
             android:id="@+id/btnNodoOrigen_CrearArco"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_CrearArco"
             android:elevation="10dp"
@@ -40,7 +40,7 @@
         <Button
             android:id="@+id/btnNodoDestino_CrearArco"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="38dp"
@@ -53,7 +53,7 @@
         <Button
             android:id="@+id/btnVolverAtras_CrearArco"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/btnCrearArco_CrearArco"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
@@ -66,7 +66,7 @@
         <Button
             android:id="@+id/btnCrearArco_CrearArco"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/btnNodoDestino_CrearArco"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
