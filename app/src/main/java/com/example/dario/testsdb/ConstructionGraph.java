@@ -41,10 +41,10 @@ public class ConstructionGraph {
      *
      * Ejemplo:
      *
-     *      A->B
-     *      A->A
-     *      B->C
-     *      C->A
+     *      A -> B
+     *      A -> A
+     *      B -> C
+     *      C -> A
      *
      *      Asi obtengo el nodo origen del enlace y del destino
      *      resultFinal = arrayListEnlaces.get(i).getOrigenEnlace() + "->"+ arrayListEnlaces.get(i).getDestinoEnlace() + "\n";

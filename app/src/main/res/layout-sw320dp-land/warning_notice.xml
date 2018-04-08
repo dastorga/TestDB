@@ -7,8 +7,8 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="749dp"
-        android:layout_height="864dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="11dp">
@@ -19,21 +19,18 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="140dp"
             android:text="Seguro desea eliminar el Grafo?"
             android:textColor="@android:color/holo_orange_light"
             android:textSize="36sp"
             android:textStyle="bold"
-            tools:text="WarnigNotice" />
+            tools:text="Seguro desea eliminar el Grafo?" />
 
         <Button
             android:id="@+id/btnAceptarWarningNotice"
-            android:layout_width="220dp"
-            android:layout_height="150dp"
-            android:layout_alignBottom="@+id/btnCancelarWarningNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/btnCancelarWarningNotice"
-            android:layout_marginStart="43dp"
+            android:layout_below="@+id/txtViewWarningNotice"
             android:background="@android:color/holo_red_light"
             android:elevation="10dp"
             android:text="ACEPTAR"
@@ -43,12 +40,11 @@
 
         <Button
             android:id="@+id/btnCancelarWarningNotice"
-            android:layout_width="220dp"
-            android:layout_height="150dp"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/txtViewWarningNotice"
-            android:layout_marginEnd="40dp"
-            android:layout_marginTop="102dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnAceptarWarningNotice"
+            android:layout_marginTop="40dp"
             android:background="@color/colorPrimary"
             android:elevation="10dp"
             android:text="CANCELAR"
