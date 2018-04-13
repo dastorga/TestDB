@@ -38,6 +38,9 @@ public class GraphListExport extends AppCompatActivity {
                 ListViewClickData.getIdGraph();
                 Toast.makeText(GraphListExport.this, "GRAFO NUMERO "+ListViewClickData.getIdGraph()+" PARA EXPORTAR", Toast.LENGTH_SHORT).show();
 
+                Globals g = Globals.getInstance();
+                g.setIdGlobalPlay(ListViewClickData.getIdGraph()); // Guardo el Id de este ultimo grafo actual a REPRODUCIR
+
                 startActivity(new Intent(getApplicationContext(), WhatsAppExport.class));
             }
         });
