@@ -26,22 +26,24 @@
         <Button
             android:id="@+id/btn_enviar_whatsapp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/layout_height_button_120"
             android:layout_below="@+id/editText_telefono_whatsapp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
             android:text="Enviar"
+            android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_volver_inicio"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/layout_height_button_120"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btn_enviar_whatsapp"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="89dp"
             android:text="Volver al Inicio"
+            android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="bold" />
     </RelativeLayout>
