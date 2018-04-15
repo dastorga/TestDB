@@ -1,11 +1,14 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Esta clase se encargara de exportar el grafo seleccionado con anterioridad y exportarlo al numero de WhatsApp ingresado
@@ -27,7 +30,7 @@ public class WhatsAppExport extends AppCompatActivity {
         editText_telefono_whatsapp = findViewById(R.id.editText_telefono_whatsapp);
         btn_enviar_whatsapp = findViewById(R.id.btn_enviar_whatsapp);
 
-        editText_telefono_whatsapp.getText(); // obtengo el numero que se ingreso, se valida como type phone
+       final Editable number = editText_telefono_whatsapp.getText(); // obtengo el numero que se ingreso, se valida como type phone
                                              // luego aqui yo lo paso a text.
 
         final Globals g = Globals.getInstance();
@@ -52,16 +55,24 @@ public class WhatsAppExport extends AppCompatActivity {
 //                Toast.makeText(WhatsAppExport.this, constructionGraphString  , Toast.LENGTH_SHORT).show();
 //                Log.i("------------------->", constructionGraphString);
 
-
                 // Me abre WhatsApp directamente
                 //Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.whatsapp");
                 //startActivity(launchIntent);
 
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "http://graphviz.it/#/"+constructionGraphString);
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
+//                Intent sendIntent = new Intent();
+//                sendIntent.setAction(Intent.ACTION_SEND);
+//                sendIntent.putExtra(Intent.EXTRA_TEXT, "http://graphviz.it/#/new"+constructionGraphString);
+//                sendIntent.setType("text/plain");
+//                startActivity(sendIntent);
+
+
+
+                Toast.makeText(WhatsAppExport.this, number.length(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                String uri = "whatsapp://send?phone=" + number + "&text=" + "Este es el mensaje para enviar";
+                intent.setData(Uri.parse(uri));
+                startActivity(intent);
 
                 //Toast.makeText(WhatsAppExport.this, "Enviado exitosamente!", Toast.LENGTH_SHORT).show();
             }
