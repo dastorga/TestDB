@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +29,7 @@ public class WhatsAppExport extends AppCompatActivity {
         editText_telefono_whatsapp = findViewById(R.id.editText_telefono_whatsapp);
         btn_enviar_whatsapp = findViewById(R.id.btn_enviar_whatsapp);
 
-       final Editable number = editText_telefono_whatsapp.getText(); // obtengo el numero que se ingreso, se valida como type phone
+        final String number = String.valueOf(editText_telefono_whatsapp.getText()); // obtengo el numero que se ingreso, se valida como type phone
                                              // luego aqui yo lo paso a text.
 
         final Globals g = Globals.getInstance();
@@ -59,22 +58,24 @@ public class WhatsAppExport extends AppCompatActivity {
                 //Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.whatsapp");
                 //startActivity(launchIntent);
 
-//                Intent sendIntent = new Intent();
-//                sendIntent.setAction(Intent.ACTION_SEND);
-//                sendIntent.putExtra(Intent.EXTRA_TEXT, "http://graphviz.it/#/new"+constructionGraphString);
-//                sendIntent.setType("text/plain");
-//                startActivity(sendIntent);
+                if(number == ""){
+                    // Opcion en la que no inserta ningun numero
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, "http://graphviz.it/#/new"+constructionGraphString);
+                    sendIntent.setType("text/plain");
+                    startActivity(sendIntent);
+                } else {
+                    // Opcion en la que inserta numero de telefono
+                    Toast.makeText(WhatsAppExport.this, number, Toast.LENGTH_SHORT).show();
 
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    String uri = "whatsapp://send?phone=" + number + "&text=" + constructionGraphString;
+                    intent.setData(Uri.parse(uri));
+                    startActivity(intent);
 
-
-                Toast.makeText(WhatsAppExport.this, number.length(), Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                String uri = "whatsapp://send?phone=" + number + "&text=" + "Este es el mensaje para enviar";
-                intent.setData(Uri.parse(uri));
-                startActivity(intent);
-
-                //Toast.makeText(WhatsAppExport.this, "Enviado exitosamente!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WhatsAppExport.this, "Enviado exitosamente!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
