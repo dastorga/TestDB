@@ -80,6 +80,10 @@ public class WhatsAppExport extends AppCompatActivity {
             }
         });
 
+        /**
+         * Me retorna a la activity anterior, osea el menu principal.
+         *
+         */
         btn_volver_inicio.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
