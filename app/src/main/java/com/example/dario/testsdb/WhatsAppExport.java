@@ -11,7 +11,9 @@ import android.widget.Toast;
 
 /**
  * Esta clase se encargara de exportar el grafo seleccionado con anterioridad y exportarlo al numero de WhatsApp ingresado
- * en el campo de texto
+ * en el campo de texto en el caso de ingresar un numero telefono que tengo ya registrado como contacto con anterioridad,
+ * de lo contrario me da la opcion de poder enviar por algun otro medio de comunicacion que disponga en el dispositivo
+ * movil (email, whatsapp, etc)
  */
 
 public class WhatsAppExport extends AppCompatActivity {
