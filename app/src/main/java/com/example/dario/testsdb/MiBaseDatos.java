@@ -46,7 +46,6 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
         db.execSQL(TABLA_GRAPH);
         db.execSQL(TABLA_NODE);
         db.execSQL(TABLA_ENLACE);
@@ -55,7 +54,6 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_GRAPH);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_NODE);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_ENLACE);
