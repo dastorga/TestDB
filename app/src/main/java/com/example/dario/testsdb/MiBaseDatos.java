@@ -29,7 +29,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     private static final String TABLA_ENLACE = "CREATE TABLE ENLACE" + "(id_enlace INTEGER PRIMARY KEY AUTOINCREMENT, origen INT, destino INT, atributo VARCHAR, id_graph INT, FOREIGN KEY(id_graph) REFERENCES GRAPH(id_graph) ON DELETE CASCADE)";
 
-    // CONSTRUCTOR de la clase
+    /**
+     * CONSTRUCTOR de la clase
+     *
+     */
     public MiBaseDatos(Context context) {
         super(context, NOMBRE_BASEDATOS, null, VERSION_BASEDATOS);
     }
@@ -62,6 +65,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     //////////////////////////////// INSERTAR /////////////////////////////////////////////////
 
+    /**
+     * Metodo encargado de crear un grafo con un id autoincrementado y con un nombre que toma como parametro.
+     *
+     */
     public int insertGraph(String name) {
         SQLiteDatabase db = getWritableDatabase();
         if(db != null){
@@ -71,7 +78,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
             long newRowId;
 
-            // REcordar que al ser autoincrementado va aumentando de uno en uno
+            // Recordar que al ser autoincrementado va aumentando de uno en uno
             newRowId = db.insert("GRAPH", null, valores);
 
             db.close();
@@ -81,6 +88,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return -1; //en caso de error en la insercion
     }
 
+    /**
+     * Metodo encargado de crear un nodo, tomando como parametro el atributo del nodo
+     * y el id_grafo al que pertenece.
+     */
     public int insertNode(String atributo, int id_graph) {
         SQLiteDatabase db = getWritableDatabase();
         if(db != null){
@@ -98,6 +109,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return -1; //en caso de error en la insercion
     }
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public int insertEnlace(int origen, int destino, String atributo, int id_graph) {
         SQLiteDatabase db = getWritableDatabase();
         if(db != null){
@@ -117,6 +132,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return -1; //en caso de error en la insercion
     }
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public void insertUser(int id, String name, int phone, String email) {
         SQLiteDatabase db = getWritableDatabase();
         if(db != null){
@@ -132,6 +151,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public void insertWord(int id, String word) {
         SQLiteDatabase db = getWritableDatabase();
         if(db != null){
@@ -147,6 +170,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     //////////////////////////////// RECUPERAR /////////////////////////////////////////////////
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public Graph recoverGraph(int id_graph) {
         SQLiteDatabase db = getReadableDatabase();
         String[] valores_recuperar = {"id_graph", "name"};
@@ -160,6 +187,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return graph;
     }
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public ArrayList<Graph> recoverGraphs() {
 
         SQLiteDatabase db = getReadableDatabase();
@@ -177,6 +208,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return lista_graphs;
     }
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public Node recoverNode(int id_node) {
         SQLiteDatabase db = getReadableDatabase();
         String[] valores_recuperar = {"id_node", "atributo", "id_graph"};
@@ -191,6 +226,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     }
 
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public List<Node> recoverNodes() {
         SQLiteDatabase db = getReadableDatabase();
         List<Node> lista_nodes = new ArrayList<Node>();
@@ -205,6 +244,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return lista_nodes;
     }
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public Enlace recoverEnlace(int id_enlace) {
         SQLiteDatabase db = getReadableDatabase();
         String[] valores_recuperar = {"id_enlace", "origen", "destino", "atributo", "id_graph"};
@@ -218,6 +261,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return enlace;
     }
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public ArrayList<Node> recoverNodesInGraph(int id_graph) {
         SQLiteDatabase db = getReadableDatabase();
         ArrayList<Node> lista_nodes = new ArrayList<Node>();
@@ -232,7 +279,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return lista_nodes;
     }
 
-
+    /**
+     * Metodo encargado de
+     *
+     */
     public ArrayList<Enlace> recoverEnlacesInGraph(int id_graph) {
         SQLiteDatabase db = getReadableDatabase();
         ArrayList<Enlace> lista_enlaces = new ArrayList<Enlace>();
@@ -247,6 +297,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return lista_enlaces;
     }
 
+    /**
+     * Metodo encargado de
+     *
+     */
     public List<Word> recoverWords() {
         SQLiteDatabase db = getReadableDatabase();
         List<Word> lista_words = new ArrayList<Word>();
@@ -264,7 +318,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     //////////////////////////////// EXISTIR /////////////////////////////////////////////////
 
-    // Dado un grafo, me indica si existen nodos para ese grafo.
+    /**
+     * Dado un grafo, me indica si existen nodos para ese grafo.
+     *
+     */
     public Boolean existsNodesInGraph(int id_graph) {
         SQLiteDatabase db = getReadableDatabase();
         List<Node> lista_nodes = new ArrayList<Node>();
@@ -281,7 +338,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return lista_nodes.size() != 0;
     }
 
-    //Dado un grafo me indica si existen enlaces para ese grafo.
+    /**
+     * Dado un grafo me indica si existen enlaces para ese grafo.
+     *
+     */
     public Boolean existsEnlacesInGraph(int id_graph) {
         SQLiteDatabase db = getReadableDatabase();
         List<Enlace> lista_enlaces = new ArrayList<Enlace>();
@@ -300,37 +360,60 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
     //////////////////////////////// ELIMINAR /////////////////////////////////////////////////
 
+    /**
+     *
+     *
+     */
     public void deleteGraph(int id_graph) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("GRAPH", "id_graph="+id_graph, null);
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void deleteNode(int id_node) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("NODE", "id_node="+id_node, null);
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void deleteEnlace(int id_enlace) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("ENLACE", "id_enlace="+id_enlace, null);
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void deleteUser(int id) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("USER", "_id="+id, null);
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void deleteWord(int id) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("WORD", "_id="+id, null);
         db.close();
     }
 
-    // Elimina los elementos de la tabla que se pasa como parametro
+    /**
+     * Elimina los elementos de la tabla que se pasa como parametro
+     *
+     */
     public void dropTable(String table) {
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("DELETE FROM " + table);
@@ -363,6 +446,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void updateGraph(int id_graph, String name){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues valores = new ContentValues();
@@ -374,6 +461,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void updateNode(int id_node, String atributo, int id_graph){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues valores = new ContentValues();
@@ -400,6 +491,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void updateOrigenEnlace(int id_enlace, int origen, int id_graph){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues valores = new ContentValues();
@@ -412,6 +507,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void updateDestinoEnlace(int id_enlace, int destino, int id_graph){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues valores = new ContentValues();
@@ -424,6 +523,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     *
+     *
+     */
     public void updateAtributoEnlace(int id_enlace, String atributo, int id_graph){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues valores = new ContentValues();
