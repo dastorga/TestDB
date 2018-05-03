@@ -35,20 +35,19 @@ public class WhatsAppExport extends AppCompatActivity {
         final Globals g = Globals.getInstance();
         final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducir
 
+        /**
+         * Mi idea en esta instancia es, armar el grafo de manera correcta en formato "dot" y almacenarlo en una variable string
+         * temporal.
+         * Luego, una vez obtenido el numero de telefono, enviar por WhatsApp el link, el cual la persona vidente recibe.
+         * Una vez recibido este link, solo le resta presionar sobre el mismo, pudiendo asi ver el grafo completo
+         * de manera grafica y online, con graphviz.
+         *
+         * Debo pasar el grafo listo por URL, asi la pagina solo lo levanta y muestra el grafo.
+         *
+         * Tambien probar correctamente la API de WhatsApp, para chequear seguridad, velocidad, en los envios de link's.
+         */
         btn_enviar_whatsapp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                /**
-                 * Mi idea en esta instancia es, armar el grafo de manera correcta en formato "dot" y almacenarlo en una variable string
-                 * temporal.
-                 * Luego, una vez obtenido el numero de telefono, enviar por WhatsApp el link, el cual la persona vidente recibe.
-                 * Una vez recibido este link, solo le resta presionar sobre el mismo, pudiendo asi ver el grafo completo
-                 * de manera grafica y online, con graphviz.
-                 *
-                 * Debo pasar el grafo listo por URL, asi la pagina solo lo levanta y muestra el grafo.
-                 *
-                 * Tambien probar correctamente la API de WhatsApp, para chequear seguridad, velocidad, en los envios de link's.
-                 */
-
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String constructionGraphString = c.ConstructionGraphString(idGlobalPlay); // paso id del grafo a construir
                 //Toast.makeText(WhatsAppExport.this, constructionGraphString  , Toast.LENGTH_SHORT).show();
@@ -79,6 +78,7 @@ public class WhatsAppExport extends AppCompatActivity {
                 }
             }
         });
+
 
         /**
          * Me retorna a la activity anterior, osea el menu principal.
