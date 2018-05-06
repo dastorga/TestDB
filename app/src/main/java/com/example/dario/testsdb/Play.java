@@ -41,10 +41,10 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         btnReproducir_PLay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 // Method yet to be defined
-                if (g.getQuien() != "Nodo"){
+                if (g.getQuien() == "Nodo"){
                     speakOut(g.getNodeCompletString());
                 }
-                if (g.getQuien() != "Grafo"){
+                if (g.getQuien() == "Grafo"){
                     speakOut(g.getGrafoCompletString());
                 }
             }
@@ -56,7 +56,12 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         btnRepetirReproduccion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 // Repito la reproduccion
-                speakOut(g.getNodeCompletString());
+                if (g.getQuien() == "Nodo"){
+                    speakOut(g.getNodeCompletString());
+                }
+                if (g.getQuien() == "Grafo"){
+                    speakOut(g.getGrafoCompletString());
+                }
             }
         });
 
