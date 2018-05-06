@@ -101,7 +101,7 @@ public class WhatsAppExport extends AppCompatActivity {
                     Toast.makeText(WhatsAppExport.this, "No has introducido numero", Toast.LENGTH_SHORT).show();
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
-                    sendIntent.putExtra(Intent.EXTRA_TEXT, "Ingresa a: https://dreampuf.github.io/GraphvizOnline/ y pega el siguiente grafo:"+"\n"+constructionGraphString);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, "AppCASE-4Blind" + "\n" +"Ingresa a: https://dreampuf.github.io/GraphvizOnline/ y pega el siguiente grafo:"+"\n"+constructionGraphString);
                     //sendIntent.putExtra(Intent.EXTRA_TEXT, constructionGraphString);
                     sendIntent.setType("text/plain");
                     startActivity(sendIntent);
@@ -109,7 +109,7 @@ public class WhatsAppExport extends AppCompatActivity {
                     // Opcion en la que inserta numero de telefono, se busca el contacto en WhatsApp y se le envia el mensaje.
                     //Toast.makeText(WhatsAppExport.this, editText_telefono_whatsapp.getText().toString(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Intent.ACTION_VIEW);
-                    String uri = "whatsapp://send?phone=" + editText_telefono_whatsapp.getText().toString() + "&text=" +"http://graphviz.it/#/"+ constructionGraphString;
+                    String uri = "whatsapp://send?phone=" + editText_telefono_whatsapp.getText().toString() + "&text=" +"AppCASE-4Blind" + "\n" +"Ingresa a: https://dreampuf.github.io/GraphvizOnline/ y pega el siguiente grafo:"+"\n"+constructionGraphString;
                     intent.setData(Uri.parse(uri));
                     startActivity(intent);
                 }

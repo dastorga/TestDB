@@ -34,6 +34,7 @@ public class ConstructionGraph {
         return resultadoFinal;
     }
 
+
     /**
      * Dado un identificador de grafo (idGrafo), me retorna como resultado los enlaces acomodados para armar el grafo total.
      */
@@ -60,10 +61,11 @@ public class ConstructionGraph {
         String lista_nodes_string = "Lista de Nodos"+"\n"; //Inicializo en vacio, variable para almacenar el resultado final.
         for(int i = 0; i< lista_nodes.size(); i++){
             //Aqui armo una cadena de los atributos de todos los nodos del grafo que se pasa como parametro
-            lista_nodes_string = lista_nodes_string + " " +lista_nodes.get(i).getAtributoNode();
+            lista_nodes_string = lista_nodes_string + "\n" +lista_nodes.get(i).getAtributoNode();
         }
         return lista_nodes_string;
     }
+
 
     /**
      * Aqui la idea seria poder construir todos los enlaces del grafo que se pasa como parametro,
