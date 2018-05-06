@@ -35,6 +35,9 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         btnRepetirReproduccion = findViewById(R.id.btnRepetirReproduccion);
         btnVolverAtras_PLay = findViewById(R.id.btnVolverAtras_PLay);
 
+        /**
+         * Boton de reproduccion.
+         */
         btnReproducir_PLay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 // Method yet to be defined
@@ -42,6 +45,9 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
             }
         });
 
+        /**
+         * Boton de repetir reproduccion.
+         */
         btnRepetirReproduccion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 // Repito la reproduccion
@@ -49,6 +55,9 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
             }
         });
 
+        /**
+         * Boton para volver atras.
+         */
         btnVolverAtras_PLay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), OpcionesReproduccionGrafo.class));

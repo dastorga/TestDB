@@ -3,7 +3,6 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -44,10 +43,11 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  */
 
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
-                String constructionGraphString = c.ConstructionGraphString(idGlobalPlay); // paso id del grafo a construir
-                Toast.makeText(OpcionesReproduccionGrafo.this, constructionGraphString  , Toast.LENGTH_SHORT).show();
+                String constructionGraphTotalString = c.ConstructionGraphTotalString(idGlobalPlay); // paso id del grafo a construir
+                g.setGrafoCompletString(constructionGraphTotalString); // Guardo todos los nodos para reproducir en otra clase.
 
-                Log.i("------------------->", constructionGraphString);
+                Toast.makeText(OpcionesReproduccionGrafo.this, constructionGraphTotalString  , Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), Play.class));
             }
         });
 

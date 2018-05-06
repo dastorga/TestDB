@@ -25,7 +25,7 @@ public class Globals {
     private static int idDestinoEdit;
 
     private static String nodeCompletString;
-
+    private static String grafoCompletString;
 
     public Globals( ) { }
 
@@ -97,10 +97,14 @@ public class Globals {
     public int getIdOrigenEdit() { return Globals.idOrigenEdit; }
 
 
-
     public void setNodeCompletString(String nodeCompletString) {Globals.nodeCompletString = nodeCompletString;}
 
     public String getNodeCompletString() { return Globals.nodeCompletString;}
+
+
+    public void setGrafoCompletString(String grafoCompletString) {Globals.grafoCompletString = grafoCompletString;}
+
+    public String getGrafoCompletString() { return Globals.grafoCompletString;}
 
 
     public static synchronized Globals getInstance(){
