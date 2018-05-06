@@ -30,7 +30,7 @@ public class ConstructionGraph {
 
         String nameGraph = MDB.recoverGraph(idGraph).getNameGraph(); //nombre del grafo
         String resultadoFinal;
-        resultadoFinal = "Grafo llamado" + nameGraph + " " + "\n" + "enlaces " +listaDeEnlaces + "\n" + " ";
+        resultadoFinal = "Grafo llamado " + nameGraph + " " + "\n" + "enlaces " + "\n" +listaDeEnlaces + "\n" + " ";
         return resultadoFinal;
     }
 

@@ -26,6 +26,7 @@ public class Globals {
 
     private static String nodeCompletString;
     private static String grafoCompletString;
+    private static String quien;
 
     public Globals( ) { }
 
@@ -106,6 +107,9 @@ public class Globals {
 
     public String getGrafoCompletString() { return Globals.grafoCompletString;}
 
+    public void setQuien(String quien) {Globals.quien = quien;}
+
+    public String getQuien() { return Globals.quien;}
 
     public static synchronized Globals getInstance(){
         if (instance==null){

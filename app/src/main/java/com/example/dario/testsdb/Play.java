@@ -41,7 +41,12 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         btnReproducir_PLay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 // Method yet to be defined
-                speakOut(g.getNodeCompletString());
+                if (g.getQuien() != "Nodo"){
+                    speakOut(g.getNodeCompletString());
+                }
+                if (g.getQuien() != "Grafo"){
+                    speakOut(g.getGrafoCompletString());
+                }
             }
         });
 

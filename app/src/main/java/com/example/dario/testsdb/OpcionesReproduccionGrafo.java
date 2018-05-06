@@ -42,6 +42,8 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                  * Luego ver el tema de la longitud de reproduccion y velocidad, y repeticion de la reproduccion.
                  */
 
+                g.setQuien("Grafo"); // Indico quien quiero que se reproduzca en la clase Play
+
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String constructionGraphTotalString = c.ConstructionGraphTotalString(idGlobalPlay); // paso id del grafo a construir
                 g.setGrafoCompletString(constructionGraphTotalString); // Guardo todos los nodos para reproducir en otra clase.
@@ -56,6 +58,8 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
                 /**
                  * Construyo todos los nodos del grafo actual a reproducir
                  */
+                g.setQuien("Nodo"); // Indico quien quiero que se reproduzca en la clase Play
+
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String nodosString = c.ConstrucctionNodesString(idGlobalPlay); // obtengo todos los nodos del grafo pasado como parametro.
                 g.setNodeCompletString(nodosString); // Guardo todos los nodos para reproducir en otra clase.
