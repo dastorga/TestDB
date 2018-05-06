@@ -58,17 +58,12 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
     }
 
     private void speakOut(String dataEntry) {
-        // Get the text typed
-        //String text = "Probando, probando!!";
-        String text = dataEntry;
-
         // If no text is typed, tts will read out 'You haven't typed text'
         // else it reads out the text you typed
-        if (text.length() == 0) {
-            tts.speak("No ha escrito el texto", TextToSpeech.QUEUE_FLUSH, null);
+        if (dataEntry.length() == 0) {
+            tts.speak("Sin nodos para reproducir", TextToSpeech.QUEUE_FLUSH, null);
         } else {
-            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-
+            tts.speak(dataEntry, TextToSpeech.QUEUE_FLUSH, null);
         }
     }
 
