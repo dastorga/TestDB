@@ -82,7 +82,7 @@ public class WhatsAppExport extends AppCompatActivity {
                 // Write in the file
                 try {
                     fos.write(constructionGraphString.getBytes());
-                    Toast.makeText(WhatsAppExport.this,  "Escritura correcta"  , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WhatsAppExport.this,  "graph.dot creado"  , Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -92,6 +92,7 @@ public class WhatsAppExport extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 //-------------------- -------------------- --------------------
 
                 if(editText_telefono_whatsapp.getText().toString().trim().equalsIgnoreCase("")){
