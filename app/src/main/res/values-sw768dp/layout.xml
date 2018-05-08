@@ -9,6 +9,8 @@
     <dimen name="layout_height_button_"> 110dp</dimen>
     <dimen name="layout_height_button_120"> 120dp</dimen>
 
-    <dimen name="wrap_content_alto_boton_tablet_10_pulgadas"> 210dp</dimen>
+    <dimen name="wrap_content_alto_boton_tablet_10_pulgadas_768"> 190dp</dimen>
+
+    <dimen name="wrap_content_alto_bot_768"> 160dp</dimen>
 
 </resources>
