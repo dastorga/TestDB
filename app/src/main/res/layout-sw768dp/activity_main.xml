@@ -79,7 +79,7 @@
 
     <Button
         android:id="@+id/btnReproducir"
-        android:layout_width="799dp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/wrap_content_alto_boton_tablet_10_pulgadas"
         android:layout_alignParentStart="true"
         android:background="@android:color/holo_purple"
