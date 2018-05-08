@@ -68,7 +68,6 @@ public class WhatsAppExport extends AppCompatActivity {
                 //Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.whatsapp");
                 //startActivity(launchIntent);
 
-
                 //-------------------- Save in Memory Internal --------------------
                 File internalStorageDir = getFilesDir();
                 File fileGraph = new File(internalStorageDir, "graph.dot");
