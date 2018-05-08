@@ -93,7 +93,6 @@ public class WhatsAppExport extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-
                 //-------------------- -------------------- --------------------
 
                 if(editText_telefono_whatsapp.getText().toString().trim().equalsIgnoreCase("")){
