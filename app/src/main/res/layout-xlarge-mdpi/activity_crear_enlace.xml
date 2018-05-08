@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dario.testsdb.CrearEnlaceActivity">
+
+    <RelativeLayout
+        android:layout_width="752dp"
+        android:layout_height="870dp"
+        tools:ignore="MissingConstraints,UselessLeaf"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/tv_CrearArco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:text="Recuerda que el nodo origen presede al nodo destino."
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnNodoOrigen_CrearArco"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tv_CrearArco"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:elevation="10dp"
+            android:text="NODO ORIGEN"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnNodoDestino_CrearArco"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/btnNodoOrigen_CrearArco"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:elevation="10dp"
+            android:text="NODO DESTINO"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnVolverAtras_CrearArco"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/btnCrearArco_CrearArco"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:elevation="10dp"
+            android:text="VOLVER ATRAS"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnCrearArco_CrearArco"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/btnNodoDestino_CrearArco"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:elevation="10dp"
+            android:text="CREAR"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

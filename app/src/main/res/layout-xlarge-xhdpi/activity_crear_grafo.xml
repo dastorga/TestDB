@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dario.testsdb.CrearGrafo">
+
+    <RelativeLayout
+        android:layout_width="754dp"
+        android:layout_height="873dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="11dp">
+
+        <EditText
+            android:id="@+id/etNombreGrafo"
+            android:layout_width="549dp"
+            android:layout_height="59dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Ingresar nombre de grafo..."
+            android:inputType="textPersonName"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="55dp" />
+
+
+        <Button
+            android:id="@+id/btnGuardarNombreGrafo"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_alignStart="@+id/btnVolverAtrasGrafo"
+            android:layout_below="@+id/etNombreGrafo"
+            android:layout_marginTop="89dp"
+            android:elevation="10dp"
+            android:text="Guardar"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="160dp" />
+
+        <Button
+            android:id="@+id/btnVolverAtrasGrafo"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/btnGuardarNombreGrafo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="122dp"
+            android:elevation="10dp"
+            android:text="Volver Atras"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="596dp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
