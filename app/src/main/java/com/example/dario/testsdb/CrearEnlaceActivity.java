@@ -40,6 +40,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
             }
         });
 
+
         btnCrearArco_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if ( g.getIdOrigen() == 0 && g.getIdDestino() != 0){Toast.makeText(CrearEnlaceActivity.this, "NO AHI ORIGEN SELECCIONADO ))", Toast.LENGTH_SHORT).show();}
