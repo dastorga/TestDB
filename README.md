@@ -4,6 +4,6 @@ App native Android.
 
 <p><img src="screenshot/PantallaPrincipal.png" width="20%"/>
 <img src="screenshot/appScreenshot.png" width="15%"/>
-<img src="screenshot/appMenuScreenshot.png" width="15%"/></p>
+<img src="screenshot/appMenuScreenshot.png" width="13%"/></p>
 
 
