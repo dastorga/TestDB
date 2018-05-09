@@ -4,5 +4,7 @@ App native Android.
 
 <p><img src="screenshot/PantallaPrincipal.png" width="20%"/>
 
+<p><img src="screenshot/appScreenshot.png" width="10%"/>
+
 
 
