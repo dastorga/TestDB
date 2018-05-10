@@ -9,54 +9,51 @@
 
     <RelativeLayout
         android:id="@+id/idCrearNodeEnlaceActivity"
-        android:layout_width="729dp"
-        android:layout_height="862dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="16dp">
 
-        <Button
-            android:id="@+id/btnCrearNode"
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="52dp"
-            android:elevation="10dp"
-            android:text="CREAR NODO"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText,MissingConstraints"
-            tools:layout_editor_absoluteX="42dp"
-            tools:layout_editor_absoluteY="77dp" />
-
-        <Button
-            android:id="@+id/btnCrearEnlace"
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:layout_alignStart="@+id/btnCrearNode"
-            android:layout_below="@+id/btnCrearNode"
-            android:layout_marginTop="81dp"
-            android:elevation="10dp"
-            android:text="CREAR ARCO"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText,MissingConstraints"
-            tools:layout_editor_absoluteX="-24dp"
-            tools:layout_editor_absoluteY="378dp" />
-
-        <Button
-            android:id="@+id/btnVolverAtrasCrearNodeEnlaceActivity"
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:layout_alignEnd="@+id/btnCrearNode"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="45dp"
-            android:elevation="10dp"
-            android:text="Volver Atras"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
-
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnVolverAtrasCrearNodeEnlaceActivity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wrap_content_relative"
+        android:elevation="10dp"
+        android:text="Volver Atras"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="849dp" />
+
+    <Button
+        android:id="@+id/btnCrearEnlace"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wrap_content_relative"
+        android:layout_alignStart="@+id/btnCrearNode"
+        android:layout_below="@+id/btnCrearNode"
+        android:elevation="10dp"
+        android:text="CREAR ARCO"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="463dp" />
+
+    <Button
+        android:id="@+id/btnCrearNode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wrap_content_relative"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        android:text="CREAR NODO"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="171dp" />
 </android.support.constraint.ConstraintLayout>

@@ -5,23 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.dario.testsdb.MainActivity"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/btnCrear"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/wrap_content_relative"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="47dp"
+            android:layout_marginTop="19dp"
             android:background="@android:color/holo_green_dark"
             android:elevation="10dp"
             android:text="Crear"
@@ -33,10 +35,10 @@
         <Button
             android:id="@+id/btnEliminar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/btnEditar"
+            android:layout_height="@dimen/wrap_content_relative"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditar"
-            android:layout_marginTop="85dp"
+            android:layout_marginTop="35dp"
             android:background="@android:color/holo_red_light"
             android:elevation="10dp"
             android:text="Eliminar"
@@ -48,7 +50,7 @@
         <Button
             android:id="@+id/btnEditar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/wrap_content_relative"
             android:layout_alignStart="@+id/btnCrear"
             android:layout_below="@+id/btnCrear"
             android:layout_marginTop="23dp"
@@ -63,7 +65,7 @@
         <Button
             android:id="@+id/btnReproducir"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/wrap_content_relative"
             android:layout_below="@+id/btnEliminar"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
@@ -78,10 +80,10 @@
         <Button
             android:id="@+id/btnExportar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/wrap_content_relative"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnReproducir"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="32dp"
             android:background="@android:color/holo_orange_light"
             android:elevation="10dp"
             android:text="EXPORTAR"
