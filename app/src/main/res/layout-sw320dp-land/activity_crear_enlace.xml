@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,15 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints,UselessLeaf"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/tv_CrearArco"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
             android:text="Recuerda que el nodo origen presede al nodo destino."
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
@@ -39,9 +41,9 @@
             android:id="@+id/btnNodoDestino_CrearArco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
-            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
             android:elevation="10dp"
             android:text="NODO DESTINO"
             android:textSize="30sp"
@@ -52,9 +54,9 @@
             android:id="@+id/btnVolverAtras_CrearArco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnCrearArco_CrearArco"
-            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
             android:textSize="30sp"
@@ -72,6 +74,16 @@
             android:text="CREAR"
             android:textSize="30sp"
             android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextGuardarAtributo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnNodoOrigen_CrearArco"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="ATRIBUTO"
+            android:inputType="textPersonName" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

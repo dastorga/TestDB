@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class CrearEnlaceActivity extends AppCompatActivity {
 
     Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco, btnCrearArco_CrearArco;
+    EditText editTextGuardarAtributo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,10 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnNodoDestino_CrearArco = findViewById(R.id.btnNodoDestino_CrearArco);
         btnVolverAtras_CrearArco = findViewById(R.id.btnVolverAtras_CrearArco);
         btnCrearArco_CrearArco = findViewById(R.id.btnCrearArco_CrearArco);
+        editTextGuardarAtributo = findViewById(R.id.editTextGuardarAtributo);
+
+
+
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -43,13 +49,16 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
         btnCrearArco_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                String atributo = editTextGuardarAtributo.getText().toString();
+                Toast.makeText(CrearEnlaceActivity.this, atributo , Toast.LENGTH_SHORT).show();
+
                 if ( g.getIdOrigen() == 0 && g.getIdDestino() != 0){Toast.makeText(CrearEnlaceActivity.this, "NO AHI ORIGEN SELECCIONADO ))", Toast.LENGTH_SHORT).show();}
                 if ( g.getIdOrigen() != 0 && g.getIdDestino() == 0){Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO SELECCIONADO ))", Toast.LENGTH_SHORT).show();}
                 if ( g.getIdOrigen() == 0 && g.getIdDestino() == 0){ Toast.makeText(CrearEnlaceActivity.this, "NO AHI NI ORIGEN NI DESTINO SELECCIONADO", Toast.LENGTH_SHORT).show();}
 
                 if ( g.getIdOrigen() != 0 && g.getIdDestino() != 0){
                     Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " - DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
-                    int numeroEnlace = MDB.insertEnlace(g.getIdOrigen(), g.getIdDestino(), "atributo", g.getIdGlobal());
+                    int numeroEnlace = MDB.insertEnlace(g.getIdOrigen(), g.getIdDestino(), atributo, g.getIdGlobal());
                     g.setIdOrigen(0);
                     g.setIdDestino(0);
                     Toast.makeText(CrearEnlaceActivity.this, "ENLACE CREADO NUMERO: "+ numeroEnlace, Toast.LENGTH_SHORT).show();

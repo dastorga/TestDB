@@ -75,5 +75,15 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+        <EditText
+            android:id="@+id/editTextGuardarAtributo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnNodoOrigen_CrearArco"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="ATRIBUTO"
+            android:inputType="textPersonName" />
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
