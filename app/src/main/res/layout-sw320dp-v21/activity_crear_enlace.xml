@@ -41,9 +41,8 @@
             android:id="@+id/btnNodoDestino_CrearArco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="38dp"
             android:elevation="10dp"
             android:text="NODO DESTINO"
             android:textSize="30sp"
@@ -67,9 +66,8 @@
             android:id="@+id/btnCrearArco_CrearArco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnNodoDestino_CrearArco"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextGuardarAtributo"
             android:elevation="10dp"
             android:text="CREAR"
             android:textSize="30sp"
@@ -79,11 +77,14 @@
             android:id="@+id/editTextGuardarAtributo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnNodoOrigen_CrearArco"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnNodoDestino_CrearArco"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="ATRIBUTO"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

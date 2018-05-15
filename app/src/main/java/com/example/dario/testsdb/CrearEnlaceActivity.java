@@ -62,6 +62,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
                     g.setIdOrigen(0);
                     g.setIdDestino(0);
                     Toast.makeText(CrearEnlaceActivity.this, "ENLACE CREADO NUMERO: "+ numeroEnlace, Toast.LENGTH_SHORT).show();
+                    editTextGuardarAtributo.setText(""); // limpio el campo ediText
                 }
             }
         });
