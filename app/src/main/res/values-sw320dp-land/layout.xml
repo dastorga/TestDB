@@ -14,6 +14,6 @@
     <dimen name="layout_height_button_80"> 80dp</dimen>
 
     <dimen name="altura_boton_50"> 50dp</dimen>
-
+    <dimen name="size_text_18"> 18sp</dimen>
 
 </resources>
