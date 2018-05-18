@@ -21,7 +21,7 @@
             android:layout_centerHorizontal="true"
             android:text="Seguro desea eliminar el Grafo?"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/size_letra"
             android:textStyle="bold"
             tools:text="Seguro desea eliminar el Grafo?" />
 

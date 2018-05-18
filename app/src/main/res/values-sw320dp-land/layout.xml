@@ -15,5 +15,6 @@
 
     <dimen name="altura_boton_50"> 50dp</dimen>
     <dimen name="size_text_18"> 18sp</dimen>
+    <dimen name="size_letra"> 30sp</dimen>
 
 </resources>

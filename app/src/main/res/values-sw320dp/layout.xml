@@ -12,4 +12,6 @@
 
     <dimen name="layout_height_button_120"> 120dp</dimen>
 
+    <dimen name="size_letra"> 30sp</dimen>
+
 </resources>

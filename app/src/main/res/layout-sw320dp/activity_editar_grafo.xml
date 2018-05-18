@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout7"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/btnEditarNombreGrafo"
@@ -28,7 +32,7 @@
             android:layout_height="@dimen/layout_height_button_"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarNombreGrafo"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="21dp"
             android:text="Editar Nodos"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -39,7 +43,7 @@
             android:layout_height="@dimen/layout_height_button_"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarEnlacesGrafo"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="15dp"
             android:text="Volver Atras"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -48,9 +52,9 @@
             android:id="@+id/btnEditarEnlacesGrafo"
             android:layout_width="match_parent"
             android:layout_height="@dimen/layout_height_button_"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarNodosGrafo"
-            android:layout_marginTop="41dp"
+            android:layout_marginTop="12dp"
             android:text="Editar Arcos"
             android:textSize="30sp"
             android:textStyle="bold" />

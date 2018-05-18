@@ -3,14 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout5"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp">
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVolver_EditarNodo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/btnGuardarCambios_EditarNodo"
@@ -18,7 +24,7 @@
             android:layout_height="@dimen/layout_height_button_"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/etNombre_EditarNodo"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="18dp"
             android:elevation="10dp"
             android:text="Guardar Cambios"
             android:textSize="30sp"
@@ -39,7 +45,6 @@
             android:layout_height="@dimen/layout_height_button_"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnGuardarCambios_EditarNodo"
-            android:layout_marginTop="23dp"
             android:elevation="10dp"
             android:text="Eliminar nodo"
             android:textSize="30sp"
@@ -51,11 +56,14 @@
         android:id="@+id/btnVolver_EditarNodo"
         android:layout_width="match_parent"
         android:layout_height="@dimen/layout_height_button_"
+        android:layout_marginBottom="62dp"
         android:elevation="10dp"
         android:text="Volver Atras"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="370dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5"
+        tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>
