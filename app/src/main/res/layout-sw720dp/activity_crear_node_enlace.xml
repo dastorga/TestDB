@@ -20,19 +20,21 @@
     <Button
         android:id="@+id/btnVolverAtrasCrearNodeEnlaceActivity"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/wrap_content_relative"
+        android:layout_height="wrap_content"
         android:elevation="10dp"
         android:text="Volver Atras"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="849dp" />
+        tools:layout_editor_absoluteY="468dp" />
 
     <Button
         android:id="@+id/btnCrearEnlace"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/wrap_content_relative"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/btnCrearNode"
         android:layout_below="@+id/btnCrearNode"
         android:elevation="10dp"
@@ -40,13 +42,13 @@
         android:textSize="30sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="463dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="312dp" />
 
     <Button
         android:id="@+id/btnCrearNode"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/wrap_content_relative"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:elevation="10dp"

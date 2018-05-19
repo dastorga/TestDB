@@ -8,8 +8,8 @@
 
     <RelativeLayout
         android:id="@+id/idCrearNodeEnlaceActivity"
-        android:layout_width="729dp"
-        android:layout_height="862dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="16dp">
@@ -48,9 +48,9 @@
             android:id="@+id/btnVolverAtrasCrearNodeEnlaceActivity"
             android:layout_width="350dp"
             android:layout_height="200dp"
-            android:layout_alignEnd="@+id/btnCrearNode"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="45dp"
+            android:layout_alignStart="@+id/btnCrearEnlace"
+            android:layout_marginBottom="103dp"
             android:elevation="10dp"
             android:text="Volver Atras"
             android:textSize="30sp"
