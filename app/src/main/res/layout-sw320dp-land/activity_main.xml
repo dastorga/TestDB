@@ -9,11 +9,14 @@
     tools:layout_editor_absoluteY="81dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout9"
+        android:layout_width="0dp"
         android:layout_height="@dimen/layout_height_relative"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="411dp"
-        tools:layout_editor_absoluteY="3dp">
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/btnCrear"
@@ -24,9 +27,8 @@
             android:background="@android:color/holo_green_dark"
             android:elevation="10dp"
             android:text="Crear"
-            android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/size_letra_36"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -40,9 +42,8 @@
             android:background="@android:color/holo_red_light"
             android:elevation="10dp"
             android:text="Eliminar"
-            android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/size_letra_36"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -56,9 +57,8 @@
             android:background="@android:color/holo_blue_light"
             android:elevation="10dp"
             android:text="Editar"
-            android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/size_letra_36"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -72,9 +72,8 @@
             android:background="@android:color/holo_purple"
             android:elevation="10dp"
             android:text="Reproducir"
-            android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/size_letra_36"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -88,9 +87,8 @@
             android:background="@android:color/holo_orange_light"
             android:elevation="10dp"
             android:text="EXPORTAR"
-            android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/size_letra_36"
             android:textStyle="bold" />
 
     </RelativeLayout>

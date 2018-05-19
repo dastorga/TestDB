@@ -22,7 +22,7 @@
             android:layout_marginStart="13dp"
             android:text="Recuerda que el nodo origen presede al nodo destino."
             android:textColor="@color/colorAccent"
-            android:textSize="24sp"
+            android:textSize="@dimen/size_letra_24"
             tools:ignore="HardcodedText" />
 
         <Button
