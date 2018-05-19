@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout3"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
         <Button
             android:id="@+id/btnCrear"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wrap_content_relative"
+            android:layout_height="@dimen/alturaButtonMain"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="19dp"
@@ -28,14 +28,14 @@
             android:elevation="10dp"
             android:text="Crear"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/text_size_relative_40sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnEliminar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wrap_content_relative"
+            android:layout_height="@dimen/alturaButtonMain"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditar"
             android:layout_marginTop="35dp"
@@ -43,14 +43,14 @@
             android:elevation="10dp"
             android:text="Eliminar"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/text_size_relative_40sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnEditar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wrap_content_relative"
+            android:layout_height="@dimen/alturaButtonMain"
             android:layout_alignStart="@+id/btnCrear"
             android:layout_below="@+id/btnCrear"
             android:layout_marginTop="23dp"
@@ -58,14 +58,14 @@
             android:elevation="10dp"
             android:text="Editar"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/text_size_relative_40sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnReproducir"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wrap_content_relative"
+            android:layout_height="@dimen/alturaButtonMain"
             android:layout_below="@+id/btnEliminar"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
@@ -73,22 +73,22 @@
             android:elevation="10dp"
             android:text="Reproducir"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/text_size_relative_40sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnExportar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wrap_content_relative"
+            android:layout_height="@dimen/alturaButtonMain"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnReproducir"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="27dp"
             android:background="@android:color/holo_orange_light"
             android:elevation="10dp"
             android:text="EXPORTAR"
             android:textColor="@android:color/background_light"
-            android:textSize="36sp"
+            android:textSize="@dimen/text_size_relative_40sp"
             android:textStyle="bold" />
 
     </RelativeLayout>

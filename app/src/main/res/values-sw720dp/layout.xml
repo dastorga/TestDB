@@ -19,4 +19,9 @@
 
     <dimen name="text_size_relative_40sp"> 40sp </dimen>
 
+    <dimen name="alturaButtonMain"> 100dp </dimen>
+
+    <dimen name="alturaButtonMainVertical"> 150dp </dimen>
+
+
 </resources>
