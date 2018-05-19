@@ -20,8 +20,6 @@
             android:layout_height="@dimen/layout_height_button_80"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="10dp"
             android:elevation="10dp"
             android:text="CREAR NODO"
             android:textSize="30sp"
