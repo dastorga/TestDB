@@ -44,7 +44,7 @@ public class ConstructionGraph {
         ArrayList<Enlace> arrayListEnlaces = MDB.recoverEnlacesInGraph(idGraph);
         for(int i = 0; i< arrayListEnlaces.size(); i++){
             String cadena = new String("nodo " + MDB.recoverNode(arrayListEnlaces.get(i).getOrigenEnlace()).getAtributoNode() + " implica "+ "nodo "+
-                    MDB.recoverNode(arrayListEnlaces.get(i).getDestinoEnlace()).getAtributoNode() + "\n");
+                    MDB.recoverNode(arrayListEnlaces.get(i).getDestinoEnlace()).getAtributoNode() + " atributo " + arrayListEnlaces.get(i).getAtributoEnlace() + "\n" );
             resultFinal+= cadena;
         }
         //Log.i("TODOS LOS ENLACES     ", resultFinal);
