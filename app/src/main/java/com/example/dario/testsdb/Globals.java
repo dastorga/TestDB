@@ -28,6 +28,8 @@ public class Globals {
     private static String grafoCompletString;
     private static String quien;
 
+    private static boolean sonidoActivado;
+
     public Globals( ) { }
 
     public void setIdGlobal(int t) {
@@ -110,6 +112,17 @@ public class Globals {
     public void setQuien(String quien) {Globals.quien = quien;}
 
     public String getQuien() { return Globals.quien;}
+
+
+    public void setSonidoActivado(Boolean sonidoActivado) {
+        Globals.sonidoActivado = sonidoActivado;
+    }
+
+    public boolean getSonidoActivado() {
+        return Globals.sonidoActivado;
+    }
+
+
 
     public static synchronized Globals getInstance(){
         if (instance==null){

@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 public class WarningNotice extends AppCompatActivity {
 
     Button btnAceptarWarningNotice, btnCancelarWarningNotice;
+    MediaPlayer click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class WarningNotice extends AppCompatActivity {
 
         btnAceptarWarningNotice = findViewById(R.id.btnAceptarWarningNotice);
         btnCancelarWarningNotice = findViewById(R.id.btnCancelarWarningNotice);
+        final Globals g = Globals.getInstance();
+        click = MediaPlayer.create(this, R.raw.click);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -32,6 +36,7 @@ public class WarningNotice extends AppCompatActivity {
                 Toast.makeText(WarningNotice.this, "GRAFO "+Integer.parseInt(dato)+" ELIMINADO", Toast.LENGTH_SHORT).show();
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), GraphListDelete.class);
                 startActivity(intentCrearEnlace);
+                if (g.getSonidoActivado()){click.start();}
             }
         });
 

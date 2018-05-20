@@ -25,8 +25,6 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         editTextGuardarAtributo = findViewById(R.id.editTextGuardarAtributo);
 
 
-
-
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
 

@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,6 +17,7 @@ public class CrearNodeActivity extends AppCompatActivity {
 
     Button btnGuardar_CrearNode,btnVolverAtras_CrearNode;
     EditText etNombreNode_CrearNode;
+    MediaPlayer click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +27,10 @@ public class CrearNodeActivity extends AppCompatActivity {
         btnGuardar_CrearNode = findViewById(R.id.btnGuardar_CrearNode);
         btnVolverAtras_CrearNode = findViewById(R.id.btnVolverAtras_CrearNode);
         etNombreNode_CrearNode = findViewById(R.id.etNombreNode_CrearNode);
+        click = MediaPlayer.create(this, R.raw.click);
 
         btnGuardar_CrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
                 Globals g = Globals.getInstance();
@@ -41,6 +43,7 @@ public class CrearNodeActivity extends AppCompatActivity {
 
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class);
                 startActivity(intentCrearEnlace);
+                if (g.getSonidoActivado()){click.start();}
             }
         });
 

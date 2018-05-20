@@ -17,7 +17,7 @@ public class CrearGrafo extends AppCompatActivity {
 
     EditText etNombreGrafo;
     Button btnGuardarNombreGrafo,btnVolverAtrasGrafo;
-    MediaPlayer mp;
+    MediaPlayer click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class CrearGrafo extends AppCompatActivity {
         etNombreGrafo = findViewById(R.id.etNombreGrafo);
         btnGuardarNombreGrafo = findViewById(R.id.btnGuardarNombreGrafo);
         btnVolverAtrasGrafo = findViewById(R.id.btnVolverAtrasGrafo);
-        mp = MediaPlayer.create(this, R.raw.click);
+        click = MediaPlayer.create(this, R.raw.click);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -42,7 +42,7 @@ public class CrearGrafo extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(),MDB.recoverGraph(g.getIdGlobal()).getNameGraph()+" Guardado!" + " IdGraph: " +  g.getIdGlobal(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
-                mp.start();
+                if (g.getSonidoActivado()){click.start();}
             }
         });
 
