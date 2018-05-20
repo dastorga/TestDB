@@ -58,7 +58,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
                 if ( g.getIdOrigen() == 0 && g.getIdDestino() == 0){ Toast.makeText(CrearEnlaceActivity.this, "NO AHI NI ORIGEN NI DESTINO SELECCIONADO", Toast.LENGTH_SHORT).show();}
 
                 if ( g.getIdOrigen() != 0 && g.getIdDestino() != 0){
-                    Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " - DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " -> DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
                     int numeroEnlace = MDB.insertEnlace(g.getIdOrigen(), g.getIdDestino(), atributo, g.getIdGlobal());
                     g.setIdOrigen(0);
                     g.setIdDestino(0);
