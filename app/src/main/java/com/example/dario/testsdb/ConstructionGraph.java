@@ -87,7 +87,7 @@ public class ConstructionGraph {
         ArrayList<Enlace> arrayListEnlaces = MDB.recoverEnlacesInGraph(idGraph);
         for(int i = 0; i< arrayListEnlaces.size(); i++){
             String cadena = new String(MDB.recoverNode(arrayListEnlaces.get(i).getOrigenEnlace()).getAtributoNode() + "->"+
-                    MDB.recoverNode(arrayListEnlaces.get(i).getDestinoEnlace()).getAtributoNode() + "\n");
+                    MDB.recoverNode(arrayListEnlaces.get(i).getDestinoEnlace()).getAtributoNode()+ "[label = " + arrayListEnlaces.get(i).getAtributoEnlace() + "]" + "\n");
             resultFinal+= cadena;
         }
         Log.i("TODOS LOS ENLACES     ", resultFinal);
@@ -102,6 +102,7 @@ public class ConstructionGraph {
      * Ejemplo:
      *
      *  digraph G {
+     *  node [ style = filled ]
      *  A -> B
      *  B -> C
      *  C -> A
@@ -112,9 +113,9 @@ public class ConstructionGraph {
     public String ConstructionGraphString(int idGraph){
         final MiBaseDatos MDB = new MiBaseDatos(context); // La paso el contexto que traigo al invocar esta clase
         String listaDeEnlaces= ConstrucctionEnlacesString(idGraph);
-        String nameGraph = MDB.recoverGraph(idGraph).getNameGraph(); //nombre del grafo
+        String nameGraph = MDB.recoverGraph(idGraph).getNameGraph().replace(" ",""); //Nombre del grafo, le quito los espacios en blanco.
         String resultadoFinal;
-        resultadoFinal = "digraph " + nameGraph + " {" + "\n" + listaDeEnlaces + "\n" + "}";
+        resultadoFinal = "digraph " + nameGraph + " {" + "\n" + "node [ style = filled ]" + "\n" + listaDeEnlaces + "\n" + "}";
         return resultadoFinal;
     }
 
