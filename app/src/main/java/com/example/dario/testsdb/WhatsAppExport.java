@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -29,6 +31,7 @@ public class WhatsAppExport extends AppCompatActivity {
     Button btn_volver_inicio, btn_enviar_whatsapp;
     EditText editText_telefono_whatsapp;
     ConstructionGraph c;
+    MediaPlayer volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class WhatsAppExport extends AppCompatActivity {
         btn_volver_inicio = findViewById(R.id.btn_volver_inicio);
         editText_telefono_whatsapp = findViewById(R.id.editText_telefono_whatsapp);
         btn_enviar_whatsapp = findViewById(R.id.btn_enviar_whatsapp);
+        volver = MediaPlayer.create(this, R.raw.volver);
 
         //final String number = String.valueOf(editText_telefono_whatsapp.getText()); // obtengo el numero que se ingreso, se valida como type phone
                                              // luego aqui yo lo paso a text.
@@ -125,6 +129,7 @@ public class WhatsAppExport extends AppCompatActivity {
         btn_volver_inicio.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                if (g.getSonidoActivado()){volver.start();}
             }
         });
 

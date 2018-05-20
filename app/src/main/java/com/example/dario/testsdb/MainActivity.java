@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
 
         click = MediaPlayer.create(this, R.raw.click);
 
+        /**
+         * Funcion que me activa los sonidos al crear un grafo y
+         * al hacer click sobre el boton volver.
+         */
         final Globals g = Globals.getInstance();
         g.setSonidoActivado(true);
 

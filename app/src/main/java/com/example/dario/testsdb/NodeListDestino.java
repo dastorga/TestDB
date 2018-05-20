@@ -51,6 +51,5 @@ public class NodeListDestino extends AppCompatActivity {
         });
 
         g.setIdDestino(0);
-
     }
 }

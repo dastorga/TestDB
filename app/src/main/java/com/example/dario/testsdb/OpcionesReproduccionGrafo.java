@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,6 +16,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
     private Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto, btnReproducirNodos;
     ConstructionGraph c;
+    MediaPlayer volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         btnEscuchargrafocompleto = findViewById(R.id.btnEscuchargrafocompleto);
         btnReproducirNodos = findViewById(R.id.btnReproducirNodos);
         btnVolver_ReproduccionGrafo = findViewById(R.id.btnVolver_ReproduccionGrafo);
+        volver = MediaPlayer.create(this, R.raw.volver);
 
         final Globals g = Globals.getInstance();
         final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducir
@@ -70,12 +73,13 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         });
 
         /**
-         *
+         * Boton volver
          *
          */
         btnVolver_ReproduccionGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), GraphListPlay.class));
+                if (g.getSonidoActivado()){volver.start();}
             }
         });
 

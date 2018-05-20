@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 public class CrearNodeEnlaceActivity extends AppCompatActivity {
 
     Button btnCrearNode, btnCrearEnlace, btnVolverAtrasCrearNodeEnlaceActivity;
+    MediaPlayer volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
         btnCrearEnlace = findViewById(R.id.btnCrearEnlace);
         btnVolverAtrasCrearNodeEnlaceActivity = findViewById(R.id.btnVolverAtrasCrearNodeEnlaceActivity);
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+        volver = MediaPlayer.create(this, R.raw.volver);
 
         btnCrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -46,7 +49,9 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
 
         btnVolverAtrasCrearNodeEnlaceActivity.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Globals g = Globals.getInstance();
                 startActivity(new Intent(getApplicationContext(), CrearGrafo.class));
+                if (g.getSonidoActivado()){volver.start();}
             }
         });
 

@@ -18,7 +18,7 @@ public class EditarNodo extends AppCompatActivity {
 
     Button btnVolver_EditarNodo, btnGuardarCambios_EditarNodo, btnEliminarNodo_ClassEditarNodo;
     EditText etNombre_EditarNodo;
-    MediaPlayer clicksuccess;
+    MediaPlayer clicksuccess, volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class EditarNodo extends AppCompatActivity {
         btnEliminarNodo_ClassEditarNodo = findViewById(R.id.btnEliminarNodo_ClassEditarNodo);
         btnVolver_EditarNodo = findViewById(R.id.btnVolver_EditarNodo);
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
+        volver = MediaPlayer.create(this, R.raw.volver);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -59,6 +60,7 @@ public class EditarNodo extends AppCompatActivity {
         btnVolver_EditarNodo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
+                if (g.getSonidoActivado()){volver.start();}
             }
         });
     }

@@ -13,7 +13,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
     Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco, btnCrearArco_CrearArco;
     EditText editTextGuardarAtributo;
-    MediaPlayer clicksuccess;
+    MediaPlayer clicksuccess, volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnCrearArco_CrearArco = findViewById(R.id.btnCrearArco_CrearArco);
         editTextGuardarAtributo = findViewById(R.id.editTextGuardarAtributo);
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
+        volver = MediaPlayer.create(this, R.raw.volver);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -71,6 +72,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnVolverAtras_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
+                if (g.getSonidoActivado()){volver.start();}
             }
         });
 
