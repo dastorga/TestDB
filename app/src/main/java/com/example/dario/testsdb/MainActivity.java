@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         btnEditar = findViewById(R.id.btnEditar);
         btnReproducir = findViewById(R.id.btnReproducir);
         btnExportar = findViewById(R.id.btnExportar);
+        mp = MediaPlayer.create(this, R.raw.mario);
+        mp.start();
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

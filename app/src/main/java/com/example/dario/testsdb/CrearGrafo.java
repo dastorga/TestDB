@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,6 +17,7 @@ public class CrearGrafo extends AppCompatActivity {
 
     EditText etNombreGrafo;
     Button btnGuardarNombreGrafo,btnVolverAtrasGrafo;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class CrearGrafo extends AppCompatActivity {
         etNombreGrafo = findViewById(R.id.etNombreGrafo);
         btnGuardarNombreGrafo = findViewById(R.id.btnGuardarNombreGrafo);
         btnVolverAtrasGrafo = findViewById(R.id.btnVolverAtrasGrafo);
+        mp = MediaPlayer.create(this, R.raw.click);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -39,6 +42,7 @@ public class CrearGrafo extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(),MDB.recoverGraph(g.getIdGlobal()).getNameGraph()+" Guardado!" + " IdGraph: " +  g.getIdGlobal(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
+                mp.start();
             }
         });
 
