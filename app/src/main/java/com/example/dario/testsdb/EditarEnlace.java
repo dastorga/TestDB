@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,6 +19,7 @@ public class EditarEnlace extends AppCompatActivity {
     Button button_editar_nodo_origen_enlace, button_editar_nodo_destino_enlace,
     button_editar_guardar_enlace, button_editar_volver_atras_enlace;
     EditText et_editar_atributo_enlace;
+    MediaPlayer clicksuccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +31,10 @@ public class EditarEnlace extends AppCompatActivity {
         button_editar_nodo_destino_enlace = findViewById(R.id.button_editar_nodo_destino_enlace);
         button_editar_guardar_enlace = findViewById(R.id.button_editar_guardar_enlace);
         button_editar_volver_atras_enlace = findViewById(R.id.button_editar_volver_atras_enlace);
+        clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
-        Globals g = Globals.getInstance();
+        final Globals g = Globals.getInstance();
         final int idEnlaceEdit = g.getIdEnlaceEdit(); // recupero el id del enlace a editar
         final int idGlobalEdit = g.getIdGlobalEdit(); // recupero el id del grafo a editar
 
@@ -72,6 +75,7 @@ public class EditarEnlace extends AppCompatActivity {
                 MDB.updateAtributoEnlace(idEnlaceEdit, et_editar_atributo_enlace.getText().toString(), idGlobalEdit);
                 Toast.makeText(EditarEnlace.this, "EDITADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), EnlaceListEdit.class));
+                if (g.getSonidoActivado()){clicksuccess.start();}
             }
         });
 

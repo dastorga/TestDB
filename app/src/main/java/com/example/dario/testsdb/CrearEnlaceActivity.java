@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +13,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
     Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco, btnCrearArco_CrearArco;
     EditText editTextGuardarAtributo;
+    MediaPlayer clicksuccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnVolverAtras_CrearArco = findViewById(R.id.btnVolverAtras_CrearArco);
         btnCrearArco_CrearArco = findViewById(R.id.btnCrearArco_CrearArco);
         editTextGuardarAtributo = findViewById(R.id.editTextGuardarAtributo);
-
+        clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -61,6 +63,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
                     g.setIdDestino(0);
                     Toast.makeText(CrearEnlaceActivity.this, "ENLACE CREADO NUMERO: "+ numeroEnlace, Toast.LENGTH_SHORT).show();
                     editTextGuardarAtributo.setText(""); // limpio el campo ediText
+                    if (g.getSonidoActivado()){clicksuccess.start();}
                 }
             }
         });

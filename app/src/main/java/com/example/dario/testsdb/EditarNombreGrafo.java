@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +18,7 @@ public class EditarNombreGrafo extends AppCompatActivity {
 
     Button btnGuardarEdicion_EditarNombreGrafo, btnVolverAtras_EditarNombreGrafo;
     EditText etEditarNombreGrafo;
+    MediaPlayer clicksuccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +28,11 @@ public class EditarNombreGrafo extends AppCompatActivity {
         btnGuardarEdicion_EditarNombreGrafo = findViewById(R.id.btnGuardarEdicion_EditarNombreGrafo);
         btnVolverAtras_EditarNombreGrafo = findViewById(R.id.btnVolverAtras_EditarNombreGrafo);
         etEditarNombreGrafo = findViewById(R.id.etEditarNombreGrafo);
+        clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
-        Globals g = Globals.getInstance();
+        final Globals g = Globals.getInstance();
         final int idGlobalEdit = g.getIdGlobalEdit();
 
         etEditarNombreGrafo.setText(MDB.recoverGraph(idGlobalEdit).getNameGraph());
@@ -39,6 +42,7 @@ public class EditarNombreGrafo extends AppCompatActivity {
                 MDB.updateGraph(idGlobalEdit, etEditarNombreGrafo.getText().toString());
                 Toast.makeText(EditarNombreGrafo.this, "EDITADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
+                if (g.getSonidoActivado()){clicksuccess.start();}
             }
         });
 

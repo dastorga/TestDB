@@ -25,7 +25,7 @@ public class WarningNotice extends AppCompatActivity {
         btnAceptarWarningNotice = findViewById(R.id.btnAceptarWarningNotice);
         btnCancelarWarningNotice = findViewById(R.id.btnCancelarWarningNotice);
         final Globals g = Globals.getInstance();
-        click = MediaPlayer.create(this, R.raw.click);
+        click = MediaPlayer.create(this, R.raw.clicksuccess);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
