@@ -7,8 +7,8 @@
     tools:context="com.example.dario.testsdb.CrearGrafo">
 
     <RelativeLayout
-        android:layout_width="667dp"
-        android:layout_height="873dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp">
@@ -30,7 +30,7 @@
         <Button
             android:id="@+id/btnGuardarNombreGrafo"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/etNombreGrafo"
             android:layout_marginTop="27dp"
@@ -45,7 +45,7 @@
         <Button
             android:id="@+id/btnVolverAtrasGrafo"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnGuardarNombreGrafo"
             android:layout_marginTop="36dp"
