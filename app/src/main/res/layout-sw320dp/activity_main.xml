@@ -37,7 +37,7 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditar"
             android:layout_marginTop="30dp"
-            android:background="@android:color/holo_red_light"
+            android:background="@drawable/gradient_box"
             android:elevation="10dp"
             android:text="Eliminar"
             android:textColor="@android:color/background_light"
