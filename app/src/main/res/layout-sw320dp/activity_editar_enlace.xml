@@ -19,7 +19,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"/>
 
         <Button
             android:id="@+id/button_editar_nodo_origen_enlace"
@@ -28,7 +28,9 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/et_editar_atributo_enlace"
             android:layout_marginTop="14dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar origen"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -39,7 +41,9 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/button_editar_nodo_origen_enlace"
             android:layout_marginTop="39dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar destino"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -50,7 +54,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignTop="@+id/button_editar_nodo_destino_enlace"
             android:layout_marginTop="94dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Guardar cambios"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -61,7 +67,9 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/button_editar_guardar_enlace"
             android:layout_marginTop="54dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Volver atras"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="36sp"
             android:textStyle="bold" />
 

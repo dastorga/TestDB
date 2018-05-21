@@ -15,7 +15,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar;
-    MediaPlayer click;
+    MediaPlayer click, mario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnExportar = findViewById(R.id.btnExportar);
 
         click = MediaPlayer.create(this, R.raw.click);
+        mario = MediaPlayer.create(this, R.raw.mario);
 
         /**
          * Funcion que me activa los sonidos al crear un grafo y
@@ -36,10 +37,12 @@ public class MainActivity extends AppCompatActivity {
          */
         final Globals g = Globals.getInstance();
         g.setSonidoActivado(true);
+        mario.start();
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CrearGrafo.class));
+                mario.stop();
             }
         });
 
