@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         click = MediaPlayer.create(this, R.raw.click);
         mario = MediaPlayer.create(this, R.raw.mario);
 
+
         /**
          * Funcion que me activa los sonidos al crear un grafo y
          * al hacer click sobre el boton volver.
