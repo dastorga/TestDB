@@ -35,7 +35,8 @@
             android:text="NODO ORIGEN"
             android:textSize="30sp"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/gradient_box_general"/>
 
         <Button
             android:id="@+id/btnNodoDestino_CrearArco"
@@ -47,7 +48,8 @@
             android:text="NODO DESTINO"
             android:textSize="30sp"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/gradient_box_general"/>
 
         <Button
             android:id="@+id/btnVolverAtras_CrearArco"
@@ -60,7 +62,8 @@
             android:text="VOLVER ATRAS"
             android:textSize="30sp"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/gradient_box_general"/>
 
         <Button
             android:id="@+id/btnCrearArco_CrearArco"
@@ -71,7 +74,8 @@
             android:elevation="10dp"
             android:text="CREAR"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@drawable/gradient_box_general"/>
 
         <EditText
             android:id="@+id/editTextGuardarAtributo"

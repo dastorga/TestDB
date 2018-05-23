@@ -28,7 +28,7 @@
             android:elevation="10dp"
             android:text="Crear"
             android:textColor="@android:color/background_light"
-            android:textSize="@dimen/size_letra_36"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -44,7 +44,7 @@
             android:text="Eliminar"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="@dimen/size_letra_36"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -59,7 +59,7 @@
             android:elevation="10dp"
             android:text="Editar"
             android:textColor="@android:color/background_light"
-            android:textSize="@dimen/size_letra_36"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -74,7 +74,7 @@
             android:elevation="10dp"
             android:text="Reproducir"
             android:textColor="@android:color/background_light"
-            android:textSize="@dimen/size_letra_36"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -89,7 +89,7 @@
             android:elevation="10dp"
             android:text="EXPORTAR"
             android:textColor="@android:color/background_light"
-            android:textSize="@dimen/size_letra_36"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
     </RelativeLayout>

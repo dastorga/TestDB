@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dario.testsdb.CrearEnlaceActivity">
+    tools:context="com.example.dario.testsdb.CrearEnlaceActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout14"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints,UselessLeaf"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,UselessLeaf">
 
         <TextView
             android:id="@+id/tv_CrearArco"
@@ -31,8 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_CrearArco"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="NODO ORIGEN"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
@@ -43,8 +48,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="NODO DESTINO"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
@@ -53,11 +61,13 @@
             android:id="@+id/btnVolverAtras_CrearArco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnCrearArco_CrearArco"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
@@ -68,8 +78,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/editTextGuardarAtributo"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="CREAR"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
