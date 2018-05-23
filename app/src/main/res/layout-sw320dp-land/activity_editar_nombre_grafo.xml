@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout11"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <EditText
             android:id="@+id/etEditarNombreGrafo"
@@ -27,26 +31,33 @@
         <Button
             android:id="@+id/btnGuardarEdicion_EditarNombreGrafo"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/etEditarNombreGrafo"
             android:layout_marginTop="22dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="GUARDAR EDICION"
-            android:textSize="30sp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnVolverAtras_EditarNombreGrafo"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btnGuardarEdicion_EditarNombreGrafo"
-            android:layout_marginTop="17dp"
-            android:elevation="10dp"
-            android:text="VOLVER ATRAS"
-            android:textSize="30sp"
-            android:textStyle="bold" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnVolverAtras_EditarNombreGrafo"
+        android:layout_width="589dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnGuardarEdicion_EditarNombreGrafo"
+        android:layout_marginBottom="87dp"
+        android:background="@drawable/gradient_box_general"
+        android:elevation="10dp"
+        android:text="VOLVER ATRAS"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

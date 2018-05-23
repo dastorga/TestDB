@@ -32,8 +32,10 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/etEditarNombreGrafo"
             android:layout_marginTop="70dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="GUARDAR EDICION"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -44,8 +46,10 @@
             android:layout_alignStart="@+id/btnGuardarEdicion_EditarNombreGrafo"
             android:layout_below="@+id/btnGuardarEdicion_EditarNombreGrafo"
             android:layout_marginTop="69dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
     </RelativeLayout>

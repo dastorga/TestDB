@@ -25,8 +25,10 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/etNombre_EditarNodo"
             android:layout_marginTop="18dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="Guardar Cambios"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -45,8 +47,11 @@
             android:layout_height="@dimen/layout_height_button_"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnGuardarCambios_EditarNodo"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="Eliminar nodo"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -57,8 +62,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/layout_height_button_"
         android:layout_marginBottom="62dp"
+        android:background="@drawable/gradient_box_general"
         android:elevation="10dp"
         android:text="Volver Atras"
+        android:textColor="@color/ic_launcher_background"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

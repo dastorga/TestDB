@@ -23,8 +23,11 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarNombreGrafo"
             android:layout_marginTop="18dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar Nodos"
-            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <Button
@@ -33,8 +36,12 @@
             android:layout_height="@dimen/layout_height_button_60"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarEnlacesGrafo"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Volver Atras"
-            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <Button
@@ -44,8 +51,11 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarNodosGrafo"
             android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar Arcos"
-            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <Button
@@ -54,8 +64,11 @@
             android:layout_height="@dimen/layout_height_button_60"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar Nombre"
-            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="0dp" />
