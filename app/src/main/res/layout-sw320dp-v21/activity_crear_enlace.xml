@@ -33,6 +33,7 @@
             android:layout_below="@+id/tv_CrearArco"
             android:elevation="10dp"
             android:text="NODO ORIGEN"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
@@ -45,6 +46,7 @@
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
             android:elevation="10dp"
             android:text="NODO DESTINO"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
@@ -58,6 +60,7 @@
             android:layout_marginTop="24dp"
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
@@ -70,6 +73,7 @@
             android:layout_below="@+id/editTextGuardarAtributo"
             android:elevation="10dp"
             android:text="CREAR"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 

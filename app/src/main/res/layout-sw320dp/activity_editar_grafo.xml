@@ -22,7 +22,9 @@
             android:layout_height="@dimen/layout_height_button_"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar Nombre"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -33,7 +35,9 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarNombreGrafo"
             android:layout_marginTop="21dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar Nodos"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -44,7 +48,9 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarEnlacesGrafo"
             android:layout_marginTop="15dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Volver Atras"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -55,7 +61,9 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEditarNodosGrafo"
             android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar Arcos"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 

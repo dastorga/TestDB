@@ -31,9 +31,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tv_CrearArco"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="NODO ORIGEN"
-            android:textSize="30sp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -43,9 +45,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="NODO DESTINO"
-            android:textSize="30sp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -53,12 +57,13 @@
             android:id="@+id/btnVolverAtras_CrearArco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/btnCrearArco_CrearArco"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
-            android:textSize="30sp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -68,9 +73,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/editTextGuardarAtributo"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="CREAR"
-            android:textSize="30sp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <EditText
@@ -79,7 +86,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnNodoDestino_CrearArco"
-            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="ATRIBUTO"
             android:inputType="textPersonName"
