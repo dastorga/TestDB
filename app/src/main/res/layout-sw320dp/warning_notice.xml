@@ -42,7 +42,6 @@
         android:layout_height="0dp"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="100dp"
-        android:background="@color/colorPrimary"
         android:elevation="10dp"
         android:text="CANCELAR"
         android:textColor="@android:color/background_light"
@@ -52,7 +51,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAceptarWarningNotice"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/gradient_box_general"/>
 
     <Button
         android:id="@+id/btnAceptarWarningNotice"
@@ -62,7 +62,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/btnCancelarWarningNotice"
         android:layout_marginBottom="6dp"
-        android:background="@android:color/holo_red_light"
+        android:background="@drawable/gradient_box_red"
         android:elevation="10dp"
         android:text="ACEPTAR"
         android:textColor="@android:color/background_light"
