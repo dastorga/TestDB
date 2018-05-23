@@ -22,9 +22,11 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="17dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="Reproducir"
-            android:textSize="36sp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <Button
@@ -34,9 +36,11 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnRepetirReproduccion"
             android:layout_marginTop="16dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="Volver Atras"
-            android:textSize="36sp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <Button
@@ -46,8 +50,10 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnReproducir_PLay"
             android:layout_marginTop="19dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Repetir"
-            android:textSize="36sp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </RelativeLayout>
 

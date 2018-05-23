@@ -19,8 +19,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="41dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="Reproducir Grafo Completo"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -31,8 +33,10 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnReproducirNodos"
             android:layout_marginTop="39dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="Volver Atras"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -43,9 +47,11 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnEscuchargrafocompleto"
             android:layout_marginTop="27dp"
+            android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="Reproducir Nodos"
             android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="30sp"
             android:textStyle="bold" />
 
