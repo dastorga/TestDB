@@ -46,10 +46,9 @@
 
     <Button
         android:id="@+id/btnVolverAtras_EditarNombreGrafo"
-        android:layout_width="589dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/btnGuardarEdicion_EditarNombreGrafo"
         android:layout_marginBottom="87dp"
         android:background="@drawable/gradient_box_general"
         android:elevation="10dp"
