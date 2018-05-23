@@ -18,45 +18,53 @@
 
         <Button
             android:id="@+id/button_editar_nodo_origen_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/button_editar_nodo_destino_enlace"
             android:layout_alignStart="@+id/button_editar_nodo_destino_enlace"
             android:layout_marginBottom="43dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar origen"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_nodo_destino_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/button_editar_guardar_enlace"
             android:layout_alignStart="@+id/button_editar_guardar_enlace"
             android:layout_marginBottom="43dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar destino"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_guardar_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/button_editar_volver_atras_enlace"
             android:layout_alignStart="@+id/button_editar_volver_atras_enlace"
             android:layout_marginBottom="26dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Guardar cambios"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_volver_atras_enlace"
-            android:layout_width="400dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="47dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Volver atras"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="36sp"
             android:textStyle="bold" />
 

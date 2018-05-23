@@ -4,38 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dario.testsdb.CrearEnlaceActivity">
+    tools:context="com.example.dario.testsdb.CrearEnlaceActivity"
+    tools:layout_editor_absoluteY="73dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout15"
+        android:layout_width="592dp"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints,UselessLeaf"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:ignore="MissingConstraints,UselessLeaf">
 
-        <TextView
-            android:id="@+id/tv_CrearArco"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="13dp"
-            android:text="Recuerda que el nodo origen presede al nodo destino."
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/size_letra_24"
-            tools:ignore="HardcodedText" />
+        <!--<TextView-->
+        <!--android:id="@+id/tv_CrearArco"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginStart="13dp"-->
+        <!--android:text="Recuerda que el nodo origen presede al nodo destino."-->
+        <!--android:textColor="@color/colorAccent"-->
+        <!--android:textSize="18sp"-->
+        <!--tools:ignore="HardcodedText" />-->
 
         <Button
             android:id="@+id/btnNodoOrigen_CrearArco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/tv_CrearArco"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="12dp"
             android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="NODO ORIGEN"
             android:textColor="@color/ic_launcher_background"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -45,11 +46,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnNodoOrigen_CrearArco"
+            android:layout_marginTop="13dp"
             android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="NODO DESTINO"
             android:textColor="@color/ic_launcher_background"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -59,11 +61,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnCrearArco_CrearArco"
+            android:layout_marginTop="18dp"
             android:background="@drawable/gradient_box_general"
             android:elevation="10dp"
             android:text="VOLVER ATRAS"
             android:textColor="@color/ic_launcher_background"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -77,7 +80,7 @@
             android:elevation="10dp"
             android:text="CREAR"
             android:textColor="@color/ic_launcher_background"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText

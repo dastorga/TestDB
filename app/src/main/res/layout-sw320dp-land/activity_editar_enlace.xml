@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="55dp">
+    tools:layout_editor_absoluteY="73dp">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
         <EditText
             android:id="@+id/et_editar_atributo_enlace"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/altura_boton_50"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ems="10"
@@ -30,46 +30,56 @@
         <Button
             android:id="@+id/button_editar_nodo_origen_enlace"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/altura_boton_50"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/et_editar_atributo_enlace"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar origen"
             android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="@dimen/size_text_18"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_nodo_destino_enlace"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/altura_boton_50"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/button_editar_nodo_origen_enlace"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Editar destino"
             android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="@dimen/size_text_18"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_guardar_enlace"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/altura_boton_50"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/button_editar_nodo_destino_enlace"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Guardar"
             android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="@dimen/size_text_18"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_editar_volver_atras_enlace"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/altura_boton_50"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/button_editar_guardar_enlace"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gradient_box_general"
             android:text="Volver atras"
             android:textAlignment="center"
+            android:textColor="@color/ic_launcher_background"
             android:textSize="@dimen/size_text_18"
             android:textStyle="bold" />
 
