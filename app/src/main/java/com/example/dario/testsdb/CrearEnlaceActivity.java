@@ -13,7 +13,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
     Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco, btnCrearArco_CrearArco;
     EditText editTextGuardarAtributo;
-    MediaPlayer clicksuccess, volver;
+    MediaPlayer clicksuccess, volver, error;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         editTextGuardarAtributo = findViewById(R.id.editTextGuardarAtributo);
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volver = MediaPlayer.create(this, R.raw.volver);
+        error = MediaPlayer.create(this, R.raw.error);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -53,9 +54,18 @@ public class CrearEnlaceActivity extends AppCompatActivity {
                 String atributo = editTextGuardarAtributo.getText().toString();
                 Toast.makeText(CrearEnlaceActivity.this, atributo , Toast.LENGTH_SHORT).show();
 
-                if ( g.getIdOrigen() == 0 && g.getIdDestino() != 0){Toast.makeText(CrearEnlaceActivity.this, "NO AHI ORIGEN SELECCIONADO ))", Toast.LENGTH_SHORT).show();}
-                if ( g.getIdOrigen() != 0 && g.getIdDestino() == 0){Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO SELECCIONADO ))", Toast.LENGTH_SHORT).show();}
-                if ( g.getIdOrigen() == 0 && g.getIdDestino() == 0){ Toast.makeText(CrearEnlaceActivity.this, "NO AHI NI ORIGEN NI DESTINO SELECCIONADO", Toast.LENGTH_SHORT).show();}
+                if ( g.getIdOrigen() == 0 && g.getIdDestino() != 0){
+                    Toast.makeText(CrearEnlaceActivity.this, "NO AHI ORIGEN SELECCIONADO ))", Toast.LENGTH_SHORT).show();
+                    if (g.getSonidoActivado()){error.start();}
+                }
+                if ( g.getIdOrigen() != 0 && g.getIdDestino() == 0){
+                    Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO SELECCIONADO ))", Toast.LENGTH_SHORT).show();
+                    if (g.getSonidoActivado()){error.start();}
+                }
+                if ( g.getIdOrigen() == 0 && g.getIdDestino() == 0){
+                    Toast.makeText(CrearEnlaceActivity.this, "NO AHI NI ORIGEN NI DESTINO SELECCIONADO", Toast.LENGTH_SHORT).show();
+                    if (g.getSonidoActivado()){error.start();}
+                }
 
                 if ( g.getIdOrigen() != 0 && g.getIdDestino() != 0){
                     Toast.makeText(CrearEnlaceActivity.this, "ORIGEN: " + g.getIdOrigen() + " -> DESTINO: " + g.getIdDestino(), Toast.LENGTH_SHORT).show();
