@@ -14,7 +14,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar;
+    Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar, btnSonido;
     MediaPlayer click;
 
     @Override
@@ -27,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
         btnEditar = findViewById(R.id.btnEditar);
         btnReproducir = findViewById(R.id.btnReproducir);
         btnExportar = findViewById(R.id.btnExportar);
+        btnSonido = findViewById(R.id.btnSonido);
         click = MediaPlayer.create(this, R.raw.click);
 
         /**
-         * Funcion que me activa los sonidos al crear un grafo y
-         * al hacer click sobre el boton volver.
+         * Sonido desactivado por defecto.
          */
         final Globals g = Globals.getInstance();
-        g.setSonidoActivado(true);
+        g.setSonidoActivado(false);
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -63,6 +63,17 @@ public class MainActivity extends AppCompatActivity {
         btnExportar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), GraphListExport.class));
+            }
+        });
+
+        btnSonido.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                /**
+                 * Funcion que me activa los sonidos al crear un grafo y
+                 * al hacer click sobre el boton volver.
+                 */
+                final Globals g = Globals.getInstance();
+                g.setSonidoActivado(true);
             }
         });
 
