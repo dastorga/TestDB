@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
          * Audios desactivados por defecto.
          */
         final Globals g = Globals.getInstance();
-        //g.setSonidoActivado(false);
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

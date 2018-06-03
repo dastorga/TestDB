@@ -11,10 +11,12 @@
         android:id="@+id/switchSonido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Sonido:"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
         android:textOff="off"
         android:textOn="on"
-        android:text="Switch"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
 
 
