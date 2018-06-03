@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * Funcion que me activa los sonidos al crear un grafo y
                  * al hacer click sobre el boton volver.
+                 * Se utiliza una funcion global "setSonidoActivado"
                  */
                 final Globals g = Globals.getInstance();
                 g.setSonidoActivado(true);
