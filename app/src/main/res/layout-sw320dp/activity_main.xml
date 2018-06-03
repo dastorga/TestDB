@@ -89,6 +89,20 @@
             android:textSize="36sp"
             android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/btnSonido"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_button"
+                android:layout_below="@+id/btnReproducir"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="37dp"
+                android:background="@drawable/gradient_box_sonido"
+                android:elevation="10dp"
+                android:text="SONIDO"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
     </ScrollView>
