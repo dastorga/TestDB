@@ -20,7 +20,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * Esta clase se encargara de exportar el grafo seleccionado con anterioridad y exportarlo al numero de WhatsApp ingresado
+ * Esta clase se encargara de exportargrafo el grafo seleccionado con anterioridad y exportarlo al numero de WhatsApp ingresado
  * en el campo de texto en el caso de ingresar un numero telefono que tengo ya registrado como contacto con anterioridad,
  * de lo contrario me da la opcion de poder enviar por algun otro medio de comunicacion que disponga en el dispositivo
  * movil (email, whatsapp, etc)
@@ -47,7 +47,7 @@ public class WhatsAppExport extends AppCompatActivity {
                                              // luego aqui yo lo paso a text.
 
         final Globals g = Globals.getInstance();
-        final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducir
+        final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducirgrafo
 
         /**
          * Mi idea en esta instancia es, armar el grafo de manera correcta en formato "dot" y almacenarlo en una variable string

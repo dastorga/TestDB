@@ -29,7 +29,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         volver = MediaPlayer.create(this, R.raw.volver);
 
         final Globals g = Globals.getInstance();
-        final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducir
+        final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducirgrafo
 
         btnEscuchargrafocompleto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -49,7 +49,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
 
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String constructionGraphTotalString = c.ConstructionGraphTotalString(idGlobalPlay); // paso id del grafo a construir
-                g.setGrafoCompletString(constructionGraphTotalString); // Guardo todos los nodos para reproducir en otra clase.
+                g.setGrafoCompletString(constructionGraphTotalString); // Guardo todos los nodos para reproducirgrafo en otra clase.
 
                 Toast.makeText(OpcionesReproduccionGrafo.this, constructionGraphTotalString  , Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), Play.class));
@@ -59,13 +59,13 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         btnReproducirNodos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 /**
-                 * Construyo todos los nodos del grafo actual a reproducir
+                 * Construyo todos los nodos del grafo actual a reproducirgrafo
                  */
                 g.setQuien("Nodo"); // Indico quien quiero que se reproduzca en la clase Play
 
                 c = new ConstructionGraph(getApplicationContext()); // Paso contexto actual
                 String nodosString = c.ConstrucctionNodesString(idGlobalPlay); // obtengo todos los nodos del grafo pasado como parametro.
-                g.setNodeCompletString(nodosString); // Guardo todos los nodos para reproducir en otra clase.
+                g.setNodeCompletString(nodosString); // Guardo todos los nodos para reproducirgrafo en otra clase.
 
                 Toast.makeText(OpcionesReproduccionGrafo.this, nodosString  , Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), Play.class));

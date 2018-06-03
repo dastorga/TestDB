@@ -37,7 +37,7 @@ public class EditarNodo extends AppCompatActivity {
         final int idNodeEdit = g.getIdNodeEdit();
         final int idGlobalEdit = g.getIdGlobalEdit();
 
-        etNombre_EditarNodo.setText(MDB.recoverNode(idNodeEdit).getAtributoNode()); // pongo el nombre actual en el campo a editar
+        etNombre_EditarNodo.setText(MDB.recoverNode(idNodeEdit).getAtributoNode()); // pongo el nombre actual en el campo a editargrafo
 
         btnGuardarCambios_EditarNodo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -50,7 +50,7 @@ public class EditarNodo extends AppCompatActivity {
 
         btnEliminarNodo_ClassEditarNodo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Aqui si elimino el nodo, deberia eliminar los enlaces que lo refieren y a los que el refiere.
+                // Aqui si elimino el nodo, deberia eliminargrafo los enlaces que lo refieren y a los que el refiere.
                 MDB.deleteNode(idNodeEdit);
                 Toast.makeText(EditarNodo.this, "ELIMINADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));

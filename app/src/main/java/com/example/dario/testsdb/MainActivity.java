@@ -15,7 +15,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar, btnConfiguracion;
-    MediaPlayer click, editar, eliminar, exportar, configuracion, reproducir, crear;
+    MediaPlayer click, editargrafo, eliminargrafo, exportargrafo, configurargrafo, reproducirgrafo, creargrafo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
         btnConfiguracion = findViewById(R.id.btnConfiguracion);
         click = MediaPlayer.create(this, R.raw.click);
 
-        editar = MediaPlayer.create(this, R.raw.editar);
-        eliminar = MediaPlayer.create(this, R.raw.eliminar);
-        exportar = MediaPlayer.create(this, R.raw.exportar);
-        configuracion = MediaPlayer.create(this, R.raw.configuracion);
-        reproducir = MediaPlayer.create(this, R.raw.reproducir);
-        crear = MediaPlayer.create(this, R.raw.crear);
+        editargrafo = MediaPlayer.create(this, R.raw.editargrafo);
+        eliminargrafo = MediaPlayer.create(this, R.raw.eliminargrafo);
+        exportargrafo = MediaPlayer.create(this, R.raw.exportargrafo);
+        configurargrafo = MediaPlayer.create(this, R.raw.configurargrafo);
+        reproducirgrafo = MediaPlayer.create(this, R.raw.reproducirgrafo);
+        creargrafo = MediaPlayer.create(this, R.raw.creargrafo);
 
         /**
          * Audios desactivados por defecto.
@@ -46,48 +46,48 @@ public class MainActivity extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CrearGrafo.class));
-                if (g.getSonidoActivado()){crear.start();}
+                if (g.getSonidoActivado()){creargrafo.start();}
             }
         });
 
         btnEditar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), GraphListEdit.class));
-                if (g.getSonidoActivado()){editar.start();}
+                if (g.getSonidoActivado()){editargrafo.start();}
             }
         });
 
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), GraphListDelete.class));
-                if (g.getSonidoActivado()){eliminar.start();}
+                if (g.getSonidoActivado()){eliminargrafo.start();}
             }
         });
 
         btnReproducir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), GraphListPlay.class));
-                if (g.getSonidoActivado()){reproducir.start();}
+                if (g.getSonidoActivado()){reproducirgrafo.start();}
             }
         });
 
         btnExportar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), GraphListExport.class));
-                if (g.getSonidoActivado()){exportar.start();}
+                if (g.getSonidoActivado()){exportargrafo.start();}
             }
         });
 
         btnConfiguracion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 /**
-                 * Funcion que me activa los sonidos al crear un grafo y
+                 * Funcion que me activa los sonidos al creargrafo un grafo y
                  * al hacer click sobre el boton volver.
                  * Se utiliza una funcion global "setSonidoActivado"
                  */
                 //startActivity(new Intent(getApplicationContext(), GraphListExport.class));
                 g.setSonidoActivado(true);
-                if (g.getSonidoActivado()){configuracion.start();}
+                if (g.getSonidoActivado()){configurargrafo.start();}
             }
         });
 

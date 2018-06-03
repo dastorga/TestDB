@@ -64,7 +64,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     //////////////////////////////// INSERTAR /////////////////////////////////////////////////
 
     /**
-     * Metodo encargado de crear un grafo con un id autoincrementado y con un nombre que toma como parametro.
+     * Metodo encargado de creargrafo un grafo con un id autoincrementado y con un nombre que toma como parametro.
      *
      */
     public int insertGraph(String name) {
@@ -87,7 +87,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     }
 
     /**
-     * Metodo encargado de crear un nodo, tomando como parametro el atributo del nodo
+     * Metodo encargado de creargrafo un nodo, tomando como parametro el atributo del nodo
      * y el id_grafo al que pertenece.
      */
     public int insertNode(String atributo, int id_graph) {

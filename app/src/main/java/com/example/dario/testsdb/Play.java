@@ -80,7 +80,7 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         // If no text is typed, tts will read out 'You haven't typed text'
         // else it reads out the text you typed
         if (dataEntry.length() == 0) {
-            tts.speak("Sin nodos para reproducir", TextToSpeech.QUEUE_FLUSH, null);
+            tts.speak("Sin nodos para reproducirgrafo", TextToSpeech.QUEUE_FLUSH, null);
         } else {
             tts.speak(dataEntry, TextToSpeech.QUEUE_FLUSH, null);
         }

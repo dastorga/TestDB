@@ -11,7 +11,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 /**
- * Lista de nodos, para luego seleccionar uno para editar.
+ * Lista de nodos, para luego seleccionar uno para editargrafo.
  */
 
 public class NodoListEdit extends AppCompatActivity {
@@ -21,7 +21,7 @@ public class NodoListEdit extends AppCompatActivity {
     NodeListAdapter adapter = null;
 
     // Aqui debere se deben listar todos los nodos del grafo (idGlobalEdit).
-    // luego se debe poder seleccionar uno para luego terminar editandolo (solo el atributo se puede editar, por el momento debido a que no posee otra cosa).
+    // luego se debe poder seleccionar uno para luego terminar editandolo (solo el atributo se puede editargrafo, por el momento debido a que no posee otra cosa).
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class NodoListEdit extends AppCompatActivity {
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         final Globals g = Globals.getInstance();
-        int idGlobalEdit = g.getIdGlobalEdit(); // obtengo el grafo actual a editar
+        int idGlobalEdit = g.getIdGlobalEdit(); // obtengo el grafo actual a editargrafo
 
         ListViewNodo = findViewById(R.id.ListViewNodo);
         list = new ArrayList<>();
@@ -47,7 +47,7 @@ public class NodoListEdit extends AppCompatActivity {
                 Toast.makeText(NodoListEdit.this, "NODO "+ListViewClickData.getIdNode()+" A EDITAR", Toast.LENGTH_SHORT).show();
 
                 final Globals g = Globals.getInstance();
-                g.setIdNodeEdit(ListViewClickData.getIdNode()); // guardo el nodo a editar en la variable global
+                g.setIdNodeEdit(ListViewClickData.getIdNode()); // guardo el nodo a editargrafo en la variable global
 
                 startActivity(new Intent(getApplicationContext(), EditarNodo.class));
             }

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 
 /**
- * Lista de enlaces, para luego seleccionar uno para editar.
+ * Lista de enlaces, para luego seleccionar uno para editargrafo.
  */
 
 public class EnlaceListEdit extends AppCompatActivity {
@@ -33,7 +33,7 @@ public class EnlaceListEdit extends AppCompatActivity {
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
         final Globals g = Globals.getInstance();
-        int idGlobalEdit = g.getIdGlobalEdit(); // obtengo el grafo actual a editar
+        int idGlobalEdit = g.getIdGlobalEdit(); // obtengo el grafo actual a editargrafo
 
         ListViewEnlace = findViewById(R.id.ListViewEnlace);
         list = new ArrayList<>();
@@ -49,7 +49,7 @@ public class EnlaceListEdit extends AppCompatActivity {
                 Toast.makeText(EnlaceListEdit.this, "ENLACE "+ListViewClickData.getIdEnlace()+" A EDITAR", Toast.LENGTH_SHORT).show();
 
                 final Globals g = Globals.getInstance();
-                g.setIdEnlaceEdit(ListViewClickData.getIdEnlace()); // guardo el enlace a editar en la variable global
+                g.setIdEnlaceEdit(ListViewClickData.getIdEnlace()); // guardo el enlace a editargrafo en la variable global
 
                 startActivity(new Intent(getApplicationContext(), EditarEnlace.class));
             }

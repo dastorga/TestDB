@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 /**
- * Activity de confirmacion antes de eliminar grafo.
+ * Activity de confirmacion antes de eliminargrafo grafo.
  */
 
 public class WarningNotice extends AppCompatActivity {
