@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
          * Audios desactivados por defecto.
          */
         final Globals g = Globals.getInstance();
-        g.setSonidoActivado(false);
+        //g.setSonidoActivado(false);
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -80,13 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnConfiguracion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                /**
-                 * Funcion que me activa los sonidos al creargrafo un grafo y
-                 * al hacer click sobre el boton volver.
-                 * Se utiliza una funcion global "setSonidoActivado"
-                 */
-                //startActivity(new Intent(getApplicationContext(), ConfigurationGraph.class));
-                g.setSonidoActivado(true);
+                startActivity(new Intent(getApplicationContext(), ConfigurationGraph.class));
                 if (g.getSonidoActivado()){configurargrafo.start();}
             }
         });

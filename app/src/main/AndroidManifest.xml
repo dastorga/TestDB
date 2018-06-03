@@ -128,6 +128,11 @@
             android:label="Exportar Grafo"
             android:parentActivityName=".GraphListExport"/>
 
+        <activity
+            android:name=".ConfigurationGraph"
+            android:label="Configuracion"
+            android:parentActivityName=".MainActivity"/>
+
     </application>
 
 </manifest>
