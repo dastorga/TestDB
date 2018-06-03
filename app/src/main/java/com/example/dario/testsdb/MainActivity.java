@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                  * al hacer click sobre el boton volver.
                  * Se utiliza una funcion global "setSonidoActivado"
                  */
-                //startActivity(new Intent(getApplicationContext(), GraphListExport.class));
+                //startActivity(new Intent(getApplicationContext(), ConfigurationGraph.class));
                 g.setSonidoActivado(true);
                 if (g.getSonidoActivado()){configurargrafo.start();}
             }

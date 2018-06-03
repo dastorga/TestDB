@@ -17,7 +17,7 @@ public class CrearGrafo extends AppCompatActivity {
 
     EditText etNombreGrafo;
     Button btnGuardarNombreGrafo,btnVolverAtrasGrafo;
-    MediaPlayer clicksuccess, volver;
+    MediaPlayer clicksuccess, volver, volveratras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,10 @@ public class CrearGrafo extends AppCompatActivity {
         etNombreGrafo = findViewById(R.id.etNombreGrafo);
         btnGuardarNombreGrafo = findViewById(R.id.btnGuardarNombreGrafo);
         btnVolverAtrasGrafo = findViewById(R.id.btnVolverAtrasGrafo);
+
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volver = MediaPlayer.create(this, R.raw.volver);
+        volveratras = MediaPlayer.create(this, R.raw.volveratras);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -52,6 +54,7 @@ public class CrearGrafo extends AppCompatActivity {
                 Globals g = Globals.getInstance();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 if (g.getSonidoActivado()){volver.start();}
+                if (g.getSonidoActivado()){volveratras.start();}
             }
         });
     }
