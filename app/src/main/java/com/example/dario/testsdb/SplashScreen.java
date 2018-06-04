@@ -1,5 +1,7 @@
 package com.example.dario.testsdb;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -14,8 +16,9 @@ import android.widget.TextView;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private TextView tv;
+    private TextView tvSplashScreen;
     private ImageView im;
+    MediaPlayer bienvenido;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,10 +26,30 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         im = (ImageView) findViewById(R.id.imageViewSplashScreen);
-
+        tvSplashScreen = findViewById(R.id.tvSplashScreen);
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
+        bienvenido = MediaPlayer.create(this, R.raw.bienvenido);
+        final Intent i = new Intent(this, MainActivity.class);
         im.startAnimation(myanim);
+        tvSplashScreen.startAnimation(myanim);
 
+        bienvenido.start();
+
+        Thread timer = new Thread(){
+            public void run (){
+                try{
+                    sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    startActivity(i);
+                    finish();
+                }
+            }
+        };
+
+        timer.start();
 
     }
 }

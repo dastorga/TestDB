@@ -21,6 +21,18 @@
             android:layout_gravity="center"
             app:srcCompat="@mipmap/ic_launcher_foreground" />
 
+        <TextView
+            android:id="@+id/tvSplashScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="serif"
+            android:text="AppCase4Blind"
+            android:textAlignment="center"
+            android:textColor="?android:attr/colorActivatedHighlight"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
 
     </LinearLayout>
 
