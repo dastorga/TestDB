@@ -15,6 +15,6 @@ A tool to facilitate the teaching-learning process of Directed Graphs, aimed at 
 
 ## Get the App for Android 
 
-<a href="https://play.google.com/store/apps/details?id=com.ramotion.showroom" >
+<a href="https://play.google.com/store/apps?hl=es" >
 <img src="https://raw.githubusercontent.com/Ramotion/react-native-circle-menu/master/google_play@2x.png" width="104" height="34"></a>
 
