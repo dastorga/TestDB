@@ -8,4 +8,13 @@ A tool to facilitate the teaching-learning process of Directed Graphs, aimed at 
 <img src="screenshot/appScreenshot.png" width="15%"/>
 <img src="screenshot/ScreenshotMenuInicio.png" width="13%"/></p>
 
+## Requirements
+
+- Android 5.0 Lollipop (min Sdk Version 19) or greater
+- Your favorite IDE
+
+## Get the App for Android 
+
+<a href="https://play.google.com/store/apps?hl=es" >
+<img src="https://raw.githubusercontent.com/Ramotion/react-native-circle-menu/master/google_play@2x.png" width="104" height="34"></a>
 
