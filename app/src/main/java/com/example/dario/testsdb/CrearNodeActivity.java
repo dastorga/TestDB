@@ -17,7 +17,7 @@ public class CrearNodeActivity extends AppCompatActivity {
 
     Button btnGuardar_CrearNode,btnVolverAtras_CrearNode;
     EditText etNombreNode_CrearNode;
-    MediaPlayer clicksuccess, volver;
+    MediaPlayer clicksuccess, volver, volveratras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class CrearNodeActivity extends AppCompatActivity {
         etNombreNode_CrearNode = findViewById(R.id.etNombreNode_CrearNode);
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volver = MediaPlayer.create(this, R.raw.volver);
+        volveratras = MediaPlayer.create(this, R.raw.volveratras);
 
         btnGuardar_CrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -53,6 +54,7 @@ public class CrearNodeActivity extends AppCompatActivity {
                 Globals g = Globals.getInstance();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
                 if (g.getSonidoActivado()){volver.start();}
+                if (g.getSonidoActivado()){volveratras.start();}
             }
         });
 

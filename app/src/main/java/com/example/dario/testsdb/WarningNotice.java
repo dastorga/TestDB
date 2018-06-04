@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class WarningNotice extends AppCompatActivity {
 
     Button btnAceptarWarningNotice, btnCancelarWarningNotice;
-    MediaPlayer click;
+    MediaPlayer click, grafoeliminado, grafonoeliminado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,8 @@ public class WarningNotice extends AppCompatActivity {
         btnCancelarWarningNotice = findViewById(R.id.btnCancelarWarningNotice);
         final Globals g = Globals.getInstance();
         click = MediaPlayer.create(this, R.raw.clicksuccess);
+        grafoeliminado = MediaPlayer.create(this, R.raw.grafoeliminado);
+        grafonoeliminado = MediaPlayer.create(this, R.raw.grafonoeliminado);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -37,6 +39,7 @@ public class WarningNotice extends AppCompatActivity {
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), GraphListDelete.class);
                 startActivity(intentCrearEnlace);
                 if (g.getSonidoActivado()){click.start();}
+                if (g.getSonidoActivado()){grafoeliminado.start();}
             }
         });
 
@@ -44,6 +47,7 @@ public class WarningNotice extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), GraphListDelete.class);
                 startActivity(intentCrearEnlace);
+                if (g.getSonidoActivado()){grafonoeliminado.start();}
             }
         });
 

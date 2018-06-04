@@ -14,7 +14,7 @@ import android.widget.Button;
 public class EditarGrafo extends AppCompatActivity {
 
     Button btnEditarNombreGrafo, btnEditarNodosGrafo, btnEditarEnlacesGrafo, btnVolverAtrasEditarGrafo;
-    MediaPlayer volver;
+    MediaPlayer volver, volveratras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,10 @@ public class EditarGrafo extends AppCompatActivity {
         btnEditarNodosGrafo = findViewById(R.id.btnEditarNodosGrafo);
         btnEditarEnlacesGrafo = findViewById(R.id.btnEditarEnlacesGrafo);
         btnVolverAtrasEditarGrafo = findViewById(R.id.btnVolverAtrasEditarGrafo);
+
         volver = MediaPlayer.create(this, R.raw.volver);
+        volveratras = MediaPlayer.create(this, R.raw.volveratras);
+
         final Globals g = Globals.getInstance();
 
         btnEditarNombreGrafo.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +54,7 @@ public class EditarGrafo extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), GraphListEdit.class);
                 startActivity(intent);
                 if (g.getSonidoActivado()){volver.start();}
+                if (g.getSonidoActivado()){volveratras.start();}
             }
         });
 

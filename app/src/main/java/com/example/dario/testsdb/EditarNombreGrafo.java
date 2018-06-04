@@ -18,7 +18,7 @@ public class EditarNombreGrafo extends AppCompatActivity {
 
     Button btnGuardarEdicion_EditarNombreGrafo, btnVolverAtras_EditarNombreGrafo;
     EditText etEditarNombreGrafo;
-    MediaPlayer clicksuccess, volver;
+    MediaPlayer clicksuccess, volver, volveratras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,10 @@ public class EditarNombreGrafo extends AppCompatActivity {
         btnGuardarEdicion_EditarNombreGrafo = findViewById(R.id.btnGuardarEdicion_EditarNombreGrafo);
         btnVolverAtras_EditarNombreGrafo = findViewById(R.id.btnVolverAtras_EditarNombreGrafo);
         etEditarNombreGrafo = findViewById(R.id.etEditarNombreGrafo);
+
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volver = MediaPlayer.create(this, R.raw.volver);
+        volveratras = MediaPlayer.create(this, R.raw.volveratras);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -51,6 +53,7 @@ public class EditarNombreGrafo extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
                 if (g.getSonidoActivado()){volver.start();}
+                if (g.getSonidoActivado()){volveratras.start();}
             }
         });
 

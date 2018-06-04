@@ -13,7 +13,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
 
     Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco, btnCrearArco_CrearArco;
     EditText editTextGuardarAtributo;
-    MediaPlayer clicksuccess, volver, error;
+    MediaPlayer clicksuccess, volver, error, noahinodoorigenseleccionado, noahinododestinoseleccionado, enlacecreado, volveratras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,12 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         btnVolverAtras_CrearArco = findViewById(R.id.btnVolverAtras_CrearArco);
         btnCrearArco_CrearArco = findViewById(R.id.btnCrearArco_CrearArco);
         editTextGuardarAtributo = findViewById(R.id.editTextGuardarAtributo);
+
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
+        noahinodoorigenseleccionado = MediaPlayer.create(this, R.raw.noahinodoorigenseleccionado);
+        noahinododestinoseleccionado = MediaPlayer.create(this, R.raw.noahinododestinoseleccionado);
+        enlacecreado = MediaPlayer.create(this, R.raw.enlacecreado);
+        volveratras = MediaPlayer.create(this, R.raw.volveratras);
         volver = MediaPlayer.create(this, R.raw.volver);
         error = MediaPlayer.create(this, R.raw.error);
 
@@ -57,10 +62,13 @@ public class CrearEnlaceActivity extends AppCompatActivity {
                 if ( g.getIdOrigen() == 0 && g.getIdDestino() != 0){
                     Toast.makeText(CrearEnlaceActivity.this, "NO AHI ORIGEN SELECCIONADO ))", Toast.LENGTH_SHORT).show();
                     if (g.getSonidoActivado()){error.start();}
+                    if (g.getSonidoActivado()){noahinodoorigenseleccionado.start();}
+
                 }
                 if ( g.getIdOrigen() != 0 && g.getIdDestino() == 0){
                     Toast.makeText(CrearEnlaceActivity.this, "NO AHI DESTINO SELECCIONADO ))", Toast.LENGTH_SHORT).show();
                     if (g.getSonidoActivado()){error.start();}
+                    if (g.getSonidoActivado()){noahinododestinoseleccionado.start();}
                 }
                 if ( g.getIdOrigen() == 0 && g.getIdDestino() == 0){
                     Toast.makeText(CrearEnlaceActivity.this, "NO AHI NI ORIGEN NI DESTINO SELECCIONADO", Toast.LENGTH_SHORT).show();
@@ -75,6 +83,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
                     Toast.makeText(CrearEnlaceActivity.this, "ENLACE CREADO NUMERO: "+ numeroEnlace, Toast.LENGTH_SHORT).show();
                     editTextGuardarAtributo.setText(""); // limpio el campo ediText
                     if (g.getSonidoActivado()){clicksuccess.start();}
+                    if (g.getSonidoActivado()){enlacecreado.start();}
                 }
             }
         });
@@ -83,6 +92,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
                 if (g.getSonidoActivado()){volver.start();}
+                if (g.getSonidoActivado()){volveratras.start();}
             }
         });
 

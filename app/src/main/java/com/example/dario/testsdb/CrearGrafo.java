@@ -17,7 +17,7 @@ public class CrearGrafo extends AppCompatActivity {
 
     EditText etNombreGrafo;
     Button btnGuardarNombreGrafo,btnVolverAtrasGrafo;
-    MediaPlayer clicksuccess, volver, volveratras;
+    MediaPlayer clicksuccess, volver, volviendoalmenudeinicio, grafoguardado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +29,10 @@ public class CrearGrafo extends AppCompatActivity {
         btnVolverAtrasGrafo = findViewById(R.id.btnVolverAtrasGrafo);
 
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
+
         volver = MediaPlayer.create(this, R.raw.volver);
-        volveratras = MediaPlayer.create(this, R.raw.volveratras);
+        volviendoalmenudeinicio = MediaPlayer.create(this, R.raw.volviendoalmenudeinicio);
+        grafoguardado = MediaPlayer.create(this, R.raw.grafoguardado);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -46,6 +48,7 @@ public class CrearGrafo extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),MDB.recoverGraph(g.getIdGlobal()).getNameGraph()+" Guardado!" + " IdGraph: " +  g.getIdGlobal(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
                 if (g.getSonidoActivado()){clicksuccess.start();}
+                if (g.getSonidoActivado()){grafoguardado.start();}
             }
         });
 
@@ -54,7 +57,7 @@ public class CrearGrafo extends AppCompatActivity {
                 Globals g = Globals.getInstance();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 if (g.getSonidoActivado()){volver.start();}
-                if (g.getSonidoActivado()){volveratras.start();}
+                if (g.getSonidoActivado()){volviendoalmenudeinicio.start();}
             }
         });
     }

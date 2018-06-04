@@ -19,7 +19,7 @@ public class EditarEnlace extends AppCompatActivity {
     Button button_editar_nodo_origen_enlace, button_editar_nodo_destino_enlace,
     button_editar_guardar_enlace, button_editar_volver_atras_enlace;
     EditText et_editar_atributo_enlace;
-    MediaPlayer clicksuccess, volver;
+    MediaPlayer clicksuccess, volver, volveratras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +31,11 @@ public class EditarEnlace extends AppCompatActivity {
         button_editar_nodo_destino_enlace = findViewById(R.id.button_editar_nodo_destino_enlace);
         button_editar_guardar_enlace = findViewById(R.id.button_editar_guardar_enlace);
         button_editar_volver_atras_enlace = findViewById(R.id.button_editar_volver_atras_enlace);
+
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
+        volveratras = MediaPlayer.create(this, R.raw.volveratras);
         volver = MediaPlayer.create(this, R.raw.volver);
+
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -88,6 +91,7 @@ public class EditarEnlace extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), EnlaceListEdit.class);
                 startActivity(intent);
                 if (g.getSonidoActivado()){volver.start();}
+                if (g.getSonidoActivado()){volveratras.start();}
             }
         });
     }
