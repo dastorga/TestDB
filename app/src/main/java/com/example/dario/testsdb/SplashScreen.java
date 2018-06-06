@@ -18,7 +18,7 @@ public class SplashScreen extends AppCompatActivity {
 
     private TextView tvSplashScreen;
     private ImageView im;
-    MediaPlayer bienvenido;
+    MediaPlayer inicio;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,25 +30,25 @@ public class SplashScreen extends AppCompatActivity {
 
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
 
-        bienvenido = MediaPlayer.create(this, R.raw.bienvenido);
+        inicio = MediaPlayer.create(this, R.raw.inicio);
         final Intent i = new Intent(this, MainActivity.class);
 
         im.startAnimation(myanim);
         tvSplashScreen.startAnimation(myanim);
+        inicio.start();
 
-        bienvenido.start();
 
         Thread timer = new Thread(){
             public void run (){
                 try{
-                    sleep(5000);
+                    sleep(6000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 finally {
                     startActivity(i);
                     finish();
-                    bienvenido.stop();
+                    inicio.stop();
                 }
             }
         };

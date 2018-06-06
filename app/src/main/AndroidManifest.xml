@@ -23,8 +23,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="Menu Principal"
-            android:parentActivityName=".SplashScreen" />
+            android:label="Menu Principal"/>
 
 
         <activity
