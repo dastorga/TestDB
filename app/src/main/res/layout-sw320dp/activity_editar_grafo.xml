@@ -6,67 +6,93 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="81dp">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btnEditarNombreGrafo"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/gradient_box_general"
-            android:text="Editar Nombre"
-            android:textColor="@color/ic_launcher_background"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnEditarNodosGrafo"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btnEditarNombreGrafo"
-            android:layout_marginTop="21dp"
-            android:background="@drawable/gradient_box_general"
-            android:text="Editar Nodos"
-            android:textColor="@color/ic_launcher_background"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnEditarNombreGrafo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_button_"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/gradient_box_general"
+                android:text="Editar Nombre"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnVolverAtrasEditarGrafo"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btnEditarEnlacesGrafo"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/gradient_box_general"
-            android:text="Volver Atras"
-            android:textColor="@color/ic_launcher_background"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnEditarNodosGrafo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_button_"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnEditarNombreGrafo"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/gradient_box_general"
+                android:text="Editar Nodos"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnEditarEnlacesGrafo"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_button_"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btnEditarNodosGrafo"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/gradient_box_general"
-            android:text="Editar Arcos"
-            android:textColor="@color/ic_launcher_background"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnEditarEnlacesGrafo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_button_"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnEditarNodosGrafo"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/gradient_box_general"
+                android:text="Editar Arcos"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-    </RelativeLayout>
+            <Button
+                android:id="@+id/btnAgregarNodoGrafo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_button_"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnEditarEnlacesGrafo"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gradient_box_general"
+                android:text="Agregar Nodo"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnAgregarEnlaceGrafo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_button_"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnEditarEnlacesGrafo"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gradient_box_general"
+                android:text="Agregar Enlace"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnVolverAtrasEditarGrafo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_button_"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnEditarEnlacesGrafo"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gradient_box_general"
+                android:text="Volver Atras"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -13,7 +13,8 @@ import android.widget.Button;
 
 public class EditarGrafo extends AppCompatActivity {
 
-    Button btnEditarNombreGrafo, btnEditarNodosGrafo, btnEditarEnlacesGrafo, btnVolverAtrasEditarGrafo;
+    Button btnEditarNombreGrafo, btnEditarNodosGrafo, btnEditarEnlacesGrafo, btnVolverAtrasEditarGrafo,
+    btnAgregarNodoGrafo, btnAgregarEnlaceGrafo;
     MediaPlayer volver, volveratras;
 
     @Override
@@ -25,6 +26,9 @@ public class EditarGrafo extends AppCompatActivity {
         btnEditarNodosGrafo = findViewById(R.id.btnEditarNodosGrafo);
         btnEditarEnlacesGrafo = findViewById(R.id.btnEditarEnlacesGrafo);
         btnVolverAtrasEditarGrafo = findViewById(R.id.btnVolverAtrasEditarGrafo);
+
+        btnAgregarNodoGrafo = findViewById(R.id.btnAgregarNodoGrafo);
+        btnAgregarEnlaceGrafo = findViewById(R.id.btnAgregarEnlaceGrafo);
 
         volver = MediaPlayer.create(this, R.raw.volver);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
@@ -46,6 +50,18 @@ public class EditarGrafo extends AppCompatActivity {
         btnEditarEnlacesGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                  startActivity(new Intent(getApplicationContext(), EnlaceListEdit.class));
+            }
+        });
+
+        btnAgregarNodoGrafo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), AgregarNodoGrafo.class));
+            }
+        });
+
+        btnAgregarEnlaceGrafo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), AgregarEnlaceGrafo.class));
             }
         });
 
