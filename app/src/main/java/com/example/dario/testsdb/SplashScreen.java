@@ -26,10 +26,13 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         im = (ImageView) findViewById(R.id.imageViewSplashScreen);
-        tvSplashScreen = findViewById(R.id.tvSplashScreen);
+        tvSplashScreen = (TextView) findViewById(R.id.tvSplashScreen);
+
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
+
         bienvenido = MediaPlayer.create(this, R.raw.bienvenido);
         final Intent i = new Intent(this, MainActivity.class);
+
         im.startAnimation(myanim);
         tvSplashScreen.startAnimation(myanim);
 
@@ -45,11 +48,11 @@ public class SplashScreen extends AppCompatActivity {
                 finally {
                     startActivity(i);
                     finish();
+                    bienvenido.stop();
                 }
             }
         };
 
         timer.start();
-
     }
 }
