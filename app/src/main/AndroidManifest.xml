@@ -86,6 +86,16 @@
             android:parentActivityName=".GraphListEdit"/>
 
         <activity
+            android:name=".AgregarNodoGrafo"
+            android:label="Agregar Nodo"
+            android:parentActivityName=".EditarGrafo"/>
+
+        <activity
+            android:name=".AgregarEnlaceGrafo"
+            android:label="Agregar Enlace"
+            android:parentActivityName=".EditarGrafo"/>
+
+        <activity
             android:name=".EditarNombreGrafo"
             android:label="Editar nombre de Grafo"
             android:parentActivityName=".EditarGrafo"/>

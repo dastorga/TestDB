@@ -55,13 +55,13 @@ public class EditarGrafo extends AppCompatActivity {
 
         btnAgregarNodoGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                startActivity(new Intent(getApplicationContext(), AgregarNodoGrafo.class));
+                startActivity(new Intent(getApplicationContext(), AgregarNodoGrafo.class));
             }
         });
 
         btnAgregarEnlaceGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                startActivity(new Intent(getApplicationContext(), AgregarEnlaceGrafo.class));
+                startActivity(new Intent(getApplicationContext(), AgregarEnlaceGrafo.class));
             }
         });
 
