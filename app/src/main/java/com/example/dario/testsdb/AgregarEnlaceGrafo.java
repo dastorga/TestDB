@@ -40,12 +40,14 @@ public class AgregarEnlaceGrafo extends AppCompatActivity {
         error = MediaPlayer.create(this, R.raw.error);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
+
         final Globals g = Globals.getInstance();
+        final int idGlobalEdit = g.getIdGlobalEdit();
 
         btnNodoOrigen_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Aqui debo mostrar una lista de nodos creados
-                Intent intentNodeList = new Intent(AgregarEnlaceGrafo.this, NodeListOrigen.class);
+                Intent intentNodeList = new Intent(AgregarEnlaceGrafo.this, NodeListOrigenAgregarEnlace.class);
                 startActivity(intentNodeList);
             }
         });
@@ -53,7 +55,7 @@ public class AgregarEnlaceGrafo extends AppCompatActivity {
         btnNodoDestino_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Aqui debo mostrar una lista de nodos creados
-                Intent intentNodeList = new Intent(AgregarEnlaceGrafo.this, NodeListDestino.class);
+                Intent intentNodeList = new Intent(AgregarEnlaceGrafo.this, NodeListDestinoAgregarEnlace.class);
                 startActivity(intentNodeList);
             }
         });
