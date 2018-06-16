@@ -150,6 +150,16 @@
             android:label="Configuracion"
             android:parentActivityName=".MainActivity"/>
 
+        <activity
+            android:name=".NodeListOrigenAgregarEnlace"
+            android:label="Lista de Nodos Origen"
+            android:parentActivityName=".AgregarEnlaceGrafo"/>
+
+        <activity
+            android:name=".NodeListDestinoAgregarEnlace"
+            android:label="Lista de Nodos Destino"
+            android:parentActivityName=".AgregarEnlaceGrafo"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

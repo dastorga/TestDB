@@ -50,7 +50,7 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
         btnVolverAtrasCrearNodeEnlaceActivity.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Globals g = Globals.getInstance();
-                startActivity(new Intent(getApplicationContext(), CrearGrafo.class));
+                startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
                 if (g.getSonidoActivado()){volver.start();}
             }
         });

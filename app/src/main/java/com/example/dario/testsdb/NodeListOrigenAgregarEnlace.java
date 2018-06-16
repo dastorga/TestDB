@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 /**
@@ -46,7 +45,7 @@ public class NodeListOrigenAgregarEnlace extends AppCompatActivity {
 
                 g.setIdOrigen(ListViewClickData.getIdNode()); // Guardo id_origen
 
-                Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearEnlaceActivity.class);
+                Intent intentCrearEnlace = new Intent(getApplicationContext(), AgregarEnlaceGrafo.class);
                 startActivity(intentCrearEnlace);
             }
         });

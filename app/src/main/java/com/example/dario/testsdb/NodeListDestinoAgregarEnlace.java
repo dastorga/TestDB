@@ -42,8 +42,10 @@ public class NodeListDestinoAgregarEnlace extends AppCompatActivity {
 
                 Node ListViewClickData = (Node) parent.getItemAtPosition(position);
                 Toast.makeText(NodeListDestinoAgregarEnlace.this, "ID DESTINO:"+ListViewClickData.getIdNode(), Toast.LENGTH_SHORT).show();
+
                 g.setIdDestino(ListViewClickData.getIdNode()); // Guardo id_destino
-                Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearEnlaceActivity.class);
+
+                Intent intentCrearEnlace = new Intent(getApplicationContext(), AgregarEnlaceGrafo.class);
                 startActivity(intentCrearEnlace);
             }
         });

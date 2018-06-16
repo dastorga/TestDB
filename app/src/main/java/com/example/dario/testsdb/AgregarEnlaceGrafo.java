@@ -97,7 +97,7 @@ public class AgregarEnlaceGrafo extends AppCompatActivity {
 
         btnVolverAtras_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
+                startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
                 if (g.getSonidoActivado()){volver.start();}
                 if (g.getSonidoActivado()){volveratras.start();}
             }
