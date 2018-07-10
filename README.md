@@ -6,7 +6,7 @@ A tool to facilitate the teaching-learning process of Directed Graphs, aimed at 
 
 <p><img src="screenshot/PantallaPrincipal.png" width="20%"/>
 <img src="screenshot/appScreenshot.png" width="15%"/>
-<img src="screenshot/ScreenshotMenuInicio.png" width="13%"/></p>
+<img src="screenshot/galaxys5portblack.png" width="13%"/></p>
 
 ## Requirements
 
