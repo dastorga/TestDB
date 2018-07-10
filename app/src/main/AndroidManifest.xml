@@ -25,7 +25,6 @@
             android:name=".MainActivity"
             android:label="Menu Principal"/>
 
-
         <activity
             android:name=".CrearGrafo"
             android:label="Crear Grafo"
