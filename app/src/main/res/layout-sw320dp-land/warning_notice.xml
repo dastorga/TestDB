@@ -8,57 +8,48 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="73dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="11dp">
+        android:layout_height="332dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/txtViewWarningNotice"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:text="Seguro desea eliminar el Grafo?"
+            android:textAlignment="center"
             android:textColor="@android:color/holo_orange_light"
             android:textSize="@dimen/size_letra"
             android:textStyle="bold"
             tools:text="Seguro desea eliminar el Grafo?" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/btnAceptarWarningNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_box_red"
+            android:elevation="10dp"
+            android:text="ACEPTAR"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnCancelarWarningNotice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/btnAceptarWarningNotice"
-        android:background="@drawable/gradient_box_general"
-        android:elevation="10dp"
-        android:text="CANCELAR"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="140dp" />
-
-    <Button
-        android:id="@+id/btnAceptarWarningNotice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/gradient_box_red"
-        android:elevation="10dp"
-        android:text="ACEPTAR"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="74dp" />
+        <Button
+            android:id="@+id/btnCancelarWarningNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnAceptarWarningNotice"
+            android:background="@drawable/gradient_box_general"
+            android:elevation="10dp"
+            android:text="CANCELAR"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

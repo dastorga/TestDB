@@ -29,6 +29,12 @@
             android:name=".CrearGrafo"
             android:label="Crear Grafo"
             android:parentActivityName=".MainActivity" />
+
+        <!--<activity-->
+        <!--android:name=".GraphLib"-->
+        <!--android:label="Probando Grafo Visual"-->
+        <!--android:parentActivityName=".MainActivity" />-->
+
         <activity
             android:name=".CrearNodeEnlaceActivity"
             android:label="Crear Nodo/Arco"
