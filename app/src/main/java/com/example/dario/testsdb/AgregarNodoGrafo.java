@@ -18,7 +18,7 @@ public class AgregarNodoGrafo extends AppCompatActivity {
 
     Button btnGuardar_CrearNode,btnVolverAtras_CrearNode;
     EditText etNombreNode_CrearNode;
-    MediaPlayer clicksuccess, volver, volveratras;
+    MediaPlayer clicksuccess, volver, volveratras, nodoagregado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class AgregarNodoGrafo extends AppCompatActivity {
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volver = MediaPlayer.create(this, R.raw.volver);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
+        nodoagregado = MediaPlayer.create(this, R.raw.nodoagregado);
 
         btnGuardar_CrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -46,7 +47,10 @@ public class AgregarNodoGrafo extends AppCompatActivity {
 
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), EditarGrafo.class);
                 startActivity(intentCrearEnlace);
-                if (g.getSonidoActivado()){clicksuccess.start();}
+                if (g.getSonidoActivado()){
+                    clicksuccess.start();
+                    nodoagregado.start();
+                }
             }
         });
 

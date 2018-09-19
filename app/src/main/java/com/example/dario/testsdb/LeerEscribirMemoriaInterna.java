@@ -6,7 +6,6 @@ package com.example.dario.testsdb;
 
 public class LeerEscribirMemoriaInterna  {
 
-
 //    File internalStorageDir = getFilesDir();
 //                Toast.makeText(LeerEscribirMemoriaInterna.this, internalStorageDir + ""  , Toast.LENGTH_SHORT).show();
 //
@@ -32,7 +31,6 @@ public class LeerEscribirMemoriaInterna  {
 //    } catch (IOException e) {
 //        e.printStackTrace();
 //    }
-
 
 }
 
