@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ public class CrearNodeActivity extends AppCompatActivity {
     Button btnGuardar_CrearNode,btnVolverAtras_CrearNode;
     EditText etNombreNode_CrearNode;
     MediaPlayer clicksuccess, volver, volveratras;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class CrearNodeActivity extends AppCompatActivity {
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volver = MediaPlayer.create(this, R.raw.volver);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         btnGuardar_CrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -45,6 +48,7 @@ public class CrearNodeActivity extends AppCompatActivity {
 
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class);
                 startActivity(intentCrearEnlace);
+                if (g.getVibrateActivado()){vibrator.vibrate(800);}
                 if (g.getSonidoActivado()){clicksuccess.start();}
             }
         });

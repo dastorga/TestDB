@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
@@ -19,6 +20,7 @@ public class SplashScreen extends AppCompatActivity {
     private TextView tvSplashScreen;
     private ImageView im;
     MediaPlayer inicio;
+    private Vibrator vibrator;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class SplashScreen extends AppCompatActivity {
         tvSplashScreen.startAnimation(myanim);
         inicio.start();
 
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        vibrator.vibrate(6000);
 
         Thread timer = new Thread(){
             public void run (){

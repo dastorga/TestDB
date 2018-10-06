@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class EditarNodo extends AppCompatActivity {
     Button btnVolver_EditarNodo, btnGuardarCambios_EditarNodo, btnEliminarNodo_ClassEditarNodo;
     EditText etNombre_EditarNodo;
     MediaPlayer clicksuccess, volver, volveratras;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +31,10 @@ public class EditarNodo extends AppCompatActivity {
         btnGuardarCambios_EditarNodo = findViewById(R.id.btnGuardarCambios_EditarNodo);
         btnEliminarNodo_ClassEditarNodo = findViewById(R.id.btnEliminarNodo_ClassEditarNodo);
         btnVolver_EditarNodo = findViewById(R.id.btnVolver_EditarNodo);
-
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volver = MediaPlayer.create(this, R.raw.volver);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -46,6 +48,7 @@ public class EditarNodo extends AppCompatActivity {
                 MDB.updateNode(idNodeEdit, etNombre_EditarNodo.getText().toString(), idGlobalEdit);
                 Toast.makeText(EditarNodo.this, "EDITADO ))", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
+                if (g.getVibrateActivado()){vibrator.vibrate(800);}
                 if (g.getSonidoActivado()){clicksuccess.start();}
             }
         });

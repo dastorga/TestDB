@@ -29,6 +29,7 @@ public class Globals {
     private static String quien;
 
     private static boolean sonidoActivado;
+    private static boolean vibrateActivado;
 
     public Globals( ) { }
 
@@ -122,7 +123,13 @@ public class Globals {
         return Globals.sonidoActivado;
     }
 
+    public void setVibrateActivado(Boolean vibrateActivado) {
+        Globals.vibrateActivado = vibrateActivado;
+    }
 
+    public boolean getVibrateActivado() {
+        return Globals.vibrateActivado;
+    }
 
     public static synchronized Globals getInstance(){
         if (instance==null){

@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
     Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco, btnCrearArco_CrearArco;
     EditText editTextGuardarAtributo;
     MediaPlayer clicksuccess, volver, error, noahinodoorigenseleccionado, noahinododestinoseleccionado, enlacecreado, volveratras;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
         volver = MediaPlayer.create(this, R.raw.volver);
         error = MediaPlayer.create(this, R.raw.error);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         final Globals g = Globals.getInstance();
@@ -82,6 +85,7 @@ public class CrearEnlaceActivity extends AppCompatActivity {
                     g.setIdDestino(0);
                     Toast.makeText(CrearEnlaceActivity.this, "ENLACE CREADO NUMERO: "+ numeroEnlace, Toast.LENGTH_SHORT).show();
                     editTextGuardarAtributo.setText(""); // limpio el campo ediText
+                    if (g.getVibrateActivado()){vibrator.vibrate(800);}
                     if (g.getSonidoActivado()){clicksuccess.start();}
                     if (g.getSonidoActivado()){enlacecreado.start();}
                 }

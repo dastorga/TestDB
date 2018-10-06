@@ -45,11 +45,13 @@ public class ConfigurationGraph extends AppCompatActivity {
             {
                 if(switchSonido.isChecked()) {
                     g.setSonidoActivado(true);
+                    g.setVibrateActivado(true);
                     switchSonido.setText("Sonido: ON");
                     sonidoactivado.start();
                 }
                 else {
                     g.setSonidoActivado(false);
+                    g.setVibrateActivado(false);
                     switchSonido.setText("Sonido: OFF");
                     sonidodesactivado.start();
                 }
