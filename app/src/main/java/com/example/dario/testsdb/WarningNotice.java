@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class WarningNotice extends AppCompatActivity {
 
     Button btnAceptarWarningNotice, btnCancelarWarningNotice;
     MediaPlayer click, grafoeliminado, grafonoeliminado;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class WarningNotice extends AppCompatActivity {
         click = MediaPlayer.create(this, R.raw.clicksuccess);
         grafoeliminado = MediaPlayer.create(this, R.raw.grafoeliminado);
         grafonoeliminado = MediaPlayer.create(this, R.raw.grafonoeliminado);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -38,6 +41,7 @@ public class WarningNotice extends AppCompatActivity {
                 Toast.makeText(WarningNotice.this, "GRAFO "+Integer.parseInt(dato)+" ELIMINADO", Toast.LENGTH_SHORT).show();
                 Intent intentCrearEnlace = new Intent(getApplicationContext(), GraphListDelete.class);
                 startActivity(intentCrearEnlace);
+                if (g.getVibrateActivado()){vibrator.vibrate(800);}
                 if (g.getSonidoActivado()){click.start();}
                 if (g.getSonidoActivado()){grafoeliminado.start();}
             }
