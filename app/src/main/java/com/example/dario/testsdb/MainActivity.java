@@ -15,7 +15,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar, btnConfiguracion;
-    MediaPlayer click, editargrafo, eliminargrafo, exportargrafo, configurargrafo, reproducirgrafo, creargrafo;
+    MediaPlayer click, editargrafo, eliminargrafo, exportargrafo, configurargrafo, reproducirgrafo, creargrafo, menuprincipal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +29,19 @@ public class MainActivity extends AppCompatActivity {
         btnExportar = findViewById(R.id.btnExportar);
         btnConfiguracion = findViewById(R.id.btnConfiguracion);
         click = MediaPlayer.create(this, R.raw.click);
-
         editargrafo = MediaPlayer.create(this, R.raw.editargrafo);
         eliminargrafo = MediaPlayer.create(this, R.raw.eliminargrafo);
         exportargrafo = MediaPlayer.create(this, R.raw.exportargrafo);
         configurargrafo = MediaPlayer.create(this, R.raw.configurargrafo);
         reproducirgrafo = MediaPlayer.create(this, R.raw.reproducirgrafo);
         creargrafo = MediaPlayer.create(this, R.raw.creargrafo);
+        menuprincipal = MediaPlayer.create(this, R.raw.menuprincipal);
 
         /**
          * Audios desactivados por defecto.
          */
         final Globals g = Globals.getInstance();
+        if (g.getSonidoActivado()){menuprincipal.start();}
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
