@@ -71,17 +71,23 @@ public class AgregarEnlaceGrafo extends AppCompatActivity {
 
                 if ( g.getIdOrigen() == 0 && g.getIdDestino() != 0){
                     Toast.makeText(AgregarEnlaceGrafo.this, "NO AHI ORIGEN SELECCIONADO ))", Toast.LENGTH_SHORT).show();
+                    long [] pattern = {0,350,100,350};
+                    if (g.getVibrateActivado()){vibrator.vibrate(pattern,-1);}
                     if (g.getSonidoActivado()){error.start();}
                     if (g.getSonidoActivado()){noahinodoorigenseleccionado.start();}
 
                 }
                 if ( g.getIdOrigen() != 0 && g.getIdDestino() == 0){
                     Toast.makeText(AgregarEnlaceGrafo.this, "NO AHI DESTINO SELECCIONADO ))", Toast.LENGTH_SHORT).show();
+                    long [] pattern = {0,350,100,350};
+                    if (g.getVibrateActivado()){vibrator.vibrate(pattern,-1);}
                     if (g.getSonidoActivado()){error.start();}
                     if (g.getSonidoActivado()){noahinododestinoseleccionado.start();}
                 }
                 if ( g.getIdOrigen() == 0 && g.getIdDestino() == 0){
                     Toast.makeText(AgregarEnlaceGrafo.this, "NO AHI NI ORIGEN NI DESTINO SELECCIONADO", Toast.LENGTH_SHORT).show();
+                    long [] pattern = {0,350,100,350};
+                    if (g.getVibrateActivado()){vibrator.vibrate(pattern,-1);}
                     if (g.getSonidoActivado()){error.start();}
                 }
 

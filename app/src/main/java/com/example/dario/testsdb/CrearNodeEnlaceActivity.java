@@ -44,6 +44,9 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
                 if (MDB.existsNodesInGraph(idGlobal)){
                     startActivity(new Intent(getApplicationContext(), CrearEnlaceActivity.class));
                 }else{
+                    //pattern conformado por silencio seguido de duracion
+                    long [] pattern = {0,350,100,350};
+                    if (g.getVibrateActivado()){vibrator.vibrate(pattern,-1);}
                     Toast.makeText(getApplicationContext(),"NO ahi Nodos creados!", Toast.LENGTH_SHORT).show();
                 }
 

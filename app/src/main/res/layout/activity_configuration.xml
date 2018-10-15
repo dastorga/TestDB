@@ -16,8 +16,19 @@
         android:textColor="@android:color/background_dark"
         android:textOff="off"
         android:textOn="on"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-
+    <Switch
+        android:id="@+id/switchVibracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vibración:"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textOff="off"
+        android:textOn="on"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
