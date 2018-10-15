@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class AgregarNodoGrafo extends AppCompatActivity {
     Button btnGuardar_CrearNode,btnVolverAtras_CrearNode;
     EditText etNombreNode_CrearNode;
     MediaPlayer clicksuccess, volver, volveratras, nodoagregado;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class AgregarNodoGrafo extends AppCompatActivity {
         volver = MediaPlayer.create(this, R.raw.volver);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
         nodoagregado = MediaPlayer.create(this, R.raw.nodoagregado);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         btnGuardar_CrearNode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -58,6 +61,7 @@ public class AgregarNodoGrafo extends AppCompatActivity {
             public void onClick(View v) {
                 Globals g = Globals.getInstance();
                 startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
                 if (g.getSonidoActivado()){volver.start();}
                 if (g.getSonidoActivado()){volveratras.start();}
             }

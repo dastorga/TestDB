@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
     private Button btnVolver_ReproduccionGrafo, btnEscuchargrafocompleto, btnReproducirNodos;
     ConstructionGraph c;
     MediaPlayer volver;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
         btnReproducirNodos = findViewById(R.id.btnReproducirNodos);
         btnVolver_ReproduccionGrafo = findViewById(R.id.btnVolver_ReproduccionGrafo);
         volver = MediaPlayer.create(this, R.raw.volver);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final Globals g = Globals.getInstance();
         final int idGlobalPlay = g.getIdGlobalPlay(); // Obtengo el id del grafo actual para reproducirgrafo
@@ -80,6 +83,7 @@ public class OpcionesReproduccionGrafo extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), GraphListPlay.class));
                 if (g.getSonidoActivado()){volver.start();}
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
             }
         });
 

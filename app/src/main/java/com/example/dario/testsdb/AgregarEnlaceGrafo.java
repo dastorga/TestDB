@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class AgregarEnlaceGrafo extends AppCompatActivity {
     Button btnNodoOrigen_CrearArco, btnNodoDestino_CrearArco, btnVolverAtras_CrearArco, btnCrearArco_CrearArco;
     EditText editTextGuardarAtributo;
     MediaPlayer clicksuccess, volver, error, noahinodoorigenseleccionado, noahinododestinoseleccionado, enlacecreado, volveratras;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class AgregarEnlaceGrafo extends AppCompatActivity {
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
         volver = MediaPlayer.create(this, R.raw.volver);
         error = MediaPlayer.create(this, R.raw.error);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
 
@@ -98,6 +101,7 @@ public class AgregarEnlaceGrafo extends AppCompatActivity {
         btnVolverAtras_CrearArco.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
                 if (g.getSonidoActivado()){volver.start();}
                 if (g.getSonidoActivado()){volveratras.start();}
             }

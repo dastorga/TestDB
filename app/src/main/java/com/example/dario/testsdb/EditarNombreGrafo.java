@@ -55,6 +55,7 @@ public class EditarNombreGrafo extends AppCompatActivity {
         btnVolverAtras_EditarNombreGrafo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), EditarGrafo.class));
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
                 if (g.getSonidoActivado()){volver.start();}
                 if (g.getSonidoActivado()){volveratras.start();}
             }

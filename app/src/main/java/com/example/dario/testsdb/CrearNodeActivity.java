@@ -57,6 +57,7 @@ public class CrearNodeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Globals g = Globals.getInstance();
                 startActivity(new Intent(getApplicationContext(), CrearNodeEnlaceActivity.class));
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
                 if (g.getSonidoActivado()){volver.start();}
                 if (g.getSonidoActivado()){volveratras.start();}
             }

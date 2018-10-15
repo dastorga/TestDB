@@ -65,6 +65,7 @@ public class EditarNodo extends AppCompatActivity {
         btnVolver_EditarNodo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
                 if (g.getSonidoActivado()){volver.start();}
                 if (g.getSonidoActivado()){volveratras.start();}
             }

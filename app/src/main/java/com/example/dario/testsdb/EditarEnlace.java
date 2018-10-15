@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class EditarEnlace extends AppCompatActivity {
     button_editar_guardar_enlace, button_editar_volver_atras_enlace;
     EditText et_editar_atributo_enlace;
     MediaPlayer clicksuccess, volver, volveratras;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class EditarEnlace extends AppCompatActivity {
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
         volver = MediaPlayer.create(this, R.raw.volver);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
@@ -90,6 +93,7 @@ public class EditarEnlace extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), EnlaceListEdit.class);
                 startActivity(intent);
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
                 if (g.getSonidoActivado()){volver.start();}
                 if (g.getSonidoActivado()){volveratras.start();}
             }
