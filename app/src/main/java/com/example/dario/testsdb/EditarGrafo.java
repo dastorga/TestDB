@@ -26,10 +26,8 @@ public class EditarGrafo extends AppCompatActivity {
         btnEditarNodosGrafo = findViewById(R.id.btnEditarNodosGrafo);
         btnEditarEnlacesGrafo = findViewById(R.id.btnEditarEnlacesGrafo);
         btnVolverAtrasEditarGrafo = findViewById(R.id.btnVolverAtrasEditarGrafo);
-
         btnAgregarNodoGrafo = findViewById(R.id.btnAgregarNodoGrafo);
         btnAgregarEnlaceGrafo = findViewById(R.id.btnAgregarEnlaceGrafo);
-
         volver = MediaPlayer.create(this, R.raw.volver);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
 

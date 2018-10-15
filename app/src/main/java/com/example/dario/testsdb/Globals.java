@@ -110,26 +110,21 @@ public class Globals {
 
     public String getGrafoCompletString() { return Globals.grafoCompletString;}
 
+
     public void setQuien(String quien) {Globals.quien = quien;}
 
     public String getQuien() { return Globals.quien;}
 
 
-    public void setSonidoActivado(Boolean sonidoActivado) {
-        Globals.sonidoActivado = sonidoActivado;
-    }
+    public void setSonidoActivado(Boolean sonidoActivado) {Globals.sonidoActivado = sonidoActivado;}
 
-    public boolean getSonidoActivado() {
-        return Globals.sonidoActivado;
-    }
+    public boolean getSonidoActivado() { return Globals.sonidoActivado;}
 
-    public void setVibrateActivado(Boolean vibrateActivado) {
-        Globals.vibrateActivado = vibrateActivado;
-    }
 
-    public boolean getVibrateActivado() {
-        return Globals.vibrateActivado;
-    }
+    public void setVibrateActivado(Boolean vibrateActivado) {Globals.vibrateActivado = vibrateActivado;}
+
+    public boolean getVibrateActivado() {return Globals.vibrateActivado;}
+
 
     public static synchronized Globals getInstance(){
         if (instance==null){
