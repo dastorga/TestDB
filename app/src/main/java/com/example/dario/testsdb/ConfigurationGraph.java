@@ -13,8 +13,8 @@ import android.widget.Switch;
  */
 
 public class ConfigurationGraph extends AppCompatActivity {
-    Switch switchSonido;
-    MediaPlayer sonidoactivado, sonidodesactivado;
+    Switch switchSonido, switchVibracion;
+    MediaPlayer sonidoactivado, sonidodesactivado, vibracionactivada, vibraciondesactivada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,13 @@ public class ConfigurationGraph extends AppCompatActivity {
 
         sonidoactivado = MediaPlayer.create(this, R.raw.sonidoactivado);
         sonidodesactivado = MediaPlayer.create(this, R.raw.sonidodesactivado);
+
+        vibracionactivada = MediaPlayer.create(this, R.raw.vibracionactivada);
+        vibraciondesactivada = MediaPlayer.create(this, R.raw.vibraciondesactivada);
+
         switchSonido = findViewById(R.id.switchSonido);
+        switchVibracion = findViewById(R.id.switchVibracion);
+
         final Globals g = Globals.getInstance();
 
         if(g.getSonidoActivado()) {
@@ -35,6 +41,17 @@ public class ConfigurationGraph extends AppCompatActivity {
             switchSonido.setText("Sonido: OFF");
         }
 
+
+        if(g.getVibrateActivado()) {
+            switchVibracion.setChecked(true);
+            switchVibracion.setText("Vibracion: ON");
+        }
+        else {
+            switchVibracion.setChecked(false);
+            switchVibracion.setText("Vibracion: OFF");
+        }
+
+
         /**
          * Funcion que me activa los sonidos al creargrafo un grafo y
          * al hacer click sobre el boton volver.
@@ -45,13 +62,11 @@ public class ConfigurationGraph extends AppCompatActivity {
             {
                 if(switchSonido.isChecked()) {
                     g.setSonidoActivado(true);
-                    g.setVibrateActivado(true);
                     switchSonido.setText("Sonido: ON");
                     sonidoactivado.start();
                 }
                 else {
                     g.setSonidoActivado(false);
-                    g.setVibrateActivado(false);
                     switchSonido.setText("Sonido: OFF");
                     sonidodesactivado.start();
                 }
@@ -59,9 +74,21 @@ public class ConfigurationGraph extends AppCompatActivity {
         });
 
 
-
-
-
+        switchVibracion.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0)
+            {
+                if(switchVibracion.isChecked()) {
+                    g.setVibrateActivado(true);
+                    switchSonido.setText("Vibracion: ON");
+                    vibracionactivada.start();
+                }
+                else {
+                    g.setVibrateActivado(false);
+                    switchVibracion.setText("Vibracion: OFF");
+                    vibraciondesactivada.start();
+                }
+            }
+        });
 
 
     }
