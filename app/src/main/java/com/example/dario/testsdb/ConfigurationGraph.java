@@ -44,11 +44,11 @@ public class ConfigurationGraph extends AppCompatActivity {
 
         if(g.getVibrateActivado()) {
             switchVibracion.setChecked(true);
-            switchVibracion.setText("Vibracion: ON");
+            switchVibracion.setText("Vibración: ON");
         }
         else {
             switchVibracion.setChecked(false);
-            switchVibracion.setText("Vibracion: OFF");
+            switchVibracion.setText("Vibración: OFF");
         }
 
 
@@ -79,7 +79,7 @@ public class ConfigurationGraph extends AppCompatActivity {
             {
                 if(switchVibracion.isChecked()) {
                     g.setVibrateActivado(true);
-                    switchSonido.setText("Vibracion: ON");
+                    switchVibracion.setText("Vibracion: ON");
                     vibracionactivada.start();
                 }
                 else {
