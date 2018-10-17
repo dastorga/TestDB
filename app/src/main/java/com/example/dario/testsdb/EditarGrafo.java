@@ -3,6 +3,7 @@ package com.example.dario.testsdb;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class EditarGrafo extends AppCompatActivity {
     Button btnEditarNombreGrafo, btnEditarNodosGrafo, btnEditarEnlacesGrafo, btnVolverAtrasEditarGrafo,
     btnAgregarNodoGrafo, btnAgregarEnlaceGrafo;
     MediaPlayer volver, volveratras;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class EditarGrafo extends AppCompatActivity {
         btnAgregarEnlaceGrafo = findViewById(R.id.btnAgregarEnlaceGrafo);
         volver = MediaPlayer.create(this, R.raw.volver);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final Globals g = Globals.getInstance();
 
@@ -67,6 +70,7 @@ public class EditarGrafo extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), GraphListEdit.class);
                 startActivity(intent);
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
                 if (g.getSonidoActivado()){volver.start();}
                 if (g.getSonidoActivado()){volveratras.start();}
             }

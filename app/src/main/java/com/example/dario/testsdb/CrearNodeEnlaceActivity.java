@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class CrearNodeEnlaceActivity extends AppCompatActivity {
 
     Button btnCrearNode, btnCrearEnlace, btnVolverAtrasCrearNodeEnlaceActivity;
-    MediaPlayer volver;
+    MediaPlayer volver,noahinodoscreados;
     Vibrator vibrator;
 
     @Override
@@ -29,6 +29,7 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
         btnVolverAtrasCrearNodeEnlaceActivity = findViewById(R.id.btnVolverAtrasCrearNodeEnlaceActivity);
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
         volver = MediaPlayer.create(this, R.raw.volver);
+        noahinodoscreados = MediaPlayer.create(this, R.raw.noahinodoscreados);
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         btnCrearNode.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +49,7 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
                     long [] pattern = {0,350,100,350};
                     if (g.getVibrateActivado()){vibrator.vibrate(pattern,-1);}
                     Toast.makeText(getApplicationContext(),"NO ahi Nodos creados!", Toast.LENGTH_SHORT).show();
+                    if (g.getSonidoActivado()){noahinodoscreados.start();}
                 }
 
             }

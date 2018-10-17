@@ -73,7 +73,10 @@ public class ConfigurationGraph extends AppCompatActivity {
             }
         });
 
-
+        /**
+         * Funcion que activa la Vibracion en el telefono movil.
+         *
+         */
         switchVibracion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0)
             {

@@ -2,6 +2,7 @@ package com.example.dario.testsdb;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
 
     private TextToSpeech tts;
     private Button btnReproducir_PLay, btnVolverAtras_PLay, btnRepetirReproduccion;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         btnReproducir_PLay = findViewById(R.id.btnReproducir_PLay);
         btnRepetirReproduccion = findViewById(R.id.btnRepetirReproduccion);
         btnVolverAtras_PLay = findViewById(R.id.btnVolverAtras_PLay);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         /**
          * Boton de reproduccion.
@@ -71,6 +74,7 @@ public class Play extends AppCompatActivity implements TextToSpeech.OnInitListen
         btnVolverAtras_PLay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), OpcionesReproduccionGrafo.class));
+                if (g.getVibrateActivado()){vibrator.vibrate(400);}
             }
         });
 
