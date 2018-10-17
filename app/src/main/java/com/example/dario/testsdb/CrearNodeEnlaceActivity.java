@@ -51,7 +51,6 @@ public class CrearNodeEnlaceActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"NO ahi Nodos creados!", Toast.LENGTH_SHORT).show();
                     if (g.getSonidoActivado()){noahinodoscreados.start();}
                 }
-
             }
         });
 

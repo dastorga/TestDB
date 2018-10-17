@@ -1,6 +1,7 @@
 package com.example.dario.testsdb;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class EnlaceListEdit extends AppCompatActivity {
     ListView ListViewEnlace;
     ArrayList<Enlace> list;
     EnlaceListAdapter adapter = null;
+    MediaPlayer noahienlacesparaeditar;
 
     // Aqui debere se deben listar todos los enlaces del grafo (idGlobalEdit) seleccionado.
     // Luego se debe poder seleccionar un enlace para luego editarlo (atributo por el momento).
@@ -40,6 +42,11 @@ public class EnlaceListEdit extends AppCompatActivity {
         adapter = new EnlaceListAdapter(this, R.layout.enlace, MDB.recoverEnlacesInGraph(idGlobalEdit));
         ListViewEnlace.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        noahienlacesparaeditar = MediaPlayer.create(this, R.raw.noahienlacesparaeditar);
+
+        if (MDB.recoverEnlacesInGraph(idGlobalEdit).size() == 0) {
+            if (g.getSonidoActivado()){noahienlacesparaeditar.start();}
+        }
 
         ListViewEnlace.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

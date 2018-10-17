@@ -19,7 +19,7 @@ public class EditarNodo extends AppCompatActivity {
 
     Button btnVolver_EditarNodo, btnGuardarCambios_EditarNodo, btnEliminarNodo_ClassEditarNodo;
     EditText etNombre_EditarNodo;
-    MediaPlayer clicksuccess, volver, volveratras;
+    MediaPlayer clicksuccess, volver, volveratras, nodoeliminado;
     Vibrator vibrator;
 
     @Override
@@ -34,6 +34,7 @@ public class EditarNodo extends AppCompatActivity {
         clicksuccess = MediaPlayer.create(this, R.raw.clicksuccess);
         volver = MediaPlayer.create(this, R.raw.volver);
         volveratras = MediaPlayer.create(this, R.raw.volveratras);
+        nodoeliminado = MediaPlayer.create(this, R.raw.nodoeliminado);
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final MiBaseDatos MDB = new MiBaseDatos(getApplicationContext());
@@ -58,6 +59,7 @@ public class EditarNodo extends AppCompatActivity {
                 // Aqui si elimino el nodo, deberia eliminargrafo los enlaces que lo refieren y a los que el refiere.
                 MDB.deleteNode(idNodeEdit);
                 Toast.makeText(EditarNodo.this, "ELIMINADO ))", Toast.LENGTH_SHORT).show();
+                if (g.getSonidoActivado()){nodoeliminado.start();}
                 startActivity(new Intent(getApplicationContext(), NodoListEdit.class));
             }
         });
