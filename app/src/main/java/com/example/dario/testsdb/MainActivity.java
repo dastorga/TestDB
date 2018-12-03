@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnCrear, btnEliminar, btnEditar, btnReproducir, btnExportar, btnConfiguracion;
     MediaPlayer click, editargrafo, eliminargrafo, exportargrafo, configurargrafo, reproducirgrafo, creargrafo, menuprincipal;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
